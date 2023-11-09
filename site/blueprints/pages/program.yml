@@ -1,0 +1,182 @@
+title: Program
+icon: palette
+image:
+  query: false
+tabs:
+  main:
+    label: Hero Image
+    sections:
+      heroselect:
+        type: fields
+        fields:
+          hero:
+            label: Select/upload image
+            type: files
+            query: site.index.findBy("intendedTemplate", "mediagallery").images
+            empty: No image selected yet
+            layout: cards
+            uploads:
+              parent: site.index.findBy("intendedTemplate", "mediagallery")
+            multiple: false
+            width: 1/4
+            
+  overview:
+    label: Overview & Mission
+    columns:
+      - width: 1/4
+        sections:
+          overviewtitling:
+            type: fields
+            fields:
+              overviewtitle:
+                type: text
+                counter: false
+                label: Section Title
+      - width: 3/4
+        sections:
+          content:
+            type: fields
+            fields:
+              programintro:
+                type: textarea
+                label: Headline
+                buttons:
+                  - italic
+                  - link
+              about:
+                label: About the Program
+                type: blocks
+                fieldsets:
+                  text:
+                    extends: blocks/text
+                    fields:
+                      text:
+                        marks:
+                          - bold
+                          - italic
+                          - link
+                  - image
+                  - video
+  courseinfo:
+    label: About Courses
+    columns:
+      - width: 1/4
+        sections:
+          coursestitling:
+            type: fields
+            fields:
+              coursestitle:
+                type: text
+                counter: false
+                label: Section Title
+      - width: 3/4
+        sections:
+          coursecontent:
+            type: fields
+            fields:
+              courseintro:
+                type: textarea
+                label: Headline
+                buttons:
+                  - italic
+                  - link
+              courseabout:
+                label: About Courses
+                type: blocks
+                fieldsets:
+                  heading:
+                    extends: blocks/heading
+                    fields:
+                      level:
+                        default: "h3"
+                        options:
+                          - h3
+                      
+                  text:
+                    extends: blocks/text
+                    fields:
+                      text:
+                        marks:
+                          - bold
+                          - italic
+                          - link
+                          - email
+                  - list
+                  - image
+                  - video
+              fineprint:
+                label: Notes/Fine Print
+                type: textarea
+                buttons:
+                  - italic
+                  - link
+  courselist:
+    label: Course List
+    columns:
+      - width: 1/1
+        sections:
+          coursedrafts:
+            type: pages
+            label: Drafts
+            empty: Add a new course
+            template: course
+            status: draft
+      - width: 1/2
+        sections:
+          fallcourses:
+            type: pagesdisplay
+            label: Fall
+            query: page.children.filterBy('semester', 'fall')
+      - width: 1/2
+        sections:
+          springcourses:
+            type: pagesdisplay
+            label: Spring
+            query: page.children.filterBy('semester', 'spring')
+  intensive:
+    label: Summer Intensive
+    columns:
+      - width: 1/4
+        sections:
+          inttitling:
+            type: fields
+            fields:
+              inttitle:
+                type: text
+                label: Section Title
+          subpage:
+            type: pages
+            label: Summer Intensive Page
+            template: intensive
+            create: false
+      - width: 3/4
+        sections:
+          descrip:
+            type: fields
+            fields:
+              intintro:
+                type: textarea
+                label: Headline
+                buttons:
+                  - italic
+                  - link
+              intabout:
+                type: blocks
+                label: About Blurb
+                fieldsets:
+                  text:
+                    extends: blocks/text
+                    fields:
+                      text:
+                        marks:
+                          - bold
+                          - italic
+                          - link
+                  - image
+                  - video
+              intlink:
+                type: textarea
+                label: Call to Action
+                buttons:
+                  - italic
+                  - link

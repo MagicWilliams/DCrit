@@ -1,0 +1,32 @@
+Title: Vera Sacchetti
+
+----
+
+Gradyear: 2011
+
+----
+
+Hometown: Basel, Switzerland
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://verasacchetti.net/
+
+----
+
+Thesis: https://vimeo.com/23599044
+
+----
+
+Img:
+
+- >
+  image-library/2019-veraundmatylda-portrait-lores-7-vera-sacchetti.jpg

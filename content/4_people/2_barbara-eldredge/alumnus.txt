@@ -1,0 +1,31 @@
+Title: Barbara Eldredge
+
+----
+
+Gradyear: 2012
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @barbaraeldredge
+
+----
+
+Link: https://twitter.com/barbaraeldredge
+
+----
+
+Thesis: https://vimeo.com/41998645
+
+----
+
+Img:
+
+- image-library/image92.jpg

@@ -1,0 +1,114 @@
+title: Event
+
+status:
+  draft:
+    label: Draft
+    text: The item can only be seen by editors with Panel access.
+  listed:
+    label: Published
+
+num: zero
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      content:
+        type: fields
+        fields:
+          infosession:
+            label: Info session?
+            type: toggle
+            text:
+              - "No"
+              - "Yes"
+            width: 1/4
+          headline:
+            label: Event Title
+            type: text
+            autofocus: true
+            required: true
+          date:
+            label: Date
+            type: date
+            width: 1/2
+            default: today
+            required: true
+          starttime:
+            label: Start Time
+            type: text
+            width: 1/4
+            required: true
+            counter: false
+          endtime:
+            label: End Time
+            type: text
+            width: 1/4
+            counter: false
+          shortdescrip:
+            label: Short Description
+            type: textarea
+            buttons:
+              - italic
+              - link
+            help: This text will be used on the Homepage if this event is selected as a Featured Event.
+          fulldescrip:
+            label: Full Description
+            type: blocks
+            fieldsets:
+              heading:
+                extends: blocks/heading
+                fields:
+                  level:
+                    default: "h2"
+                    options:
+                      - h2
+                      - h3
+              text:
+                extends: blocks/text
+                fields:
+                  text:
+                    marks:
+                      - italic
+                      - link
+                      - email
+              - list
+          link:
+            label: Registration Link
+            type: url
+            width: 2/3
+          linkhost:
+            label: Registration Webhost
+            type: text
+            width: 1/3
+            help: If other than Eventbrite, enter the name of the service website.
+          documentation:
+            label: Recording Link
+            type: url
+            width: 2/3
+          watchhost:
+            label: Recording Webhost
+            type: select
+            options:
+              - Vimeo
+              - YouTube
+            width: 1/3
+            help: Required for accessibility
+  sidebar:
+    width: 1/3
+    sections:
+      imageselect:
+        type: fields
+        fields:
+          img:
+            type: files
+            label: Event Image
+            empty: No image selected yet
+            layout: cards
+            multiple: false
+            query: site.index.findBy("intendedTemplate", "mediagallery").images
+            uploads:
+              parent: site.index.findBy("intendedTemplate", "mediagallery")
+
+
+        

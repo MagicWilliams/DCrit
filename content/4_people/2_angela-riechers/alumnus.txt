@@ -1,0 +1,32 @@
+Title: Angela Riechers
+
+----
+
+Gradyear: 2010
+
+----
+
+Hometown: Philadelphia, Pennsylvania
+
+----
+
+Linktype: insta
+
+----
+
+Linktext: @designspeakeasy
+
+----
+
+Link: https://www.instagram.com/designspeakeasy/?hl=en
+
+----
+
+Thesis: https://vimeo.com/11656130
+
+----
+
+Img:
+
+- >
+  image-library/squareme_2018-angela-riechers.png

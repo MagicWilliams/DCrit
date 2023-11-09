@@ -1,0 +1,31 @@
+Title: John Cantwell
+
+----
+
+Gradyear: 2010
+
+----
+
+Hometown: New Jersey
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://vimeo.com/11657586
+
+----
+
+Img:
+
+- image-library/image2.jpg

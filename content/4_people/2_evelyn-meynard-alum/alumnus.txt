@@ -1,0 +1,32 @@
+Title: Evelyn Meynard
+
+----
+
+Gradyear: 2023
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://www.youtube.com/watch?v=RMS7m15Znbo
+
+----
+
+Img:
+
+- >
+  image-library/headshot_class_of_2023_evelyn-meynard-908x1200.jpeg

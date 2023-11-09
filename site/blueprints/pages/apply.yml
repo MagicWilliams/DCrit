@@ -1,0 +1,200 @@
+title: Apply
+icon: key
+image:
+  query: false
+
+tabs:
+  main:
+    label: Hero Image
+    sections:
+      heroselect:
+        type: fields
+        fields:
+          hero:
+            label: Select/upload image
+            type: files
+            query: site.index.findBy("intendedTemplate", "mediagallery").images
+            empty: No image selected yet
+            layout: cards
+            uploads:
+              parent: site.index.findBy("intendedTemplate", "mediagallery")
+            multiple: false
+            width: 1/4
+  overview:
+    label: Overview
+    columns:
+      - width: 1/4
+        sections:
+          titling:
+            type: fields
+            fields:
+              sectitle:
+                type: text
+                label: Section Title
+      - width: 3/4
+        sections:
+          content:
+            type: fields
+            fields:
+              announcement:
+                type: textarea
+                label: Headline
+                buttons:
+                  - italic
+                  - link
+              intro:
+                type: layout
+                label: Application Overview
+                layouts:
+                  - "1/1"
+                  - "1/2, 1/2"
+                fieldsets:
+                  heading:
+                    extends: blocks/heading
+                    fields:
+                      level:
+                        options:
+                          - h3
+                          - h4
+                  text:
+                    extends: blocks/text
+                    fields:
+                      text:
+                        marks:
+                          - bold
+                          - italic
+                          - link
+                          - email
+                  list:
+                    extends: blocks/list
+                    fields:
+                      text:
+                        nodes:
+                          - bulletList
+                        marks:
+                          - bold
+                          - italic
+                          - link
+                          - email
+                  - image
+                  - video
+  requirements:
+    label: Requirements
+    columns:
+      - width: 1/4
+        sections:
+          reqtitling:
+            type: fields
+            fields:
+              reqtitle:
+                type: text
+                label: Section Title
+      - width: 3/4
+        sections:
+          reqcontent:
+            type: fields
+            fields:
+              reqs:
+                label: Application Requirements
+                type: structure
+                columns:
+                  req:
+                    width: 1/4
+                  wordcount:
+                    width: 1/4
+                  notes:
+                    width: 1/2
+                fields:
+                  req:
+                    type: text
+                    label: Requirement
+                    required: true
+                  wordcount:
+                    type: text
+                    label: Word Count
+                    help: If applicable
+                  notes:
+                    type: textarea
+                    label: Notes
+                    buttons:
+                      - bold
+                      - italic
+                      - link
+              addnotes:
+                label: Additional Notes
+                type: textarea
+                buttons:
+                  - bold
+                  - italic
+                  - link
+  timeline:
+    label: Timeline
+    columns:
+      - width: 1/4
+        sections:
+          timetitling:
+            type: fields
+            fields:
+              timetitle:
+                label: Section Title
+                type: text
+      - width: 3/4
+        sections:
+          reldates:
+            type: fields
+            fields:
+              dates:
+                label: Important Dates
+                type: structure
+                columns:
+                  date:
+                    width: 1/4
+                  event:
+                    width: 3/4
+                fields:
+                  date:
+                    type: text
+                    label: Dates
+                    required: true
+                    width: 1/2
+                    counter: false
+                  event:
+                    type: textarea
+                    label: Event
+                    buttons:
+                      - bold
+                      - italic
+                      - link
+  infosessions:
+    label: Info Sessions
+    columns:
+      - width: 1/4
+        sections:
+          infotitling:
+            type: fields
+            fields:
+              infotitle:
+                type: text
+                counter: false
+                label: Section Title
+      - width: 3/4
+        sections:
+          sessiondrafts:
+            type: pages
+            label: Drafts
+            empty: Add a new session
+            template: event
+            parent: site.index.findBy("intendedTemplate", "events")
+            status: draft
+            help: New sessions will automatically be added to Events. Drafts for all event types are shown in this list.
+          sessionlist:
+            type: pagesdisplay
+            label: Published Sessions
+            query: site.index.filterBy('infosession', 'true')
+            image: page.img.toFile
+            info: '{{ page.date }}'
+            empty: No info sessions yet
+
+
+
+

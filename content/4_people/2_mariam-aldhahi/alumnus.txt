@@ -1,0 +1,31 @@
+Title: Mariam Aldhahi
+
+----
+
+Gradyear: 2015
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @mariamaldhahi
+
+----
+
+Link: https://twitter.com/mariamaldhahi
+
+----
+
+Thesis: 
+
+----
+
+Img:
+
+- image-library/image83.jpg

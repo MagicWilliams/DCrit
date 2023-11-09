@@ -1,0 +1,31 @@
+Title: Cornelia Smith
+
+----
+
+Gradyear: 2022
+
+----
+
+Hometown: 
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://vimeo.com/726053200
+
+----
+
+Img:
+
+- image-library/cornelia-smith.jpeg

@@ -1,0 +1,18 @@
+name: field.blocks.video.name
+icon: video
+preview: video
+fields:
+  url:
+    label: field.blocks.video.url.label
+    type: url
+    placeholder: field.blocks.video.url.placeholder
+  title:
+    label: Video Title
+    type: text
+    help: Required for accessibility. Provides information to screen readers on the content of the video.
+    required: true
+  caption:
+    label: field.blocks.video.caption
+    type: writer
+    inline: true
+    help: Small text best used for credits if needed.

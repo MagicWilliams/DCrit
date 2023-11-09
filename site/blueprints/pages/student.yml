@@ -1,0 +1,46 @@
+title: Student
+
+status:
+  draft:
+    label: Draft
+    text: The item can only be seen by editors with Panel access.
+  listed:
+    label: Published
+
+num: 1
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      content:
+        type: fields
+        fields:
+          role:
+            label: Title
+            type: text
+          bio:
+
+            type: textarea
+            size: medium
+            buttons:
+              - bold
+              - italic
+              - link
+  sidebar:
+    width: 1/3
+    sections:
+      imgselect:
+        type: fields
+        fields:
+          img:
+            type: files
+            label: Headshot
+            layout: cards
+            multiple: false
+            empty: No image selected yet
+            query: site.index.findBy("intendedTemplate", "mediagallery").images
+            uploads:
+              parent: site.index.findBy("intendedTemplate", "mediagallery")
+            image:
+              ratio: 1/1

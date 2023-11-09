@@ -1,0 +1,31 @@
+Title: Aneta Zeleznikova
+
+----
+
+Gradyear: 2019
+
+----
+
+Hometown: Prague, Czech Republic
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://vimeo.com/341376088
+
+----
+
+Img:
+
+- image-library/aneta-z.jpeg

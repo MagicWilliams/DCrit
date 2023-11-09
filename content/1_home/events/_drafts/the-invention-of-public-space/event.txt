@@ -1,0 +1,67 @@
+Title: The Invention of Public Space
+
+----
+
+Infosession: false
+
+----
+
+Headline: “The Invention of Public Space," Mariana Mogilevich with Karrie Jacobs
+
+----
+
+Date: 2023-01-02
+
+----
+
+Starttime: 12:30pm
+
+----
+
+Endtime: 
+
+----
+
+Shortdescrip: Nulla facilisi. Nulla tristique, lacus non porta gravida, tellus nunc mattis ex, quis iaculis tellus tellus ac turpis. Quisque quis massa at velit congue suscipit vel vitae ipsum. Nullam ut lacinia mi. Proin id erat interdum, ullamcorper nisi a, semper arcu. Nunc facilisis aliquam iaculis. Ut sodales ligula eu dui accumsan accumsan. Maecenas eu convallis felis.
+
+----
+
+Fulldescrip: [{"content":{"text":"<p>Mariana Mogilevich is a writer, scholar, and producer of public projects on the makings and meanings of urban environments. Her book The Invention of Public Space: Designing for Inclusion in Lindsay\u2019s New York was published by the University of Minnesota Press in 2020. She is editor in chief of Urban Omnibus at the Architectural League of New York and has taught architectural and urban history at New York University, Princeton University, Pratt Institute and Cornell University.<\/p><p>Karrie Jacobs is a contributing editor at Architect Magazine where she writes essays, critiques and profiles. For a decade, she was contributing editor at Metropolis magazine where she wrote a monthly column, \u201cAmerica,\u201d about how ideas and strategies in architecture and design play out on the landscape. Between 1999 and 2002 Jacobs was the founding editor-in-chief of Dwell, a San Francisco-based magazine about modern residential architecture and design. Prior to launching Dwell, Jacobs served as the architecture critic of New York Magazine, and was the founding executive editor of Benetton\u2019s Colors. She has written about design, technology, and visual language for many periodicals including The New York Times, ID, and Fortune, and is author of The Perfect $100,000 House: A Trip Across America and Back in Pursuit of a Place to Call Home (Viking, 2006).<\/p>"},"id":"e64a2019-b55e-4265-8224-3a57d4c655db","isHidden":false,"type":"text"}]
+
+----
+
+Link: https://www.eventbrite.com/e/the-invention-of-public-space-mariana-mogilevich-with-karrie-jacobs-tickets-224737454777?aff=ebdsoporgprofile
+
+----
+
+Linkhost: 
+
+----
+
+Documentation: 
+
+----
+
+Watchhost: 
+
+----
+
+Img:
+
+- image-library/mariana.jpg
+
+----
+
+Alttext: Alt text here
+
+----
+
+Descrip:
+
+Mariana Mogilevich is a writer, scholar, and producer of public projects on the makings and meanings of urban environments. Her book *The Invention of Public Space: Designing for Inclusion in Lindsay’s New York* was published by the University of Minnesota Press in 2020. She is editor in chief of Urban Omnibus at the Architectural League of New York and has taught architectural and urban history at New York University, Princeton University, Pratt Institute and Cornell University.
+
+Karrie Jacobs is a contributing editor at *Architect Magazine* where she writes essays, critiques and profiles. For a decade, she was contributing editor at Metropolis magazine where she wrote a monthly column, “America,” about how ideas and strategies in architecture and design play out on the landscape. Between 1999 and 2002 Jacobs was the founding editor-in-chief of Dwell, a San Francisco-based magazine about modern residential architecture and design. Prior to launching Dwell, Jacobs served as the architecture critic of New York Magazine, and was the founding executive editor of Benetton’s Colors. She has written about design, technology, and visual language for many periodicals including The New York Times, ID, and Fortune, and is author of The Perfect $100,000 House: A Trip Across America and Back in Pursuit of a Place to Call Home (Viking, 2006).
+
+----
+
+Time: 

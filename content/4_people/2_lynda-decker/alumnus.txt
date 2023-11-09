@@ -1,0 +1,31 @@
+Title: Lynda Decker
+
+----
+
+Gradyear: 2014
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: https://deckerdesign.com
+
+----
+
+Thesis: https://vimeo.com/94233907
+
+----
+
+Img:
+
+- image-library/lynda_decker.jpg

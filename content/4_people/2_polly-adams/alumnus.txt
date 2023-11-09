@@ -1,0 +1,31 @@
+Title: Polly Adams
+
+----
+
+Gradyear: 2020
+
+----
+
+Hometown: Brooklyn, NY
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @pollyloutru
+
+----
+
+Link: https://twitter.com/pollyloutru
+
+----
+
+Thesis: https://vimeo.com/432131656
+
+----
+
+Img:
+
+- image-library/polly-adams.png

@@ -1,0 +1,31 @@
+Title: Anna Kealey
+
+----
+
+Gradyear: 2012
+
+----
+
+Hometown: London, England
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @annakealey
+
+----
+
+Link: https://twitter.com/annakealey
+
+----
+
+Thesis: https://vimeo.com/40437698
+
+----
+
+Img:
+
+- image-library/image1.jpg

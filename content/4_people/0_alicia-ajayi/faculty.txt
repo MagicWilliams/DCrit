@@ -1,0 +1,53 @@
+Title: Alicia Ajayi
+
+----
+
+Role: Architectural designer and researcher
+
+----
+
+Svapos: corefac
+
+----
+
+Bio:
+
+Alicia Olushola Ajayi is an architectural designer, researcher, writer, and (still trying to figure it out) based in NYC. After receiving a dual masters in architecture and social work from Washington University in St. Louis, Alicia worked as an associate designer at MASS Design Group. There she contributed to the Equal Justice Initiatives Soil Collection exhibition and the ground-breaking Memorial to Peace and Justice in Montgomery, Alabama, a site dedicated to the racial terror and lynching throughout US history.
+
+She graduated from the SVA MA Design Research, Writing and Criticism program in 2020. At SVA, she refined her research practice to be rooted in historical research and cultural theory applications. Ajayi is currently documenting and researching Brooklyn, IL, the first Black American town to be incorporated by 1829. Situated along the Mason-Dixon line, Brooklyn’s past offers a rich history of the external ideologies and internal motivations that created radical Black spatial conditions. The study of Brooklyn and other antebellum Black settlements offer a critical understanding of Black place-making in American history. The research is supported by the School of Visual Arts Alumni Association (2019), the New York State Art Council on the Arts (2019), and the Architectural League’s Deborah J. Norden Travel Grant (2020). Ajayi’s article “We Call It Freedom Village: Brooklyn, Illinois’ Radical Tactics of Black Place-making” can be read here.
+
+Ajayi’s practice incorporates multiple writing forms from scholarly to commentary to experimental. Her work is featured in The New York Architecture in Review, PIN-UP Magazine, Metropolis, Architectural Record, The Architectural Review, Dear Friend, and The Funambulist. Ajayi serves on the advisory board of Oculus Magazine. She is the show producer for the upcoming podcast Curious Story Lab, an interview platform hosted by influential graphic designer Michele Washington, spotlighting designers of color. Ajayi is also the project manager at BlackSpace Urbanist Collective, a group of design professionals dedicated to protect and create Black spaces.
+
+She co-teaches Approaches to Design History, Part II with Jon Key in the Fall Semester.
+
+----
+
+Contact:
+
+- 
+  contacttype: Weblink
+  linktype: Twitter
+  linktext: @aliciaoajayi
+  linkurl: http://twitter.com/aliciaoajayi
+
+----
+
+Lectures: 
+
+----
+
+Img:
+
+- image-library/alicia-ajayi.png
+
+----
+
+Firstname: Alicia
+
+----
+
+Lastname: Ajayi
+
+----
+
+Name: Alicia Ajayi

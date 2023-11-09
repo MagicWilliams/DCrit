@@ -1,0 +1,19 @@
+title: Hero Image
+
+fields:
+  alt:
+    label: Alt Text
+    type: text
+    width: 3/4
+  gap:
+    type: gap
+    width: 1/4
+  caption:
+    width: 3/4
+    label: Credit/Caption
+    type: textarea
+    buttons:
+      - bold
+      - italic
+      - link
+      - email

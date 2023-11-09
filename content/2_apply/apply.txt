@@ -1,0 +1,128 @@
+Title: Apply
+
+----
+
+Hero:
+
+- image-library/apply.jpg
+
+----
+
+Sectitle: Application Overview
+
+----
+
+Announcement: We are currently accepting applications for the 2024-2025 academic year! Apply by January 15, 2024.
+
+----
+
+Intro: [{"attrs":[],"columns":[{"blocks":[{"content":{"text":"<p>The MA program in Design Research, Writing &amp; Criticism is suited to mid-career design or media professionals who wish to deepen their multi-dimensional research practice and enrich their understanding of design, architecture, and urban infrastructure. The program is also aimed at recent graduates, holding BA and BFA degrees, interested in strengthening their writing and critical thinking and developing an area of expertise.<\/p><p>Applicants come to the program with experience in design, architecture, journalism and curation, or from academic backgrounds in art history, English literature, philosophy, social sciences, and critical studies.<\/p>"},"id":"e0c1c37b-7f79-48f2-8788-9f7d1ab3b970","isHidden":false,"type":"text"},{"content":{"level":"h3","text":"How to Apply"},"id":"0cbf5901-4204-4a89-b3bb-18c86019412a","isHidden":false,"type":"heading"},{"content":{"text":"<p>Admission to the program is by\u00a0<a href=\"https:\/\/svanyc.force.com\/ERx_Forms__Portal_Register\" rel=\"noopener noreferrer\">online application<\/a>, the submission of required documents, and an interview by phone or in person. All applicants will receive an admissions decision in writing.\u00a0Applications will be accepted on an ongoing basis, as space allows.<\/p><p>Upon acceptance to the program, nonimmigrant alien applicants are required to submit documentation of sufficient financial resources to attend\u00a0SVA.<\/p>"},"id":"b0863722-f59f-411a-ba1d-81d781594b67","isHidden":false,"type":"text"},{"content":{"level":"h3","text":"Tuition"},"id":"ab476ce7-8d2f-49fe-95ec-68234fb60469","isHidden":false,"type":"heading"},{"content":{"text":"<p>Information on tuition and fees can be found on the <a href=\"https:\/\/sva.edu\/students\/financial-resources\/tuition-and-fees\" rel=\"noopener noreferrer\">SVA Financial Resources page<\/a>. Substantial scholarship support will be offered to all successful candidates. Please <a href=\"mailto:designresearch@sva.edu\">contact us<\/a> for\u00a0details.<\/p>"},"id":"1605ad57-4cbc-4a9a-bf23-bb90e450f453","isHidden":false,"type":"text"}],"id":"72b66982-079d-49a0-8715-c19ab5262f1e","width":"1\/1"}],"id":"98e164ee-2b43-438f-9701-6ef6b438d8ad"},{"attrs":[],"columns":[{"blocks":[{"content":{"level":"h4","text":"Supplementary MA Design Research Scholarships"},"id":"eabca35c-5fc5-4ecd-9ea8-8e83c71542a3","isHidden":false,"type":"heading"},{"content":{"text":"<ul><li>The Susan Merritt Applied Thesis Award<\/li><li><a href=\"https:\/\/alumni-society.squarespace.com\/asas\" rel=\"noopener noreferrer\">SVA Alumni Scholarship Award<\/a><\/li><li><a href=\"http:\/\/www.sva.edu\/student-life\/financial-aid\/types-of-aid-available\" rel=\"noopener noreferrer\">SVA Matching Outside Scholarship<\/a><\/li><li>Henry Wolf Scholarship<\/li><li>Visual Arts Foundation Scholarship<\/li><li><a href=\"https:\/\/sva.edu\/alumni\/alumni-society\/how-to-apply\" rel=\"noopener noreferrer\">Alumni Society Housing Scholarship Award<\/a><\/li><li><a href=\"https:\/\/sva.edu\/alumni\/alumni-society\/how-to-apply\" rel=\"noopener noreferrer\">Emergency Assistance Fund<\/a><\/li><\/ul>"},"id":"82cb9d05-cb6a-4a7f-8c29-f4b295c813db","isHidden":false,"type":"list"}],"id":"41eec90d-0eec-4db6-98c6-bd249b6ad5f7","width":"1\/2"},{"blocks":[{"content":{"level":"h4","text":"Examples of Outside Scholarships"},"id":"4d1d9069-03de-4417-8bb2-55f16b59e62b","isHidden":false,"type":"heading"},{"content":{"text":"<ul><li><a href=\"https:\/\/www.agitraining.com\/scholarships\" rel=\"noopener noreferrer\">American Graphics Institute Design Thinking Scholarship<\/a><\/li><li><a href=\"http:\/\/www.aiga.org\/worldstudio-scholarship\/\" rel=\"noopener noreferrer\">Worldstudio AIGA Scholarships<\/a><\/li><\/ul>"},"id":"fbce66ae-b691-4eb1-901e-b2e78363ce80","isHidden":false,"type":"list"}],"id":"3aff89a8-dabe-4973-96bc-8e2107460881","width":"1\/2"}],"id":"4782abe6-bbeb-452a-a8bf-c7882ee8c06d"}]
+
+----
+
+Reqtitle: Require&shy;ments
+
+----
+
+Reqs:
+
+- 
+  req: Statement of Intent
+  wordcount: Up to 500 words
+  notes: >
+    This personal essay should convey why
+    you’re interested in joining the
+    program as well as where you’re coming
+    from professionally/intellectually, and
+    where you hope to go.
+- 
+  req: Writing Samples
+  wordcount: Totaling up to 2000 words
+  notes: >
+    Our orientation is toward journalistic
+    writing rather than creative writing.
+    Ideally, your writing sample will
+    reflect writing based on some type of
+    research or investigation. Samples may
+    be existing published or unpublished
+    work, including articles, essays, blog
+    posts, papers submitted for an academic
+    class, white papers, or content strategy
+    work, among other types of
+    research-based writing. You may submit
+    multiple short pieces/excerpts up to
+    2000 words, or one long piece/excerpt of
+    2000 words.
+- 
+  req: Current resume or CV
+  wordcount: ""
+  notes: >
+    This helps us get a quick snapshot of
+    your educational and professional
+    background.
+- 
+  req: Letter of Recommendation
+  wordcount: ""
+  notes: 'The recommender should be someone who has worked with you professionally or academically, and can speak to your research and writing skills as well as your intellectual curiosity and drive. For those applying for the January 15 priority deadline: you may submit your application with a recommender’s name, even if the recommender’s letter will not be submitted by January 15.'
+- 
+  req: >
+    List schools from which you’ve
+    requested transcripts
+  wordcount: ""
+  notes: 'A Bachelor’s degree is required to enter this program. Please request transcripts from all institutions from which you have received a degree. These should be sent to SVA directly from the institution. For those applying for the January 15 priority deadline: You may submit your application even if your transcript request is in progress.'
+- 
+  req: English Proficiency
+  wordcount: ""
+  notes: >
+    Applicants whose primary language is not
+    English are required to submit proof of
+    language proficiency.
+- 
+  req: Interview
+  wordcount: ""
+  notes: >
+    Successful applicants will be invited
+    for an informal interview.
+- 
+  req: No GRE is required
+  wordcount: ""
+  notes: ""
+
+----
+
+Addnotes: Please also note that if you are accepted for 2023-24, you may defer your acceptance for one academic year (to enroll 2024-25) without reapplying.
+
+----
+
+Timetitle: Timeline
+
+----
+
+Dates:
+
+- 
+  date: Year-round
+  event: >
+    We accept applications on a rolling
+    basis, as space allows.
+  enddate: Dec 16
+- 
+  date: June 5-16
+  event: 'Design Writing & Research Summer Intensive'
+- 
+  date: September 5
+  event: Fall classes begin
+- 
+  date: Fall Semester
+  event: Attend a departmental info session
+  enddate: ""
+- 
+  date: January 15
+  event: >
+    Priority application deadline (first
+    consideration for scholarship funding)
+  enddate: ""
+
+----
+
+Infotitle: Info Sessions

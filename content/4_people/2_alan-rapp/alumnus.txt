@@ -1,0 +1,31 @@
+Title: Alan Rapp
+
+----
+
+Gradyear: 2010
+
+----
+
+Hometown: 
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://vimeo.com/11656809
+
+----
+
+Img:
+
+- image-library/image103.jpg

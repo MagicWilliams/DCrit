@@ -1,0 +1,31 @@
+Title: Avinash Rajagopal
+
+----
+
+Gradyear: 2011
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @avirajagopal
+
+----
+
+Link: https://twitter.com/avirajagopal
+
+----
+
+Thesis: https://vimeo.com/23600334
+
+----
+
+Img:
+
+- image-library/image8.jpg

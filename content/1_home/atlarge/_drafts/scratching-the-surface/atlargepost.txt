@@ -1,0 +1,99 @@
+Title: Scratching the Surface
+
+----
+
+Mediaselect: Video
+
+----
+
+Img: 
+
+----
+
+Vid:
+
+input: https://vimeo.com/726054652
+media:
+  title: 'Roshita Thomas, "Scratching The Surface: The Lifecycle of Record Album Design"'
+  description: |
+    Strata–gies:
+    The D-Crit Class of 2022 Graduate Thesis Symposium
+    Tuesday, May 17th, 2022 6-8pm
+    SVA Theatre
+    
+    
+    In 12-minute presentations, each of our six MA candidates show their strategy of research and questioning to uncover the layers of meaning behind designed systems, experiences, and products that influence how we move about in the world.
+  url: https://vimeo.com/726054652
+  type: video
+  tags: [ ]
+  image: >
+    https://i.vimeocdn.com/video/1461662731-3caf60e395d8d58a135d541c18507517580ac73fe8fe6eab3eeeded994406472-d_295x166
+  imageWidth: 295
+  imageHeight: 166
+  images:
+    - 
+      url: >
+        https://i.vimeocdn.com/video/1461662731-3caf60e395d8d58a135d541c18507517580ac73fe8fe6eab3eeeded994406472-d_295x166
+      width: 295
+      height: 166
+      size: 48970
+      mime: image/jpeg
+    - 
+      url: 'https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1461662731-3caf60e395d8d58a135d541c18507517580ac73fe8fe6eab3eeeded994406472-d_1280x720&src1=https%3A%2F%2Ff.vimeocdn.com%2Fimages_v6%2Fshare%2Fplay_icon_overlay.png'
+      width: 1280
+      height: 720
+      size: 921600
+      mime: image/png
+  code: '<iframe src="https://player.vimeo.com/video/726054652?h=c2d9374647&amp;app_id=122963" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Roshita Thomas, &amp;quot;Scratching The Surface: The Lifecycle of Record Album Design&amp;quot;" referrerpolicy="strict-origin-when-cross-origin" width="426" height="240" frameborder="0"></iframe>'
+  feeds: [ ]
+  width: 426
+  height: 240
+  aspectRatio: 56.338
+  authorName: SVA MA Design Research
+  authorUrl: https://vimeo.com/dcrit
+  providerIcon: >
+    https://i.vimeocdn.com/favicon/main-touch_180
+  providerIcons:
+    - 
+      url: https://vimeo.com/favicon.ico
+      width: 32
+      height: 32
+      size: 1024
+      mime: image/vnd.microsoft.icon
+    - 
+      url: >
+        https://i.vimeocdn.com/favicon/main-touch_180
+      width: 180
+      height: 180
+      size: 32400
+      mime: image/jpeg
+    - 
+      url: >
+        https://f.vimeocdn.com/images_v6/favicon.ico?69575b8802277884109858847e5228b058fe7285
+      width: 32
+      height: 32
+      size: 1024
+      mime: image/vnd.microsoft.icon
+    - 
+      url: >
+        https://i.vimeocdn.com/favicon/main-touch_144
+      width: 144
+      height: 144
+      size: 20736
+      mime: image/jpeg
+  providerName: Vimeo
+  providerUrl: https://vimeo.com/
+  publishedTime: null
+  license: null
+
+----
+
+Featureline: 
+
+----
+
+Link: 
+
+----
+
+Vidcaption: Roshita Thomas (D-Crit ‘22) presents “Scratching The Surface: The Lifecycle of Record Album Design” at Strata-gies: The D-Crit Class of 2022 Graduate Thesis Symposium.

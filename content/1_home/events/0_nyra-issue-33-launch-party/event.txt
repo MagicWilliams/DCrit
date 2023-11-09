@@ -1,0 +1,51 @@
+Title: NYRA Issue #33 Launch Party
+
+----
+
+Infosession: false
+
+----
+
+Headline: Publication-in-residence NYRA Issue #33 Launch Party
+
+----
+
+Date: 2023-02-03
+
+----
+
+Starttime: 7:00 pm
+
+----
+
+Endtime: 
+
+----
+
+Shortdescrip: Our D-Crit publication-in-residence NYRA launches Issue #33 this Friday at DSK in Brooklyn. This issue features writing by faculty including Karrie Jacobs, Mimi Zeiger, and Eric Schwartau.
+
+----
+
+Fulldescrip: [{"content":{"text":"<p>Our D-Crit publication-in-residence NYRA launches Issue #33 this Friday at DSK in Brooklyn. This issue features writing by faculty members Karrie Jacobs and Eric Schwartau.<\/p><p>Contributors include Ian Volner, Karrie Jacobs, Piper French, Sasha Frere-Jones, Gideon Fink Shaprio, Thomas de Monchaux, Phillip Denny, James Wines, Yasmin Nair, Charlie Dulik, Mimi Zeiger, Sean Tatol, Sophie Haigney, Ana Karina Zatarain, Alex Kitnick, Clare Fentress, Samuel Medina, and Allison Hewitt Ward.<\/p><p>Some of them will be there on Friday, some of them will actually read their work live.<\/p><p>Topics range from supertalls\u2019 weird relationship to New York to Blair Kamin\u2019s weird relationship to Chicago to Reiner de Graaf\u2019s weird relationship with Rem Koolhaas. Actually just about everybody\u2019s weird relationship to Rem Koolhaas. There are at least two articles about malls. Handicap accessibility for the acropolis is discussed, as well as housing accessibility for New York. And there is a big art surprise.<\/p><p>DSK Brooklyn: 710 Fulton St, Brooklyn, NY 11217<\/p><p>7pm doors, 8pm readings<\/p><p><a href=\"https:\/\/substack.com\/redirect\/a3913d8b-1ec3-4f36-a655-60e6dcd791c8?j=eyJ1Ijoid3hocDgifQ.w45L5XMPFqVJGvSBOyIewRtTSvPtFccmmfqkkwBUUNs\" target=\"_blank\" rel=\"noopener noreferrer\">RSVP here<\/a>.<\/p>"},"id":"d7375b97-dd78-4795-8490-e0bf17a4452d","isHidden":false,"type":"text"}]
+
+----
+
+Link: https://www.eventbrite.com/e/new-york-reviews-architecture-issue-33-launch-party-tickets-523140546457?utm_source=substack&utm_medium=email
+
+----
+
+Linkhost: 
+
+----
+
+Documentation: 
+
+----
+
+Watchhost: 
+
+----
+
+Img:
+
+- image-library/unnamed.jpeg

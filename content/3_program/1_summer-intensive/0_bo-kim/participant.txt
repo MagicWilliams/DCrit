@@ -1,0 +1,27 @@
+Title: Bo Kim
+
+----
+
+Role: User Experience Designer
+
+----
+
+Bio:
+
+Bo Kim (she/her) is a User Experience Designer based in New York specializing in consumer and enterprise products in digital health. Her work at the Memorial Sloan Kettering Cancer Center has spanned from overseeing the design strategy of health consumer products to shaping the user experience of the clinical trial digitization process. Previous to her current role, she designed oncology data analytics products at Tempus, a biotech unicorn funded by Google. 
+
+She received her design and research training at Carnegie Mellon University, with an interdisciplinary major in Ethics, History, and Public Policy (EHPP) and Art, and an additional major in Human-Computer Interaction. From this background, her interests continue to evolve around digital inclusion, health equity, design justice, and accessibility.
+
+----
+
+Contact: 
+
+----
+
+Img:
+
+- image-library/bokim.png
+
+----
+
+Imgcap: 

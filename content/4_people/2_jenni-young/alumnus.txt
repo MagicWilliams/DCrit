@@ -1,0 +1,31 @@
+Title: Jenni Young
+
+----
+
+Gradyear: 2016
+
+----
+
+Hometown: San Francisco, California
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @thenontraveller
+
+----
+
+Link: https://twitter.com/thenontraveller
+
+----
+
+Thesis: https://vimeo.com/171804532
+
+----
+
+Img:
+
+- image-library/image82.png

@@ -1,0 +1,32 @@
+Title: Derrick Mead
+
+----
+
+Gradyear: 2012
+
+----
+
+Hometown: Red Hook, NY
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://derrickmead.co
+
+----
+
+Thesis: https://vimeo.com/41903597
+
+----
+
+Img:
+
+- >
+  image-library/200301_derrick_bykatielevinephoto_-7156crop-derrick-mead.jpg

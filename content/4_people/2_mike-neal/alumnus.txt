@@ -1,0 +1,31 @@
+Title: Mike Neal
+
+----
+
+Gradyear: 2010
+
+----
+
+Hometown: 
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://vimeo.com/11658099
+
+----
+
+Img:
+
+- image-library/image64.jpg

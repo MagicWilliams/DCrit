@@ -1,0 +1,37 @@
+Title: Jennifer Kabat
+
+----
+
+Role: Writer and editor
+
+----
+
+Svapos: corefac
+
+----
+
+Bio: Jennifer Kabat’s *The Eighth Moon* on a 1840s socialist uprising in her town will be published by Milkweed Editions in Spring 2024. Half of a diptych, the second volume *Nightshining* will come out in 2025. Her work has been supported by numerous grants including a Silvers Foundation Grant and a Warhol Foundation Arts Writers Grant for her criticism. Her essays have appeared in *BOMB*, *Granta*, *Frieze*, *McSweeney’s*, *The Believer*, *Virginia Quarterly Review*, *LARB*, *New York Review*, *4 Columns* and the *White Review* and been anthologized in *Best American Essays*. She often collaborates with artists and contributes to museum catalogues. An apprentice herbalist, she lives in rural upstate New York and serves on her volunteer fire department.
+
+----
+
+Contact:
+
+- 
+  contacttype: Weblink
+  linktype: Website
+  linktext: ""
+  linkurl: https://www.jenniferkabat.com/
+
+----
+
+Lectures: 
+
+----
+
+Img:
+
+- image-library/jk-x-cj-edits-3.jpeg
+
+----
+
+Imgcap: 

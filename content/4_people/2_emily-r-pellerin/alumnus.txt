@@ -1,0 +1,32 @@
+Title: Emily R. Pellerin
+
+----
+
+Gradyear: 2019
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: https://www.emilyraepellerin.com/
+
+----
+
+Thesis: https://vimeo.com/341363458
+
+----
+
+Img:
+
+- >
+  image-library/erp__ph.-elissa-castles-emily-r.-pellerin.jpg

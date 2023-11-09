@@ -1,0 +1,31 @@
+Title: Molly Butcher
+
+----
+
+Gradyear: 2015
+
+----
+
+Hometown: San Francisco, California
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Designer & Writer
+
+----
+
+Link: http://mollybutcher.com
+
+----
+
+Thesis: 
+
+----
+
+Img:
+
+- image-library/image84.jpg

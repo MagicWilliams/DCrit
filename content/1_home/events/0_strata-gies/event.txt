@@ -1,0 +1,56 @@
+Title: STRATA-GIES
+
+----
+
+Infosession: false
+
+----
+
+Headline: STRATA-GIES: The D-Crit Class of 2022 Graduate Thesis Symposium
+
+----
+
+Date: 2021-07-23
+
+----
+
+Starttime: 12:30pm
+
+----
+
+Endtime: 
+
+----
+
+Shortdescrip: 
+
+----
+
+Fulldescrip: [{"content":{"text":"<p>In 12-minute presentations, each of our six MA candidates show their strategy of research and questioning to uncover the layers of meaning behind the designed systems, experiences, and products that influence how we move about in the world. We\u2019ll kick off the evening with a brief panel discussion with members of the Class of 2021.<\/p>"},"id":"54026156-4b1d-4c87-ac5b-3ad00762ff6e","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"\"Strata-gies\" Program"},"id":"08630755-c3bc-4935-8c56-c0aa967df1fd","isHidden":false,"type":"heading"},{"content":{"text":"<ul><li>5:30pm: Doors<\/li><li>6:00pm: Welcome, Molly Heintz, Program Chair<\/li><li>6:10pm: Class of 2021 \"Self\/Centered\" panel with Jon Key, Anwulika Oputa, Pune Dracker and Youyou Zhou moderated by Alex de Looz<\/li><li>6:40pm: Introduction to the class of 2022, Alex de Looz, Lead Thesis Advisor<\/li><li>6:45pm: Thesis Presentations, Class of 2022<\/li><li>8:00pm: Reception! SVA Theatre lobby<\/li><\/ul>"},"id":"934bb02b-7bc9-4658-a21f-2f611db88556","isHidden":false,"type":"list"},{"content":{"level":"h2","text":"Class of 2022 Thesis Presentations"},"id":"5cff2fc4-1a8e-4d49-a570-98dc9fc2e739","isHidden":false,"type":"heading"},{"content":{"text":"<ul><li>Andrew McQuiston, \"The Bulldozer in the Garden: Earthmoving &amp; Autonomous Futures\"<\/li><li>Brooke Viegut, \"Anonymous Intimacy: Designing Rage, Joy, Inclusion, and Connection in Live Entertainment\"<\/li><li>Roshita Thomas, \"Scratching The Surface: The Lifecycle of Record Album Design\"<\/li><li>Clara Gross, \"Startup City: How Business-driven Urban Plans Miss the Mark on Citymaking\"<\/li><li>Jared Dalcourt, \"StereoTypographic Specimens: The American Black Brute in Type &amp; Image\"<\/li><li>Cornelia Smith, \"Practice Makes Patients: Diagnosing the Design of the Pelvic Exam\"<\/li><\/ul>"},"id":"5c28cad0-b640-448b-bcb2-696fb528bcc9","isHidden":false,"type":"list"},{"content":{"text":"<p>Congrats Class of 2022!<\/p>"},"id":"7dbe0a9b-0a24-4bfa-90e3-35b25088d382","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Notes"},"id":"6a2a526c-16ce-4105-a5da-76e571d0d745","isHidden":false,"type":"heading"},{"content":{"text":"<p>A program designed by, edited by, and featuring the work of the Class of 2022 will be distributed at the event.<\/p><p>This event will be livestreamed here: <a href=\"https:\/\/youtu.be\/fHT1bgALKm0\" rel=\"noopener noreferrer\">https:\/\/youtu.be\/fHT1bgALKm0<\/a><\/p><p>You must show ID and proof of vaccine <em>and booster<\/em> to attend this event. Masks are currently required inside the theatre.<\/p>"},"id":"396a81b0-bb7b-4449-be75-89707d51a39a","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Additional details on COVID protocols"},"id":"4e98aced-e90a-4070-8b27-2ca1a961330d","isHidden":false,"type":"heading"},{"content":{"text":"<ul><li>All those entering SVA Theatre (including guests, students, and staff) need to be fully vaccinated with an FDA \/ WHO authorized COVID vaccine (listed here) and must show proof of vaccination upon entrance. \u201cFully vaccinated\u201d means at least 14 days past the final dose of the vaccine received, plus a booster shot for those eligible to receive it. (Recipients of the Pfizer or Moderna vaccines become eligible for a booster six months after their second dose, and recipients of the Johnson &amp; Johnson vaccine become eligible two months after their single dose.)<\/li><li>Those not yet eligible for a booster (or within two weeks of eligibility) will be able to enter provided they are two weeks past their second dose in a two-dose vaccine series or two weeks after receiving a single-dose vaccine. Children under the age of 12 do not need to show proof of a booster. <\/li><li>The only exception to the above will be for those who need reasonable accommodations due to a medical condition or sincerely held religious belief. Guests requesting an exemption must provide proof of the exemption, in addition to either a negative COVID PCR test taken within 72 hours of the event, or a negative COVID rapid antigen test taken within 6 hours of the event. At-home test results will not be accepted unless the test provides time-stamped, digital authentication of a negative result via an app, website, or email.<\/li><li>SVA students and staff should display the Clear4Work access badge upon entrance, along with their SVA ID. Non-SVA guests may present proof of vaccination (or a negative test, if applicable) on paper or a smartphone. Smartphone apps such as the NY State Excelsior Pass, NYC COVID Safe, CLEAR Health Pass, Docket (NJ), CT WiZ (CT), etc. are acceptable forms of proof and are preferred over physical (or photographs of) vaccination cards.<\/li><li>In addition to proof of vaccination, all guests 18 years or older must also present a government-issued photo ID, such as a driver\u2019s license or passport. The name on the ID must match the name on the proof of vaccination \/ negative test. Guests under 18 may use a school photo ID or must be accompanied by an adult who meets the above requirements.<\/li><\/ul>"},"id":"a7990041-ae45-45ba-99ba-9cda50e19970","isHidden":false,"type":"list"},{"content":{"level":"h3","text":"Masks"},"id":"64d6f043-8fc0-4b19-b800-00fe7f82357e","isHidden":false,"type":"heading"},{"content":{"text":"<ul><li>Everyone entering SVA Theatre must wear approved face coverings that cover the nose and mouth at all times. CDC guidelines state that bandanas, gaiters, or masks with vents\/valves are not approved. For those who do not have approved masks, SVA Theatre will provide masks free of charge (as supplies last).<\/li><li>Masks may be removed while speaking on stage, or briefly in order to drink water or other non-alcoholic beverages.<\/li><\/ul>"},"id":"39be60f4-efaa-4c89-80ae-f6ff93244d7e","isHidden":false,"type":"list"}]
+
+----
+
+Link: 
+
+----
+
+Linkhost: 
+
+----
+
+Documentation: https://youtu.be/fHT1bgALKm0
+
+----
+
+Watchhost: YouTube
+
+----
+
+Img:
+
+- >
+  image-library/dcrit-co22_stata_gies-lockup_black-2.png
+
+----
+
+Alttext: test

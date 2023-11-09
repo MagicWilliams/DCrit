@@ -1,0 +1,27 @@
+Title: Rachel Chang
+
+----
+
+Role: UX designer
+
+----
+
+Bio:
+
+Rachel Chang is a user experience designer based in Los Angeles. After studying communication design and human computer interaction at Carnegie Mellon, she has built digital tools across industries, from waste management to insurance to mobility. 
+
+Her experience in the tech industry led to an interest in the relationship between technology and society, how values and philosophies both dictate the design of technologies and are reinforced through its usage, and the structural forces that have shaped modern design methodologies.
+
+----
+
+Contact: 
+
+----
+
+Img:
+
+- image-library/headshot-2-250x250.jpeg
+
+----
+
+Imgcap: 

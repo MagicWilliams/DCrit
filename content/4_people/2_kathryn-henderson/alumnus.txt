@@ -1,0 +1,32 @@
+Title: Kathryn Henderson
+
+----
+
+Gradyear: 2010
+
+----
+
+Hometown: New York City/Los Angeles
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://hondocreative.com/
+
+----
+
+Thesis: 
+
+----
+
+Img:
+
+- >
+  image-library/fav2_v2_bw-1500x1500-katie-henderson.jpg

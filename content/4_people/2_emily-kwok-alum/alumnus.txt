@@ -1,0 +1,32 @@
+Title: Emily Kwok
+
+----
+
+Gradyear: 2023
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://www.youtube.com/watch?v=VfhKSWBdHkM
+
+----
+
+Img:
+
+- >
+  image-library/headshot_class_of_2023_emily-kwok-889x1200.jpeg

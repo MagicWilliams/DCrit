@@ -1,0 +1,32 @@
+Title: Lucas Albrecht
+
+----
+
+Gradyear: 2023
+
+----
+
+Hometown: 
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://www.youtube.com/watch?v=kvPJW_2ouac
+
+----
+
+Img:
+
+- >
+  image-library/headshot_class_of_2023_lucas-albrecht.jpeg

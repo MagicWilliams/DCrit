@@ -1,0 +1,32 @@
+Title: Esty Bagos
+
+----
+
+Gradyear: 2023
+
+----
+
+Hometown: Manila, Philippines
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://www.youtube.com/watch?v=u261ibuxO2I
+
+----
+
+Img:
+
+- >
+  image-library/headshot_class_of_2023_esty_bagos-1.jpeg

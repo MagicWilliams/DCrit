@@ -1,0 +1,13 @@
+title: Image Library
+icon: file-image
+status:
+  delete: false
+  url: false
+  unlisted: Unlisted
+  
+sections:
+  gallery:
+    label: Uploaded Images
+    type: files
+    layout: cards
+    search: true

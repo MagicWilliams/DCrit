@@ -1,0 +1,52 @@
+Title: Prem Krishnamurthy, "Department of Transformation"
+
+----
+
+Infosession: false
+
+----
+
+Headline: Prem Krishnamurthy, "Department of Transformation"
+
+----
+
+Date: 2023-04-25
+
+----
+
+Starttime: 12:00 pm
+
+----
+
+Endtime: 
+
+----
+
+Shortdescrip: "How might art and design help to develop a more equitable, diverse, and joyous world?" asks Prem Krishnamurthy.
+
+----
+
+Fulldescrip: [{"content":{"text":"<p>Our <em>How \u2013To<\/em>: series continues over lunch on April 25, with an informal chat with the founder of Department of Transformation, an itinerant workshop that practices collaborative tools for social change. Prem Krishnamurthy is an award-winning designer, author, and educator. His multifaceted work explores the role of art as an agent of transformation at an individual, collective, and structural level, manifesting in exhibitions, images, performances, publications, systems, talks, texts, and workshops. Join us to explore how Prem shapes his practice and habits to produce a wide array of fascinating work.<\/p><p><\/p><p>This spring, MA Design Research, Writing and Criticism presents <em>How-To:<\/em>, a series of talks, conversations, and symposia about design, how it is translated, and how it is transforming the world around us. Follow us on social media and subscribe to our email list for updates.<\/p><p><\/p><p>Prem Krishnamurthy is a designer, author, and educator. His multifaceted work explores the role of art as an agent of transformation at an individual, collective, and structural level. This manifests itself in exhibitions, images, performances, publications, systems, talks, texts, and workshops. He received the Cooper Hewitt National Design Award for Communications Design in 2015 and KW Institute for Contemporary Art\u2019s \u201cA Year With\u2026\u201d residency fellowship in 2018. His professional papers were acquired by Bard College\u2019s Center for Curatorial Studies in 2019.<\/p><p>He has curated several large-scale exhibitions including FRONT International 2022: <em>Oh, Gods of Dust and Rainbows<\/em>. His book-length epistolary essay, On Letters, was published in 2022. He currently directs Wkshps, a multidisciplinary design studio, and organizes Department of Transformation, an itinerant workshop that practices collaborative tools for social change. Previously, Prem founded the design studio Project Projects and the exhibition space P! in New York.<\/p>"},"id":"818cfbf6-45c4-4f19-a067-37141f51cc5e","isHidden":false,"type":"text"}]
+
+----
+
+Link: 
+
+----
+
+Linkhost: 
+
+----
+
+Documentation: https://www.youtube.com/watch?v=446XX7yO92c
+
+----
+
+Watchhost: YouTube
+
+----
+
+Img:
+
+- >
+  image-library/screen-shot-2023-05-09-at-3.59.37-pm.png

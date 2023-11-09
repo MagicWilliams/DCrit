@@ -1,0 +1,35 @@
+Title: StereoTYPOGRAPHIC
+
+----
+
+Headline: StereoTypographic: An Investigation of Representations of Race in the United States
+
+----
+
+Date: 2022-05-17
+
+----
+
+Author: Jared Dalcourt
+
+----
+
+Authorlink: 
+
+----
+
+Blurb: In the most common usage today, stereotypes are understood as “widely held but fixed and oversimplified images or ideas of a particular type of person or thing.” Walter Lippmann popularized the term as a metaphor in his 1922 book Public Opinion. He saw stereotypes as pictures in our heads that simplify reality: “[Stereotypes] may not be a complete picture of the world, but they are a picture of a possible world to which we are adapted.”³ He recognized that stereotypes have the ability to create a recognizable or iconic figure and, through making multiple copies, to imprint this image on the mind of the public.
+
+----
+
+Link: https://medium.com/strata-gies/stereotypographic-an-investigation-of-representations-of-race-in-the-united-states-4cf9a9f8d4d3
+
+----
+
+Img:
+
+- image-library/stereotypographic.gif
+
+----
+
+Authorselect: people/jared-dalcourt

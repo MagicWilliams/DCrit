@@ -1,0 +1,31 @@
+Title: Jonathan Key
+
+----
+
+Gradyear: 2021
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://morcoskey.com/
+
+----
+
+Thesis: https://vimeo.com/569160307
+
+----
+
+Img:
+
+- image-library/image40.jpg

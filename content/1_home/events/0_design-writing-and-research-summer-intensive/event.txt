@@ -1,0 +1,51 @@
+Title: Design Writing and Research Summer Intensive
+
+----
+
+Infosession: false
+
+----
+
+Headline: Design Writing and Research Summer Intensive
+
+----
+
+Date: 2023-06-05
+
+----
+
+Starttime: 10:00 am
+
+----
+
+Endtime: 
+
+----
+
+Shortdescrip: Join us online for our renowned two-week (link: https://designresearch.sva.edu/program/summer-intensive text: Summer Intensive), aimed at those who would like to refine their skills as thinkers, reporters and storytellers.
+
+----
+
+Fulldescrip: [{"content":{"text":"<p><\/p><p>This program offers methods and insights for understanding and writing compellingly about images, objects and spaces. Clear thinking, deep research and engaging expression are vital skills in any creative industry.<\/p><p>By the end of the two weeks, participants will have completed several pieces of writing, formulated ideas for stories, and garnered a robust set of tools and approaches for writing authoritatively and imaginatively about design.<\/p><p>Program dates: June 5\u201316, 2023<\/p><p>Tuition: $1800<\/p><p>(link: <a href=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSfSb1zFCDEdaQ7ZMh026dwYLRktdpm0F1hF47NvehTIldbxMQ\/viewform\" rel=\"noopener noreferrer\">https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSfSb1zFCDEdaQ7ZMh026dwYLRktdpm0F1hF47NvehTIldbxMQ\/viewform<\/a> text: Apply here!)<\/p>"},"id":"287db453-f66a-41e1-9abc-84c16e633d7c","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"New On-Site Offering!"},"id":"52e082bb-91f4-4c11-8286-484c4c9adebc","isHidden":false,"type":"heading"},{"content":{"text":"<p>Due to increased demand, we are excited to offer an on-site option for our renowned 2023 Design Writing and Research Summer Intensive program. In addition to online instruction from our renowned faculty, on-site participants will receive desk space in our bright and airy studio in the heart of Manhattan. So if you\u2019re in the New York area or would like to be, we invite you to live in the department this June.<\/p><p>On-site perks include: <\/p>"},"id":"97af657f-bfd1-4a19-a573-6f59707763c7","isHidden":false,"type":"text"},{"content":{"text":"<ul><li>24\/7 studio desk and printer access<\/li><li>In-person studio visits to New York design firms<\/li><li>Round-table talk with D\u2013Crit faculty member and design writer Steven Heller<\/li><li>Opportunity to observe editors of publication-in-residence The New York Review of Architecture produce their Summer issue #36<\/li><li>Meet fellow in-person participants and explore the city<\/li><li>Free access to SVA-partner museums<\/li><\/ul>"},"id":"fe1a9876-9f7b-4942-8cf8-ac7feb2ed756","isHidden":false,"type":"list"}]
+
+----
+
+Link: https://docs.google.com/forms/d/e/1FAIpQLSfSb1zFCDEdaQ7ZMh026dwYLRktdpm0F1hF47NvehTIldbxMQ/viewform
+
+----
+
+Linkhost: Google Form
+
+----
+
+Documentation: 
+
+----
+
+Watchhost: 
+
+----
+
+Img:
+
+- image-library/159_sva_2022.jpg

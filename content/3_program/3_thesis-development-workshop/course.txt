@@ -1,0 +1,30 @@
+Title: Thesis Development Workshop
+
+----
+
+Coursetitle: Thesis Development Workshop
+
+----
+
+Instructors:
+
+- 
+  instructor: people/margaret-arbanas
+- 
+  instructor: people/eric-schwartau
+
+----
+
+Semester: fall
+
+----
+
+Day: M
+
+----
+
+Time: 14:00:00
+
+----
+
+Descrip: Through group meetings and one-on-one consultations, each student will choose a thesis topic that is innovative and rich enough to withstand extended inquiry. Students will be guided through the process of identifying problems, developing critical questions, and developing primary and secondary sources as they embark upon research for their thesis portfolio. Students will explore research methodologies and resources related to design research as they develop a thesis research question and build a research dossier to support their writing.

@@ -1,0 +1,32 @@
+Title: Andrew McQuiston
+
+----
+
+Gradyear: 2022
+
+----
+
+Hometown: 
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://vimeo.com/726051196
+
+----
+
+Img:
+
+- >
+  image-library/a_mcquiston-headshot_sva-1.jpeg

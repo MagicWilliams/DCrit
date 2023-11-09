@@ -1,0 +1,31 @@
+Title: Natalie Dubois
+
+----
+
+Gradyear: 2019
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://www.natalieraedubois.com
+
+----
+
+Thesis: https://vimeo.com/341373679
+
+----
+
+Img:
+
+- image-library/image13.jpg

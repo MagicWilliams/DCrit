@@ -1,0 +1,341 @@
+.content-sm.apply {
+    width: 85%;
+}
+
+.content-sm {
+    max-width: unset;
+    flex: 4 0 60%;
+}
+
+.callout {
+    max-width: 50rem;
+}
+
+section.list li.nonote {
+    margin-bottom: 2.3rem;
+}
+
+.apply h3 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 0.5rem;
+}
+
+.apply .block-type-list li::before {
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+.apply ul {
+    font-size: 1.2rem;
+}
+
+#app-overview p:not(.callout) {
+    padding-right: 2rem;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+}
+
+.two-col .block-type-heading {
+    margin-top: 2rem;
+}
+
+#reqs p {
+    margin-bottom: 0;
+    max-width: 35rem;
+}
+
+section.list li {
+    margin-bottom: 2.3rem;
+}
+
+section.list li.nonote {
+    margin-bottom: 0.5rem;
+}
+
+#reqs li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 0.5rem;
+}
+
+.line {
+    flex: 0.5;
+    border-bottom: 1px solid var(--primary);
+    padding-top: 0.7rem;
+}
+
+.line.empty {
+    border-bottom: none;
+}
+
+.req {
+    flex: 1;
+    padding-right: 0.7rem;
+}
+
+div.bullet {
+    width: 1.5rem;
+    margin-right: 0.4rem;
+}
+
+#reqs h3 {
+    font-family: 'editorial-new', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.1rem;
+}
+
+section.list .reqnotes {
+    flex: 2;
+    padding-left: 1.5rem;
+}
+
+#timeline h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.slide.session > a {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.carousel.session {
+    margin-bottom: 0.5rem;
+}
+
+.slide.session {
+    padding: 0 0.5rem;
+}
+
+.carousel-image {
+    margin-bottom: 0.9rem;
+}
+
+.slide.session h3:hover {
+    text-decoration: underline;
+}
+
+.carousel-image {
+    order: -1;
+    height: 15vw;
+    position: relative;
+    border-radius: 3%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.1s ease-in-out;
+}
+
+.carousel-image:hover img {
+    transform: scale(1.05);
+}
+
+.carousel-button.session {
+    width: 3.2rem;
+}
+
+.carousel-button:not(.slick-disabled):hover svg, .carousel-button:not(.slick-disabled):active svg, .carousel-button:not(.slick-disabled):focus svg {
+    transform: scale(1.1);
+} 
+
+.carousel-button.slick-disabled svg path {
+    fill: #919191;
+}
+
+.session.custom-prev-button {
+    left: 0.5rem;
+}
+
+.session.custom-next-button {
+    right: 0.5rem;
+}
+
+.carousel-descrip {
+    margin-bottom: 0;
+}
+
+.carousel-controls {
+    margin-top: 2rem;
+}
+
+.footer_col3 > nav a {
+    color: var(--smalltext);
+
+}
+
+@media screen and (max-width: 480px) {
+    #app-overview {
+        padding-top: 0.5rem;
+    }
+
+    #app-overview > h2 {
+        border: 0;
+        clip: rect(0 0 0 0); 
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap; 
+        width: 1px;
+    }
+
+    .content-sm.apply {
+        width: 100%;
+    }
+
+    #app-overview p:not(.callout) {
+        padding-right: 0;
+    }
+
+    .apply h3 {
+        padding-bottom: 0.2rem;
+    }
+
+    .apply ul {
+        font-size: 1rem;
+    }
+
+    .two-col {
+        display: block;
+    }
+
+    .two-col .block-type-heading {
+        margin-bottom: 1rem;
+    }
+
+    #reqs li {
+        padding-right: 0;
+        flex-wrap: wrap;
+    }
+
+    .line {
+        display: none;
+    }
+
+    section.list .reqnotes {
+        flex-basis: 100%;
+        padding-left: 2.2rem;
+    }
+
+    .req {
+        margin-bottom: 1rem;
+        padding-right: 0;
+    }
+
+    #reqs h3 {
+        margin-bottom: 0;
+    }
+
+    section.list li {
+        margin-bottom: 2rem;
+    }
+
+    #timeline ul {
+        padding-left: 0.2rem;
+    }
+
+    #timeline li {
+        margin-bottom: 1.5rem;
+    }
+
+    div.bullet {
+        margin-right: 0.6rem;
+    }
+
+    #timeline h3 {
+        font-size: 1.5rem;
+    }
+
+    #overview p:not(.callout), .block-type-list, #app-overview p:not(.callout), #timeline p, #intensive p:not(.callout) {
+        font-size: 1.1rem;
+        margin-bottom: 1.1rem;
+    }
+
+    .block-type-heading {
+        margin: 3rem 0 0.7rem 0;
+    }
+
+    .block-type-heading h4 {
+        font-size: 1.2rem;
+        color: var(--smalltext);
+    }
+
+    .block-type-list li {
+        margin-bottom: 0.5rem;
+    }
+
+    span.bullet {
+        margin-right: 1.3em;
+        margin-top: -0.1rem;
+    }
+
+    .callout {
+        color: var(--smalltext);
+    }
+
+    .req p {
+        font-size: 0.8rem;
+        line-height: 1;
+    }
+
+    .carousel-image {
+        height: unset;
+        max-height: 55vw;
+    }
+
+    .slide.session {
+        padding: 0;
+    }
+    
+    #info-sessions {
+        padding-bottom: 4rem;
+    }
+
+    #info-sessions h2 {
+        margin-bottom: 1rem;
+    }
+
+    .carousel.session {
+        margin-bottom: 0.5rem;
+    }
+
+    .carousel-controls {
+        margin-top: 0;
+        padding-right: 0;
+    }
+
+    .session.carousel-button {
+        width: 2.5rem;
+    }
+
+    .session.custom-prev-button {
+        left: 0.2rem;
+    }
+
+    .session.custom-next-button {
+        right: 0.2rem;
+    }
+
+    .slick-slider {
+        margin-bottom: 10px;
+    }
+
+    span.email {
+        width: 0.9rem;
+    }
+}

@@ -1,0 +1,31 @@
+Title: John Kazior
+
+----
+
+Gradyear: 2019
+
+----
+
+Hometown: Malmö, Sweden
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: https://www.jpkazior.com/
+
+----
+
+Thesis: https://vimeo.com/341372630
+
+----
+
+Img:
+
+- image-library/image87.jpg

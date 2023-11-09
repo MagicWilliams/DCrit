@@ -1,0 +1,5 @@
+type: pages
+label: Events
+parent: site.find("events")
+template: event
+empty: No events yet

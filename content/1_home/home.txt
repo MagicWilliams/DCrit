@@ -1,0 +1,96 @@
+Title: Home
+
+----
+
+Toggle: Image
+
+----
+
+Heroselect:
+
+- image-library/landing.jpg
+
+----
+
+Embed: https://vimeo.com/726055533
+
+----
+
+Embedtitle: What advice do you have for the Class of 2022?
+
+----
+
+Oneliner: A two-semester master's exploring the contexts and consequences of design.
+
+----
+
+Learnmore:
+
+- 
+  buttontext: MA Program
+  buttonlink: https://designresearch.sva.edu/apply
+  acctext: Learn More about the Program
+- 
+  buttontext: Meet the Class of 2024
+  buttonlink: 'https://designresearch.sva.edu/people#students'
+  acctext: Meet the Class of 2024
+
+----
+
+Featuretype: Event
+
+----
+
+Customlabel: News
+
+----
+
+Event: home/events/criticism-research-and-the-essay-a-design-conversation
+
+----
+
+Read: 
+
+----
+
+Atlarge: home/atlarge/welcome-class-of-2024
+
+----
+
+Generic: 
+
+----
+
+Updatetitle: Updates
+
+----
+
+Readtitle: Reads
+
+----
+
+Eventtitle: Events
+
+----
+
+Embedtest: https://vimeo.com/726055533
+
+----
+
+Gallery: 
+
+----
+
+Hero: - landing.jpg
+
+----
+
+Text: Nulla tristique, lacus non porta gravida, tellus nunc mattis ex, quis iaculis tellus tellus ac turpis.
+
+----
+
+Img: 
+
+----
+
+Feature: None

@@ -1,0 +1,32 @@
+Title: Derek Edward Love
+
+----
+
+Gradyear: 2016
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://www.dereklove.com/
+
+----
+
+Thesis: https://vimeo.com/171804525
+
+----
+
+Img:
+
+- >
+  image-library/derek_love_color-derek-love.png

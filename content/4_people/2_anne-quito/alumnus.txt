@@ -1,0 +1,32 @@
+Title: Anne Quito
+
+----
+
+Gradyear: 2014
+
+----
+
+Hometown: Brooklyn/Barcelona
+
+----
+
+Linktype: insta
+
+----
+
+Linktext: @annequito
+
+----
+
+Link: https://www.instagram.com/annequito
+
+----
+
+Thesis: https://vimeo.com/94233034
+
+----
+
+Img:
+
+- >
+  image-library/anne-quito-_-2020-headshot-crop-anne-quito.png

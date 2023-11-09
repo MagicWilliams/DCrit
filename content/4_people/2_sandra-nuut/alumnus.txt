@@ -1,0 +1,32 @@
+Title: Sandra Nuut
+
+----
+
+Gradyear: 2014
+
+----
+
+Hometown: Tallinn, Estonia
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://sandranuut.com
+
+----
+
+Thesis: https://vimeo.com/94233900
+
+----
+
+Img:
+
+- >
+  image-library/f97b0b16-8293-4889-b10b-ede124e7c0dc-sandra-nuut.jpeg

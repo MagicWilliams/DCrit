@@ -1,0 +1,31 @@
+Title: Galina Yordanov
+
+----
+
+Gradyear: 2020
+
+----
+
+Hometown: Beirut, Lebanon
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @galinayordanov
+
+----
+
+Link: https://twitter.com/galinayordanov
+
+----
+
+Thesis: https://vimeo.com/432133241
+
+----
+
+Img:
+
+- image-library/image85.png

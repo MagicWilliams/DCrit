@@ -1,0 +1,31 @@
+Title: Tiffany Lambert
+
+----
+
+Gradyear: 2013
+
+----
+
+Hometown: 
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: https://www.tiffany-lambert.com/
+
+----
+
+Thesis: https://vimeo.com/66394603
+
+----
+
+Img:
+
+- image-library/image104.jpg

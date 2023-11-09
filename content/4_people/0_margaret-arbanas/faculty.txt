@@ -1,0 +1,41 @@
+Title: Margaret Arbanas
+
+----
+
+Role: Architect and author
+
+----
+
+Svapos: corefac
+
+----
+
+Bio:
+
+An architect and an author, Margaret Arbanas has worked on projects ranging from books to exhibitions to buildings to cities. Educated at Harvard University’s Graduate School of Design, Arbanas joined Rem Koolhaas’s Office for Metropolitan Architecture in Rotterdam and New York in 2003, where she was responsible for a number of projects in Europe, US and China. Highlights from her time at OMA include visual identity design for the European Union, content development for the exhibition *The Image of Europe*, timeline design for OMA’s retrospective exhibition and publication Content, and design of Cornell University’s new school of architecture. She returned to Harvard in 2009 to co-lead Koolhaas’ master thesis cohort in 2008.
+
+In 2009 Arbanas started her own practice, collaborating with numerous cultural institutions such as Guggenheim Museum , Harvard University, and Pentagram. Her work has been featured in the Venice Biennale of Architecture and various publications. 
+
+Arbanas was awarded grants from the Graham Foundation and American Institute of Architects to relocate to Cuba and research the 1959 revolution’s impact on architecture and culture. She is also the recipient of the Balokovic Scholarship from Croatian Academy of Sciences and Arts.
+
+----
+
+Lectures: 
+
+----
+
+Img:
+
+- image-library/margaret.jpeg
+
+----
+
+Firstname: Margaret
+
+----
+
+Lastname: Arbanas
+
+----
+
+Name: Margaret Arbanas

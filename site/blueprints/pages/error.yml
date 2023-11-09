@@ -1,0 +1,15 @@
+title: Error
+
+icon: flag
+fields:
+  info:
+    label: Info
+    text: Customize error page message here. This message will appear if a visitor attempts to navigate to a hidden page, or a page that does not exist.
+    width: 3/4
+  message:
+    label: Message
+    type: textarea
+    buttons:
+      - link
+    width: 3/4
+    placeholder: 'This page does not exist.'

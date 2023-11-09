@@ -1,0 +1,73 @@
+body {
+    --primary: #9f00ff;
+    --contrast: #ff0000;
+}
+
+body > .img-container {
+    max-height: unset;
+    height: 60vh;
+    margin-top: 5rem;
+    border-radius: 1vw;
+}
+
+body > .img-container > img {
+    object-position: top center;
+}
+
+section {
+    padding-top: 2rem;
+}
+
+section:last-of-type {
+    padding-bottom: 6rem;
+}
+
+.etext {
+    order: 1;
+    flex: 2;
+    max-width: 41rem;
+}
+
+.etext > p:first-of-type {
+    text-transform: uppercase;
+}
+
+.elinks {
+    flex: 0 1 30%;
+}
+
+a.button {
+    margin: 0;
+    padding: 0.4rem 1.5rem 0.1rem 1.5rem;
+}
+
+#eventname {
+    font-size: 2.1rem;
+    border-bottom: 3px solid var(--primary);
+    margin-bottom: 1.8rem;
+    padding-bottom: 1.5rem;
+}
+
+.etext .block-type-heading {
+    margin-top: 3rem;
+}
+
+.block-type-heading h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 0.2rem;
+}
+
+.block.block-type-list {
+    font-family: 'neue-montreal', sans-serif;
+    font-size: 1rem;
+}
+
+p {
+    line-height: 1.4;
+}
+
+a.button:focus {
+    color: var(--bg1);
+    background: var(--primary);
+}

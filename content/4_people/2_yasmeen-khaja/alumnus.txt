@@ -1,0 +1,32 @@
+Title: Yasmeen Khaja
+
+----
+
+Gradyear: 2019
+
+----
+
+Hometown: Kuwait
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://yasmeenkhaja.com/
+
+----
+
+Thesis: https://vimeo.com/341394524
+
+----
+
+Img:
+
+- >
+  image-library/screen-shot-2023-01-27-at-2.46.25-pm.png

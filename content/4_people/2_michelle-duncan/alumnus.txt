@@ -1,0 +1,31 @@
+Title: Michelle Duncan
+
+----
+
+Gradyear: 2021
+
+----
+
+Hometown: Brooklyn, New York
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://vimeo.com/569160666
+
+----
+
+Img:
+
+- image-library/image88.png

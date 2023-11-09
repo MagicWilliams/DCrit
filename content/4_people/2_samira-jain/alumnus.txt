@@ -1,0 +1,32 @@
+Title: Samira Jain
+
+----
+
+Gradyear: 2016
+
+----
+
+Hometown: Seattle, Washington
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: https://www.samirajain.com/
+
+----
+
+Thesis: https://vimeo.com/171804529
+
+----
+
+Img:
+
+- >
+  image-library/screen-shot-2023-01-27-at-2.41.02-pm.png

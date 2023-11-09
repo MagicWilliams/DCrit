@@ -1,0 +1,304 @@
+title: Summer Intensive
+icon: sun
+image:
+  query: false
+
+tabs:
+  main:
+    label: Hero Image
+    sections:
+      heroselect:
+        type: fields
+        fields:
+          hero:
+            label: Select/upload image
+            type: files
+            query: site.index.findBy("intendedTemplate", "mediagallery").images
+            empty: No image selected yet
+            layout: cards
+            uploads:
+              parent: site.index.findBy("intendedTemplate", "mediagallery")
+            multiple: false
+            width: 1/4
+  abouttab:
+    label: About
+    columns:
+      - width: 1/4
+        sections:
+          programdates:
+            type: fields
+            fields:
+              dates:
+                type: text
+                label: Program Dates
+                counter: false
+      - width: 3/4
+        sections:
+          about:
+            type: fields
+            fields:
+              headline:
+                type: textarea
+                label: Headline
+                buttons:
+                  - i
+                  - link
+                  - email
+              intro:
+                type: blocks
+                label: Introductory Text
+                fieldsets:
+                  text:
+                    extends: blocks/text
+                    fields:
+                      text:
+                        marks:
+                          - bold
+                          - italic
+                          - link
+                          - email
+                  - image
+                  - video
+              notes:
+                type: writer
+                label: Notes/Fine Print
+                marks:
+                  - bold
+                  - italic
+                  - link
+                  - email
+                nodes:
+                  - paragraph
+  curriculum:
+    label: Curriculum
+    columns:
+      - width: 1/4
+        sections:
+          currtitling:
+            type: fields
+            fields:
+              currtitle:
+                type: text
+                label: Section Title
+                counter: false
+          courselist:
+            type: pages
+            label: Summer Courses
+            empty: Add a course
+            template: summercourse
+      - width: 3/4
+        sections:
+          curriculumabout:
+            type: fields
+            fields:
+              curriculumintro:
+                type: textarea
+                label: Headline
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - email
+              curriculumabout:
+                label: About the Curriculum
+                type: blocks
+                fieldsets:
+                  text:
+                    extends: blocks/text
+                    fields:
+                      text:
+                        marks:
+                          - bold
+                          - italic
+                          - link
+                          - email
+                  - image
+                  - video
+  instructorstab:
+    label: Instructors
+    columns:
+      - width: 1/4
+        sections:
+          insttitling:
+            type: fields
+            fields:
+              instructortitle:
+                type: text
+                label: Section Title
+                counter: false
+      - width: 3/4
+        sections:
+          instructorlist:
+            type: fields
+            fields:
+              instructors:
+                type: structure
+                empty: No instructors added
+                fields:
+                  instructor:
+                    type: select
+                    options: query
+                    query: site.find('people').children.filterBy('template', 'in', ['faculty', 'lecturer'])
+  participantstab:
+    label: Participants
+    columns:
+      - width: 1/4
+        sections:
+          partitling:
+            type: fields
+            fields:
+              partitle:
+                type: text
+                label: Section Title
+                counter: false
+      - width: 3/4
+        sections:
+          pardrafts:
+            type: pages
+            label: Drafts
+            status: draft
+            template: participant
+            empty: Add a Summer Intensive participant
+          parpub:
+            label: Current Participants
+            type: pagesdisplay
+            query: page.children.template('participant').listed
+            sortBy: lastnamesort asc
+            image: page.img.toFile
+                          
+  testimonialstab:
+    label: Testimonials
+    columns:
+      - width: 1/4
+        sections:
+          testtitling:
+            type: fields
+            fields:
+              testtitle:
+                type: text
+                label: Section Title
+                counter: false
+      - width: 3/4
+        sections:
+          testimoniallist:
+            type: fields
+            fields:
+              testimonials:
+                type: structure
+                empty: No testimonials added
+                fields:
+                  testimg:
+                    label: Image
+                    type: files
+                    query: site.index.findBy("intendedTemplate", "mediagallery").images
+                    empty: No image selected yet
+                    layout: cards
+                    uploads:
+                      parent: site.index.findBy("intendedTemplate", "mediagallery")
+                    multiple: false
+                    width: 1/4
+                  testimonial:
+                    label: Testimonial text
+                    type: textarea
+                    size: medium
+                    buttons:
+                      - bold
+                      - italic
+                      - link
+                      - email
+                    width: 3/4
+  applytab:
+    label: Apply
+    columns:
+      - width: 1/4
+        sections:
+          apptitling:
+            type: fields
+            fields:
+              apptitle:
+                label: Section Title
+                type: text
+                counter: false
+      - width: 3/4
+        sections:
+          content:
+            type: fields
+            fields:
+              announcement:
+                type: textarea
+                label: Headline
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - email
+              appmethods:
+                type: structure
+                label: How to Apply
+                empty: No application methods added
+                columns:
+                  method:
+                    width: 1/4
+                  methodtext:
+                    width: 3/4
+                fields:
+                  method:
+                    type: select
+                    label: Method
+                    options:
+                      form: Online Form
+                      email: Email
+                      mail: Mail
+                  methodtext:
+                    type: textarea
+                    label: Explanatory Text
+                    buttons:
+                      - italic
+                      - email
+                      - ul
+                  formlink:
+                    type: url
+                    label: Form Link
+                    when:
+                      method: form
+              appinfo:
+                type: blocks
+                label: Details
+                empty: No content yet
+                fieldsets:
+                  heading:
+                    extends: blocks/heading
+                    fields:
+                      level:
+                        options:
+                          - h3
+                  text:
+                    extends: blocks/text
+                    fields:
+                      text:
+                        marks:
+                          - italic
+                          - link
+                          - email
+                  list:
+                    extends: blocks/list
+                    fields:
+                      text:
+                        nodes:
+                          - bulletList
+                        marks:
+                          - italic
+                          - link
+                          - email
+                  - image
+                  - video
+              furtherinfo:
+                type: textarea
+                label: Further Info
+                buttons:
+                  - italic
+                  - link
+                  - email
+
+
+

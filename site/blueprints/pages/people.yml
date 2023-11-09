@@ -1,0 +1,177 @@
+title: People
+icon: users
+image:
+  query: false
+tabs:
+  main:
+    label: Page Settings
+    sections:
+      heroselect:
+        type: fields
+        fields:
+          hero:
+            label: Select hero image
+            type: files
+            query: site.index.findBy("intendedTemplate", "mediagallery").images
+            empty: No image selected yet
+            layout: cards
+            uploads:
+              parent: site.index.findBy("intendedTemplate", "mediagallery")
+            multiple: false
+            width: 1/4
+          factoggle:
+            width: 1/4
+            label: Faculty Button Text
+            type: text
+            counter: false
+            required: true
+          stutoggle:
+            width: 1/4
+            label: Student Button Text
+            type: text
+            counter: false
+            required: true
+          alumtoggle:
+            width: 1/4
+            label: Alumni Button Text
+            type: text
+            counter: false
+            required: true
+
+  faculty:
+    label: Faculty & Lecturers
+    columns:
+      - width: 1/1
+        sections:
+          facdrafts:
+            type: pages
+            label: Drafts
+            status: draft
+            template: faculty
+            empty: Add a faculty member or lecturer
+      - width: 1/4
+        sections:
+          factitling:
+            type: fields
+            fields:
+              facsec:
+                type: text
+                counter: false
+                label: Section Title
+      - width: 3/4
+        sections:
+          facpub:
+            label: Core Faculty
+            type: pagesdisplay
+            query: page.children.template('faculty').filterBy('svapos', 'corefac')
+            sortBy: lastnamesort asc
+            image: page.img.toFile
+            max: 10
+      - width: 1/4
+        sections:
+          lecttitling:
+            type: fields
+            fields:
+              lecsec:
+                type: text
+                counter: false
+                label: Section Title
+      - width: 3/4
+        sections:
+          lecpub:
+            label: Lecturers (Critics, Readers, etc.)
+            type: pagesdisplay
+            query: page.children.template('faculty').filterBy('svapos', 'otherlec')
+            sortBy: lastnamesort asc
+            image: page.img.toFile
+            max: 10
+      - width: 1/1
+        sections:
+          headerinfo:
+            label: Guest Speakers & Studio Visits
+            type: info
+            text: The following sections are simple lists, where each entry does NOT have its own page.
+      - width: 1/2
+        sections:
+          guests:
+            type: fields
+            fields:
+              guestsec:
+                type: text
+                counter: false
+                label: Section Title
+              guestspeakers:
+                label: Guest Speaker List
+                type: list
+                marks:
+                  - bold
+                  - italic
+                  - link
+      - width: 1/2
+        sections:
+          visits:
+            type: fields
+            fields:
+              studiosec:
+                type: text
+                counter: false
+                label: Section Title
+              studiovisits:
+                label: Studio Visit List
+                type: list
+                marks:
+                  - bold
+                  - italic
+                  - link
+  students:
+    label: Students
+    columns:
+      - width: 1/4
+        sections:
+          studenttitling:
+            type: fields
+            fields:
+              studenttitle:
+                type: text
+                counter: false
+                label: Section Title
+      - width: 3/4
+        sections:
+          studrafts:
+            label: Drafts
+            type: pages
+            status: draft
+            template: student
+            empty: Add a current student
+            sortBy: lastnamesort asc
+            image: page.img.toFile
+          stupub:
+            label: Current Students
+            type: pages
+            status: listed
+            create: false
+            template: student
+            empty: No students added yet
+            sortBy: lastnamesort asc
+            image: page.img.toFile
+  alumni:
+    label: Alumni
+    sections:
+      alumdrafts:
+        label: Drafts
+        type: pages
+        status: draft
+        template: alumnus
+        empty: Add an alumnus
+        image: page.img.toFile
+        sortBy: lastnamesort asc
+      alumpub:
+        label: Alumni
+        type: pages
+        status: listed
+        template: alumnus
+        create: false
+        empty: No alumni added yet
+        sortBy: lastnamesort asc
+        image: page.img.toFile
+

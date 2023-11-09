@@ -1,0 +1,31 @@
+Title: Derek Bangle
+
+----
+
+Gradyear: 2017
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: 
+
+----
+
+Img:
+
+- image-library/image9.jpg

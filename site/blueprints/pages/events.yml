@@ -1,0 +1,26 @@
+title: Events
+
+status:
+  delete: false
+  url: false
+  status: false
+
+sections:
+  drafts:
+    label: Drafts
+    type: pages
+    status: draft
+    templates: event
+    empty: Create a new event
+  
+  published:
+    label: Published events
+    type: pages
+    status: listed
+    create: false
+    empty: No events yet
+    limit: 10
+    image: page.img.toFile
+    sortBy: date
+    flip: true
+    info: '{{ page.date }}'

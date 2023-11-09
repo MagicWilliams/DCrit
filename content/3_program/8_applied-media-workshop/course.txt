@@ -1,0 +1,30 @@
+Title: Applied Media Workshop
+
+----
+
+Coursetitle: Applied Media Workshop
+
+----
+
+Instructors:
+
+- 
+  instructor: people/leital-molad
+- 
+  instructor: people/eric-schwartau
+
+----
+
+Semester: spring
+
+----
+
+Day: Th
+
+----
+
+Time: 17:00:00
+
+----
+
+Descrip: This workshop is predicated on the idea that critical research and writing encompasses a rapidly expanding range of media and that a researcher, writer, editor, or scholar working in the contemporary design and media landscape needs to be proficient in multiple media formats beyond the written text. Students will learn how to translate their thinking about design, architecture and visual culture into the form of a compelling podcast. By the end of this workshop, students will have produced an eight-minute podcast for their thesis portfolio. Other media to be explored will be chosen by the department chair.

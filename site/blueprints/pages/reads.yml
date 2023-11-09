@@ -1,0 +1,25 @@
+title: Reads
+
+status:
+  delete: false
+  url: false
+  status: false
+
+sections:
+  drafts:
+    label: Drafts
+    type: pages
+    status: draft
+    templates: read
+    empty: Add new Medium article
+  
+  published:
+    label: Published Articles
+    type: pages
+    status: listed
+    create: false
+    empty: No articles yet
+    limit: 10
+    text: " {{ page.headline}}"
+    info: " {{ page.author }}"
+    image: page.img.toFile

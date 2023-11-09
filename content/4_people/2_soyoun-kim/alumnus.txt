@@ -1,0 +1,31 @@
+Title: Soyoun Kim
+
+----
+
+Gradyear: 2016
+
+----
+
+Hometown: South Korea
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @soyoun_k
+
+----
+
+Link: https://twitter.com/soyoun_k
+
+----
+
+Thesis: https://vimeo.com/171804523
+
+----
+
+Img:
+
+- image-library/image39.jpg

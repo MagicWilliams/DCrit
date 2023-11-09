@@ -1,0 +1,55 @@
+Title: Milton Glaser
+
+----
+
+Infosession: false
+
+----
+
+Headline: Milton Glaser and Walter Bernard with Anne Quito, ” Mag Men: Fifty Years of Making Magazines”
+
+----
+
+Date: 2019-12-03
+
+----
+
+Starttime: 6:30 pm
+
+----
+
+Endtime: 
+
+----
+
+Shortdescrip: 
+
+----
+
+Fulldescrip: [{"content":{"text":"<p>For more than fifty years, Walter Bernard and Milton Glaser have revolutionized the look of magazine journalism. In Mag Men, Bernard and Glaser recount their storied careers, offering insiders\u2019 perspective on some of the most iconic design work of the twentieth century. They look back at some of their most important and compelling projects, from the creation of New York magazine to redesigns of such publications as Time, Fortune, Paris Match, and The Nation, explaining how their designs complemented a story and shaped the visual identity of a magazine. Their talk will be moderated by the book's writer\/editor and D-Crit alum Anne Quito.<\/p><p>Walter Bernard has been the designer and art director of many of the best-known magazines and newspapers in the United States, including Time, Fortune, and The Atlantic. He coproduced the documentary Portraits of a Lady (2008). In 2013, he received the Henry R. Luce Lifetime Achievement award for his work at Time Inc.<\/p><p>Milton Glaser is one of the most important graphic designers of the twentieth century, responsible for many iconic designs, including the \u201cI \u2665 New York\u201d logo. In 2009, president Barack Obama awarded Milton the National Medal of Arts, the first graphic designer to receive the honor. He has written several books, including Milton Glaser: Graphic Design (1973), Art is Work (2008), Drawing Is Thinking (2008), and In Search of the Miraculous: Or, One Thing Leads to Another (2012).<\/p><p>Anne Quito is a journalist and design critic based in New York City. A staff reporter at Quartz, her coverage underscores the design angle of politics and business news. She is the inaugural recipient of the Steven Heller Prize for Cultural Commentary. Anne graduated from Georgetown University with a master\u2019s degree in Visual Culture in 2009 and is an alumna of the School of Visual Arts Design Criticism MFA where she wrote a thesis on the nation branding of the world's newest nation, South Sudan. She is the writer and editor of Mag Men.<\/p><p>This lecture is followed by a book signing and drinks reception, where you can take the opportunity to chat with our speakers as well as students and faculty of the program. This event free and open to the public, but you must RSVP to attend.<\/p><p>Please note seating is first-come, first-served and, though RSVPs are required, they do not guarantee admittance.<\/p>"},"id":"71fb8890-2ccc-4a12-9a4e-d38f70771ff2","isHidden":false,"type":"text"}]
+
+----
+
+Link: 
+
+----
+
+Linkhost: 
+
+----
+
+Documentation: https://www.youtube.com/watch?v=02DlO6YJkAg
+
+----
+
+Watchhost: YouTube
+
+----
+
+Img:
+
+- image-library/mag-men.jpeg
+
+----
+
+Alttext: test

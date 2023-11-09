@@ -1,0 +1,243 @@
+body {
+    --primary: #9f00ff;
+    --contrast: #ff0000;
+}
+
+#courseintro h3 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--primary);
+}
+
+#courseintro::after, #fall::after {
+    display: none;
+}
+
+#fall {
+    border-bottom: none;
+}
+
+.courses > h3 {
+    flex: 0 1 15%;
+    font-size: 2rem;
+}
+
+.courses > .content-wide {
+    flex: 0 1 85%;
+}
+
+.courses h4 {
+    flex: 1;
+    padding-right: 100px;
+    font-size: 1.5rem;
+}
+
+.courses button {
+    display: flex;
+}
+
+.bio-head.courseinfo {
+    flex: 1.4;
+}
+
+.coursemeta {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.person.bio.opened .coursemeta {
+    margin-bottom: 1.5rem;
+}
+
+.instructors, .coursemeta > p {
+    flex: 4;
+}
+
+.instructors > a {
+    margin-bottom: 0.2rem;
+    text-decoration: underline;
+    display: table;
+    font-size: 1rem;
+    font-family: 'neue-montreal', sans-serif;
+    color: #000;
+}
+
+.instructors > a:hover, .instructors > a:focus {
+    text-decoration-style: wavy;
+    color: var(--primary);
+}
+
+.person .bio-head.courseinfo {
+    display: block;
+}
+
+.coursedescrip {
+    width: 100%;
+}
+
+.courses .person.bio {
+    align-items: stretch;
+    padding: 1.8rem 0 2rem 0;
+}
+
+.courses .person.bio:first-of-type {
+    padding-top: 0;
+}
+
+.courses .person.bio {
+    cursor: auto;
+}
+
+.courses, #courseintro {
+    padding: 3rem 0;
+}
+
+.courses {
+    margin-bottom: 1rem;
+}
+
+#spring {
+    padding-bottom: 8rem;
+}
+
+#courseintro {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    border-bottom: none;
+}
+
+.callout a {
+    border-bottom: 2px solid var(--primary);
+}
+
+@media screen and (max-width: 1024px) {
+    #overview {
+        padding: 2rem 0 4rem 0;
+    }
+
+    #courseintro {
+        padding-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #overview {
+        padding: 0.5rem 0 3.5rem 0;
+    }
+
+    #overview h2 {
+        display: none;
+    }
+
+    .person.bio {
+        display: block;
+    }
+
+    .person.bio button {
+        padding: 0.1rem 0 0 0;
+    }
+
+    .person .accordion {
+        padding: 0.3rem 0.5rem 0 2rem;
+        margin: 0;
+        position: absolute;
+        top: 0.9rem;
+        right: 0;
+    }
+
+    .person svg {
+        width: 1.5rem;
+    }
+
+    .person {
+        margin-bottom: 0;
+    }
+
+    section:not(section.people):last-of-type {
+        padding-bottom: 0.8rem;
+    }
+
+    #courseintro {
+        padding-top: 1rem;
+        border-bottom: none;
+        padding-bottom: 2rem;
+    }
+
+    #courseintro h3 {
+        padding-bottom: 0.2rem;
+    }
+
+    .courses {
+        margin-bottom: 0.5rem;
+        padding-top: 0;
+        border-bottom: none;
+    }
+
+    .courses > h3 {
+        font-size: 1.8rem;
+        border-bottom: 1px solid var(--primary);
+        padding-bottom: 0.2rem;
+    }
+
+    .courses .person.bio {
+        padding: 0.9rem 0 0.8rem 0;
+        position: relative;
+    }
+
+    .courses .person.bio:first-of-type {
+        padding-top: 1rem;
+    }
+
+    .courses h4 {
+        padding-right: 2.5rem;
+    }
+
+    .person.bio button {
+        font-size: 1.3rem;
+        width: 100%;
+        line-height: 1.2;
+    }
+
+    #spring {
+        padding-bottom: 5rem;
+        margin-bottom: 0;
+        border-bottom: 3px solid var(--primary);
+    }
+
+    .course-descrip > p:last-of-type {
+        margin-bottom: 0.5rem;
+    }
+
+    .coursemeta > p {
+        display: none;
+    }
+
+    .bio-head p {
+        padding-right: 0;
+    }
+
+    .instructors {
+        margin-top: 0.3rem;
+    }
+
+    .instructors > a {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    .person.opened .bio-head {
+        padding-bottom: 0;
+    }
+
+    .person .bio-head.courseinfo {
+        display: none;
+    }
+
+    .person.opened .bio-head.courseinfo {
+        display: block;
+    }
+
+    .person.opened .bio-head p:last-of-type {
+        margin-bottom: 0.7rem;
+    }
+}

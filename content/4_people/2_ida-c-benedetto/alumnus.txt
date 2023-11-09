@@ -1,0 +1,31 @@
+Title: Ida C. Benedetto
+
+----
+
+Gradyear: 2016
+
+----
+
+Hometown: Brooklyn, New York
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @idamantium
+
+----
+
+Link: https://twitter.com/idamantium
+
+----
+
+Thesis: https://vimeo.com/171804533
+
+----
+
+Img:
+
+- image-library/image101.png

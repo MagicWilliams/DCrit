@@ -1,0 +1,32 @@
+Title: Julia van den Hout-Fisbein
+
+----
+
+Gradyear: 2012
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://www.originalcopy-nyc.com
+
+----
+
+Thesis: https://vimeo.com/40437888
+
+----
+
+Img:
+
+- >
+  image-library/julia-van-den-hout-photo-sean-davidson_lr-julia-van-den-hout.jpg

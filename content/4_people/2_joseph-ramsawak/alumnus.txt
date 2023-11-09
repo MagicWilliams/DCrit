@@ -1,0 +1,32 @@
+Title: Joseph Ramsawak
+
+----
+
+Gradyear: 2017
+
+----
+
+Hometown: Paris, France
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Linkedin
+
+----
+
+Link: https://www.linkedin.com/in/joseph-ramsawak
+
+----
+
+Thesis: 
+
+----
+
+Img:
+
+- >
+  image-library/e206da0e-23ce-4ea7-9e78-406d35f677e5-joseph-ramsawak.jpeg

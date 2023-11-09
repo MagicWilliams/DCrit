@@ -1,0 +1,51 @@
+Title: The 2023 Design Writing & Research Summer Intensive
+
+----
+
+Infosession: false
+
+----
+
+Headline: Application deadline: 2023 Online Design Writing & Research Summer Intensive
+
+----
+
+Date: 2010-04-01
+
+----
+
+Starttime: 11:59 pm
+
+----
+
+Endtime: 
+
+----
+
+Shortdescrip: Join us for our (link: https://designresearch-beta.sva.edu/program/summer-intensive text: two-week online Summer Intensive) aimed at those who would like to refine their skills as thinkers, researchers and storytellers.
+
+----
+
+Fulldescrip: [{"content":{"text":"<p>The Design Research, Writing and Criticism Department is pleased to offer our two-week online Summer Intensive aimed at those who would like to refine their skills as thinkers, researchers and storytellers. Find out more <a href=\"https:\/\/designresearch.sva.edu\/program\/summer-intensive\" target=\"_blank\" rel=\"noopener noreferrer\">here<\/a>.<\/p>"},"id":"ff65904a-d791-43a9-adcb-99f053f29417","isHidden":false,"type":"text"}]
+
+----
+
+Link: https://svacontinuingeducation.submittable.com/submit
+
+----
+
+Linkhost: Submittable
+
+----
+
+Documentation: 
+
+----
+
+Watchhost: 
+
+----
+
+Img:
+
+- image-library/041019_sva_-1059.jpg

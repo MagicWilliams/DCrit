@@ -1,0 +1,31 @@
+Title: Brigette Brown
+
+----
+
+Gradyear: 2013
+
+----
+
+Hometown: Los Angeles, California
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://vimeo.com/66421351
+
+----
+
+Img:
+
+- image-library/image80.jpg

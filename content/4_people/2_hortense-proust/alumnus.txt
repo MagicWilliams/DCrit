@@ -1,0 +1,31 @@
+Title: Hortense Proust
+
+----
+
+Gradyear: 2016
+
+----
+
+Hometown: 
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @hortense_proust
+
+----
+
+Link: https://twitter.com/hortense_proust
+
+----
+
+Thesis: https://vimeo.com/171804537
+
+----
+
+Img:
+
+- image-library/image14.jpg

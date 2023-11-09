@@ -1,0 +1,47 @@
+Title: Monica Nelson, "Edible Flowers"
+
+----
+
+Infosession: false
+
+----
+
+Headline: Monica Nelson, "Edible Flowers"
+
+----
+
+Date: 2022-05-27
+
+----
+
+Starttime: 12:30pm
+
+----
+
+Endtime: 
+
+----
+
+Shortdescrip: 
+
+----
+
+Fulldescrip: [{"content":{"text":"<p>In Edible Flowers: How, Why, and When We Eat Flowers, designer and writer Monica Nelson combines practical information, cultural history, personal narrative, and stunning photography into a portable primer. Organized alphabetically by the featured flowers\u2019 common names, the book spotlights little-known stories and detailed facts about more than 100 blooms from acacia to zinnia, with original essays by an array of cultural producers, including curator Alexandra Cunningham Cameron, artist Laila Gohar, writer Julia Sherman, and vegan chef and activist Tara Thomas, among other contributors.<\/p><p>Join us for a conversation between D-Crit alum Monica Nelson and faculty member Jennifer Kabat, as they explore questions posed in the title of Nelson\u2019s beautiful new book.<\/p><p>Monica Nelson is a writer and graphic designer in New York. She has developed strategic visual narratives for publications, cultural institutions, and brands, among them Gap, Kate Spade, and Levis, working with over 100 photographers\u2014some emerging, some Magnum. She was the founding creative and photo director of Wilder Quarterly, which fostered a floral-drenched view of the natural world. She is a graduate of the MA Design Research, Writing and Criticism program at the School of Visual Arts (2019).<\/p><p>Jennifer Kabat\u2019s essays have been included in Best American Essays, Granta, Frieze, BOMB, Harper\u2019s, McSweeney\u2019s, the Believer, Virginia Quarterly Review, the New York Review of Books, and the White Review. She\u2019s been awarded a Warhol Foundation Arts Writers Grant for her criticism. She often collaborates with artists, most recently Marlene McCarty and Kate Newby and her writing has been included in exhibitions at the Poor Farm (Waupaca, Wi); Arnolfini (Bristol UK) and Index (Stockholm, Sweden). An apprentice herbalist, she lives in rural upstate New York, teaches at the New School and SVA, and serves on her volunteer fire department. She was recently awarded a Silvers Foundation Grant, and is currently working on a memoir on time and socialist uprisings.<\/p>"},"id":"296b516e-f30f-4873-97a0-830567866024","isHidden":false,"type":"text"}]
+
+----
+
+Link: https://www.eventbrite.com/e/monica-nelson-edible-flowers-tickets-194566332137?aff=ebdsoporgprofile
+
+----
+
+Documentation: 
+
+----
+
+Img:
+
+- image-library/monica-nelson.png
+
+----
+
+Alttext: test

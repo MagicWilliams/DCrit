@@ -1,0 +1,31 @@
+Title: Bryn Smith
+
+----
+
+Gradyear: 2013
+
+----
+
+Hometown: 
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://vimeo.com/66387467
+
+----
+
+Img:
+
+- image-library/image36.jpg

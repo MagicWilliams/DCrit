@@ -1,0 +1,32 @@
+Title: Cultural Theory
+
+----
+
+Coursetitle: Cultural Theory
+
+----
+
+Instructors:
+
+- 
+  instructor: people/pierre-alexandre-de-looz
+
+----
+
+Semester: fall
+
+----
+
+Day: M
+
+----
+
+Time: 10:00:00
+
+----
+
+Descrip: This seminar exposes students to key issues in cultural theory and criticism, with a view to the study and interpretation of designed space and objects. Special consideration will be given to the development of critical positions that serve as a lens for reading the complexity of the built environment within a larger context. Sessions will focus on key texts drawn from disciplines that include philosophy, critical theory, art criticism, cultural studies, anthropology and media studies. These readings offer different perspectives on cultural economies, politics and systems of meaning, with a goal of helping students define their own critical framework for research.
+
+----
+
+Instructor: people/alicia-ajayi

@@ -1,0 +1,31 @@
+Title: Komal Kehar
+
+----
+
+Gradyear: 2018
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://vimeo.com/280990043
+
+----
+
+Img:
+
+- image-library/image50.jpg

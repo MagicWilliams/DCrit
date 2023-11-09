@@ -1,0 +1,31 @@
+Title: Monica Nelson
+
+----
+
+Gradyear: 2019
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: insta
+
+----
+
+Linktext: @monicacarmella
+
+----
+
+Link: https://www.instagram.com/monicacarmella/?hl=en
+
+----
+
+Thesis: https://vimeo.com/341397260
+
+----
+
+Img:
+
+- image-library/mn372-monica-nelson.jpg

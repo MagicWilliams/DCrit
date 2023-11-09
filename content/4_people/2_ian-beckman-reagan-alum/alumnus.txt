@@ -1,0 +1,32 @@
+Title: Ian Beckman Reagan
+
+----
+
+Gradyear: 2023
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://www.youtube.com/watch?v=2sGoOu9YR4A
+
+----
+
+Img:
+
+- >
+  image-library/headshot_class_of_2023_ian-reagan-1200x1200.jpeg

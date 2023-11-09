@@ -1,0 +1,31 @@
+Title: Becky Quintal
+
+----
+
+Gradyear: 2010
+
+----
+
+Hometown: Austin, Texas
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Linkedin
+
+----
+
+Link: https://www.linkedin.com/in/beckyquintal/
+
+----
+
+Thesis: https://vimeo.com/11656391
+
+----
+
+Img:
+
+- image-library/image37.jpg

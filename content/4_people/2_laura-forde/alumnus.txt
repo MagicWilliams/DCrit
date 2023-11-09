@@ -1,0 +1,31 @@
+Title: Laura Forde
+
+----
+
+Gradyear: 2010
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: https://lauraforde.com/
+
+----
+
+Thesis: https://vimeo.com/11555631
+
+----
+
+Img:
+
+- image-library/image105.jpg

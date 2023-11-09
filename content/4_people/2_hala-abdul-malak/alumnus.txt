@@ -1,0 +1,31 @@
+Title: Hala Abdul Malak
+
+----
+
+Gradyear: 2010
+
+----
+
+Hometown: Beirut, Lebanon
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://www.thedesigncritic.com/
+
+----
+
+Thesis: https://vimeo.com/11555198
+
+----
+
+Img:
+
+- image-library/hala-abdul-malak.jpeg

@@ -1,0 +1,51 @@
+Title: Pau Garcia - AI Anti-prompts
+
+----
+
+Infosession: false
+
+----
+
+Headline: Pau Garcia, Artificial Ignorance and Anti-prompts
+
+----
+
+Date: 2023-10-12
+
+----
+
+Starttime: 6:30 PM
+
+----
+
+Endtime: 
+
+----
+
+Shortdescrip: Following his visit last spring, media designer Pau Garcia returns to the D–Crit Studio Sessions with a talk and a hands-on exercise designed to instigate critical thinking about the ethical underpinnings of artificial intelligence. The session will provide a comprehensive look at the intricacies of AI ethics, focusing on ChatGPT. The first half delves into the theory behind machine learning and biases, laying the groundwork for the second part, where participants are exposed to hands-on practice with ChatGPT. Here, you'll explore how to create 'anti-prompts' that can actively work against AI biases, enabling more equitable interactions and designs.
+
+----
+
+Fulldescrip: 
+
+----
+
+Link: https://www.eventbrite.com/e/pau-garcia-artificial-ignorance-and-anti-prompts-tickets-729782648547?aff=oddtdtcreator
+
+----
+
+Linkhost: 
+
+----
+
+Documentation: 
+
+----
+
+Watchhost: 
+
+----
+
+Img:
+
+- image-library/img_7899.jpg

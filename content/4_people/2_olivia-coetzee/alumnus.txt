@@ -1,0 +1,31 @@
+Title: Olivia Coetzee
+
+----
+
+Gradyear: 2017
+
+----
+
+Hometown: Bay Area, California
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Graphic Designer
+
+----
+
+Link: http://www.oliviacoetzee.com
+
+----
+
+Thesis: 
+
+----
+
+Img:
+
+- image-library/olivia-coetzee.jpeg

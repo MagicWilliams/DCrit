@@ -1,0 +1,32 @@
+Title: Mark Dudlik
+
+----
+
+Gradyear: 2016
+
+----
+
+Hometown: Philadelphia, Pennsylvania
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://www.markdudlik.com
+
+----
+
+Thesis: https://vimeo.com/171804534
+
+----
+
+Img:
+
+- >
+  image-library/wa_jsknh_400x400-mark-dudlik.jpg

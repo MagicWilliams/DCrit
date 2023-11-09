@@ -1,0 +1,320 @@
+header, footer, h1 {
+    --primary: var(--toggle1);
+}
+
+button.menu {
+    border: 3px solid #000;
+    color: #000;
+}
+
+button.menu:hover {
+    color: var(--bg1);
+    background: #000;
+}
+
+.alum-text {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.alum .person > .img-container {
+    overflow: hidden;
+}
+
+.person > .img-container > img {
+    width: 100%;
+}
+
+.person.bio > .img-container {
+    max-height: 85px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.person {
+    padding-bottom: 0.5rem;
+}
+
+.person.bio.opened > .img-container {
+    max-height: unset;
+}
+
+@media screen and (max-width: 480px) {
+    button.menu {
+        border: 2px solid #000;
+    }
+
+    .people-nav {
+        order: -1;
+        padding: 0 0.5rem;
+        margin-bottom: 1rem;
+        margin-top: 0.4rem;
+    }
+
+    .people-toggle {
+        font-size: 1.2rem;
+        padding: 0.2rem 0 0 0;
+        line-height: 1.4;
+    }
+
+    .people-nav li:nth-of-type(1) {
+        padding-right: 0.1rem;
+    }
+
+    .people-nav li:nth-of-type(2) {
+        padding: 0 0.15rem;
+    }
+
+    .people-nav li:nth-of-type(3) {
+        padding-left: 0.1rem;
+    }
+
+    #toggle1 {
+        color: var(--toggle1);
+        border: 2px solid var(--toggle1);
+    }
+
+    #toggle2 {
+        border: 2px solid var(--toggle2);
+    }
+
+    #toggle3 {
+        border: 2px solid var(--smalltext);
+    }
+
+    #toggle3:hover, #toggle3.active {
+        background: var(--smalltext);
+    }
+
+    #people-img.img-container img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #people-img {
+        max-height: 23vh;
+        overflow: hidden;
+    }
+
+    .facsection {
+        display: block;
+        margin-bottom: 4.5rem;
+    }
+
+    #faculty .facsection:first-of-type {
+        margin-bottom: 3.5rem;
+    }
+
+    #faculty h3, #students h3 {
+        border-bottom: 1px solid var(--primary);
+        padding-right: 0;
+        padding-bottom: 13px;
+        padding-top: 5px;
+    }
+
+    .person {
+        padding-top: 12px;
+        padding-bottom: 6px;
+        margin-bottom: 0;
+    }
+
+    .person svg, .facsection.list svg {
+        width: 1.5rem
+    }
+
+    .person.bio.opened {
+        flex-wrap: wrap;
+        padding-top: 0.5rem;
+    }
+
+    .person.opened .bio {
+        flex-basis: 100%;
+    }
+
+    .person.bio > .img-container {
+        flex: 1.5;
+    }
+
+    .person.bio.opened > .img-container {
+        flex-basis: 100%;
+        padding: 0;
+    }
+
+    .person > .img-container > img {
+        border-radius: 10%;
+    }
+
+    .person.opened > .img-container > img {
+        border-radius: 3%;
+    }
+
+    .img-placeholder {
+        margin-bottom: 7px;
+    }
+
+    .person.bio button {
+        padding: 0;
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .person.bio.opened button {
+        font-size: 1.8rem;
+    }
+
+    .accordion, .facsection.list .accordion {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .people .person .accordion {
+        padding: 0.5rem 0.7rem 0.5rem 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .bio-head {
+        position: relative;
+        display: block;
+        padding-left: 0.5rem;
+    }
+
+    .person.opened .bio-head {
+        padding: 0.3rem 0 1.5rem 0;
+    }
+
+
+    .bio-head h4 {
+        padding-right: 2.5rem;
+        font-size: 1.3rem;
+    }
+
+    .bio-head p {
+        color: var(--primary);
+        font-size: 0.9rem;
+        padding-right: 3.5rem;
+        margin-top: -0.2rem;
+        line-height: 1.1;
+    }
+
+    .bio-text {
+        width: 100%;
+    }
+
+    .bio-text > p:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .person.opened .bio-head p {
+        font-size: 1rem;
+        margin-top: -0.1rem;
+    }
+
+    .facsection.list {
+        position: relative;
+    }
+
+    .people .person .accordion {
+        padding: 0.3rem 0.7rem 1.5rem 0;
+    }
+
+
+    .facsection.list .accordion {
+        padding: 1.6rem 0.7rem 1.6rem 0;
+    }
+
+    .facsection.list ul {
+        column-count: 1;
+        column-gap: 0;
+        padding: 0;
+    }
+
+    .facsection.list li {
+        margin-bottom: 1rem;
+    }
+
+    .facsection.list.opened ul {
+        padding-top: 0;
+    }
+
+    #faculty .facsection.list h3 {
+        border-bottom: none;
+        padding: 0;
+    }
+
+    #faculty.active {
+        padding-bottom: 0;
+    }
+    
+    #studio ul {
+        column-count: 1;
+    }
+
+    .main-content {
+        padding-bottom: 0;
+    }
+
+    #people-img.img-container {
+        margin: 0 0.6rem;
+    }
+
+    #people-img.img-container img {
+        border-radius: 2vw;
+        width: 100%;
+    }
+
+    #alumni {
+        padding-bottom: 0.2rem;
+    }
+
+    .alum .person {
+        flex: 0 1 100%;
+        padding-top: 0;
+        align-items: flex-start;
+        padding-bottom: 0.8rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .alum .person:last-of-type {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+
+    .alum .person h3 {
+        text-align: left;
+        padding-bottom: 0.1rem;
+    }
+
+    .alum-text {
+        padding-left: 1rem;
+        display: block;
+    }
+
+    .alum-info p {
+        line-height: 1.2;
+        font-size: 0.8rem;
+    }
+
+    .alum-info a.external-link {
+        font-size: 0.9rem;
+    }
+
+    .alum .person > .img-container {
+        width: 85px;
+        height: 85px;
+        max-height: unset;
+        border-radius: 2vw;
+        overflow: hidden;
+    }
+
+    .alum .person > .img-container > img {
+        max-width: unset;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0;
+    }
+}

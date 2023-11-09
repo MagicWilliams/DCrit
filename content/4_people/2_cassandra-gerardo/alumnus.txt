@@ -1,0 +1,31 @@
+Title: Cassandra Gerardo
+
+----
+
+Gradyear: 2018
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: https://www.cassandracortezdesign.com/
+
+----
+
+Thesis: https://vimeo.com/280990061
+
+----
+
+Img:
+
+- image-library/image48.jpg

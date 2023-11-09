@@ -1,0 +1,44 @@
+Title: Jon Key
+
+----
+
+Role: Artist and designer
+
+----
+
+Svapos: corefac
+
+----
+
+Bio:
+
+Jon(athan) Key is an artist, designer, and writer originally from Seale, Alabama. After receiving his BFA from RISD, Jon began his design career at Grey Advertising in NYC before moving on to work with HBO, Nickelodeon, and The Public Theater. Now he is co-founder of the Brooklyn–based design studio Morcos Key with Wael Morcos. As an educator, Jon has taught at MICA, Parsons, and currently teaches at Cooper Union and SVA. Jon is also a Co-Founder and Design Director of Codify Art, a multidisciplinary collective dedicated to creating, producing, supporting, and showcasing work by artists of color, particularly women, queer, and trans artists of color. Jon was selected for Forbes 30 under 30 Art and Style list for 2020 and was the Frank Staton Chair in Graphic Design at Cooper Union 2018-2019. His work has been featured in Jeffery Deitch Gallery NYC, the Armory Show, The New York Times, The Washington Post and The Atlantic.
+
+He holds an MA in Design Research, Writing and Criticism from SVA (Class of 2021). He co-teaches Approaches to Design History, Part II with Alicia Ajayi in the Fall Semester.
+
+@jonkey13
+
+----
+
+Contact:
+
+- 
+  contacttype: Weblink
+  linktype: Instagram
+  linktext: @jkey13
+  linkurl: https://www.instagram.com/jkey13/
+
+----
+
+Lectures: 
+
+----
+
+Img:
+
+- >
+  image-library/jonathan_key_headshot-250x250.jpg
+
+----
+
+Imgcap: 

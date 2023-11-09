@@ -1,0 +1,31 @@
+Title: Chappell Ellison
+
+----
+
+Gradyear: 2010
+
+----
+
+Hometown: 
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://www.chappellellison.com/
+
+----
+
+Thesis: https://vimeo.com/11657164
+
+----
+
+Img:
+
+- image-library/image27.jpg

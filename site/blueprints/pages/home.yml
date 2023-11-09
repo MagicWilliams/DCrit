@@ -1,0 +1,250 @@
+title: Homepage
+icon: home
+tabs:
+  landing:
+    label: Landing
+    icon: home
+    columns:
+      - width: 1/4
+        sections:
+          opt:
+            type: fields
+            fields:
+              toggle:
+                label: Image or video hero?
+                type: radio
+                options:
+                  - Image
+                  - Video
+              heroselect:
+                label: Select hero image
+                type: files
+                empty: No image selected yet
+                layout: cards
+                query: site.index.findBy("intendedTemplate", "mediagallery").images
+                uploads:
+                  parent: site.index.findBy("intendedTemplate", "mediagallery")
+                multiple: false
+                when:
+                  toggle: Image
+              embed:
+                type: url
+                label: Embed hero video
+                when:
+                  toggle: Video
+              embedtitle:
+                type: text
+                label: Video Title
+                help: Required for accessibility. Provides information to screen readers on the content of the video.
+                counter: false
+                when:
+                  toggle: Video
+      - width: 3/4
+        sections:
+          text:
+            type: fields
+            fields:
+              oneliner:
+                required: true
+                type: textarea
+                label: One-Liner
+                buttons:
+                  - italic
+                  - link
+              learnmore:
+                type: structure
+                label: Shortcut Nav Buttons
+                empty: No buttons added
+                columns:
+                  buttontext:
+                    width: 1/3
+                  buttonlink:
+                    width: 2/3
+                fields:
+                  buttontext:
+                    type: text
+                    label: Button Text
+                    counter: false
+                    width: 1/4
+                  buttonlink:
+                    label: Link
+                    type: url
+                    width: 3/4
+                  acctext:
+                    type: text
+                    label: Accessible Description
+                    counter: false
+                    help: This text provides a useful description of the link to screen readers, e.g. "Learn More about the Program" or "Learn More about Applying to D-Crit".
+
+  feature:
+    label: Feature
+    icon: star-outline
+    columns:
+      opt:
+        width: 1/4
+        fields:
+          featuretype:
+            type: radio
+            label: Feature Type
+            options:
+              - None
+              - Update
+              - Read
+              - Event
+              - Custom
+          customlabel:
+            label: Feature Label
+            type: text
+            before: Featured
+            when:
+              featuretype: Custom
+            help: Section label in the pattern "Featured ________". If left blank, Custom Feature posts will read "Featured Content."
+      main:
+        width: 3/4
+        fields:
+          event:
+            label: Featured Event
+            type: select
+            options: query
+            query: site.index.findBy("intendedTemplate", "events").children.listed
+            when:
+              featuretype: Event
+          
+          read:
+            label: Featured Read
+            type: select
+            options: query
+            query: site.index.findBy("intendedTemplate", "reads").children.listed
+            when:
+              featuretype: Read
+          atlarge:
+            label: Featured Update
+            type: select
+            options: query
+            query: site.index.findBy("intendedTemplate", "atlarge").children.listed
+            when:
+              featuretype: Update
+          generic:
+            label: Custom Feature Content
+            type: blocks
+            when:
+              featuretype: Custom
+            fieldsets:
+              heading:
+                extends: blocks/heading
+                fields:
+                  level:
+                    default: "h3"
+                    options:
+                      - h3
+              text:
+                extends: blocks/text
+                fields:
+                  text:
+                    marks:
+                      - bold
+                      - italic
+                      - link
+                      - email
+              - image
+              - video
+  atlarge:
+    label: Updates
+    icon: bell
+    columns:
+      - width: 1/4
+        sections:
+          updatetitling:
+            type: fields
+            fields:
+              updatetitle:
+                label: Section Title
+                type: text
+                counter: false
+      - width: 3/4
+        sections:
+          instadrafts:
+            type: pages
+            label: Drafts
+            template: atlargepost
+            parent: site.index.findBy("intendedTemplate", "atlarge")
+            status: draft
+            empty: Add a post
+          instaposts:
+            type: pages
+            label: Published
+            parent: site.index.findBy("intendedTemplate", "atlarge")
+            status: listed
+            layout: cards
+            image:
+              query: page.img.toFile
+              ratio: 1/1
+              cover: true
+  reads:
+    label: Reads
+    icon: book
+    columns:
+      - width: 1/4
+        sections:
+          readstitling:
+            type: fields
+            fields:
+              readtitle:
+                label: Section Title
+                type: text
+                counter: false
+      - width: 3/4
+        sections:
+          readdrafts:
+            type: pages
+            label: Drafts
+            parent: site.index.findBy("intendedTemplate", "reads")
+            empty: Add an article
+            status: draft
+            template: read
+          readlist:
+            type: pages
+            label: Published
+            parent: site.index.findBy("intendedTemplate", "reads")
+            empty: No entries yet
+            status: listed
+            limit: 10
+            create: false
+            image: page.img.toFile
+            info: '{{ page.author }}'
+  events:
+    label: Events
+    icon: calendar
+    columns:
+      - width: 1/4
+        sections:
+          eventstitling:
+            type: fields
+            fields:
+              eventtitle:
+                type: text
+                label: Section Title
+                counter: false
+      - width: 3/4
+        sections:
+          eventdrafts:
+            type: pages
+            label: Drafts
+            template: event
+            empty: Create a new event
+            parent: site.index.findBy("intendedTemplate", "events")
+            status: draft
+          eventlist:
+            type: pages
+            label: Published
+            empty: No events yet
+            status: listed
+            limit: 10
+            parent: site.index.findBy("intendedTemplate", "events")
+            create: false
+            image: page.img.toFile
+            sortBy: date
+            flip: true
+            info: '{{ page.date }}'
+        
+

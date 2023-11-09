@@ -1,0 +1,86 @@
+title: Update
+
+status:
+  draft:
+    label: Draft
+    text: This post is still in draft mode. It can only be seen by editors with Panel access.
+  listed:
+    label: Published
+    text: This post is online and public.
+
+columns:
+  sidebar:
+    width: 1/4
+    sections:
+      imageselect:
+        type: fields
+        fields:
+          mediaselect:
+            type: radio
+            label: Update Type
+            options:
+              - Image
+              - Video
+            required: true
+  main:
+    width: 3/4
+    sections:
+      content:
+        type: fields
+        fields:
+          img:
+            type: files
+            label: Image
+            required: true
+            layout: cards
+            image:
+              ratio: 1/1
+            empty: No image selected yet
+            multiple: false
+            when:
+              mediaselect: Image
+            query: site.index.findBy("intendedTemplate", "mediagallery").images
+            uploads:
+              parent: site.index.findBy("intendedTemplate", "mediagallery")
+          vid:
+            type: embed
+            label: Video Link
+            when:
+              mediaselect: Video
+          featureline:
+            label: Caption
+            type: textarea
+            buttons:
+              - bold
+              - italic
+              - link
+              - email
+            counter: true
+            help: Recommended length <300 characters, excluding urls. 
+            when:
+              mediaselect: Image
+          link:
+            label: External Link
+            type: url
+            help: Link offsite (Instagram, Medium, articles, etc.) for more information. 
+            when:
+              mediaselect: Image
+          acclink:
+            label: Accessible Link Description
+            type: text
+            help: This text provides a useful description of the link to screen readers, e.g. "Learn More about New City Critics on Instagram.
+            when:
+              mediaselect: Image
+          vidcaption:
+            label: Caption
+            type: textarea
+            buttons:
+              - bold
+              - italic
+              - link
+              - email
+            counter: true
+            help: Recommended length <300 characters, excluding urls. 
+            when:
+              mediaselect: Video
+

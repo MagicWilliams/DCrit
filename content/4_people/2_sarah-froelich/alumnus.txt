@@ -1,0 +1,31 @@
+Title: Sarah Froelich
+
+----
+
+Gradyear: 2010
+
+----
+
+Hometown: Park Hills, Missouri
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: https://sarahfroelich.com/
+
+----
+
+Thesis: https://vimeo.com/11559500
+
+----
+
+Img:
+
+- image-library/image65.jpg

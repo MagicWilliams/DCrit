@@ -1,0 +1,31 @@
+Title: Matt Shaw
+
+----
+
+Gradyear: 2013
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://mockitecture.blogspot.com/
+
+----
+
+Thesis: https://vimeo.com/66419212
+
+----
+
+Img:
+
+- image-library/image15.jpg

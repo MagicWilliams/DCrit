@@ -1,0 +1,31 @@
+Title: Anja Laubscher
+
+----
+
+Gradyear: 2018
+
+----
+
+Hometown: Toronto, Canada
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Linkedin
+
+----
+
+Link: https://www.linkedin.com/in/anja-laubscher-72938884/
+
+----
+
+Thesis: https://vimeo.com/280990069
+
+----
+
+Img:
+
+- image-library/image16.jpg

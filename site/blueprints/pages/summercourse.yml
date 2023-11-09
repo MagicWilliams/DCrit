@@ -1,0 +1,43 @@
+title: Summer Course
+
+status:
+  draft:
+    label: Draft
+    text: The item is still in draft mode. It can only be seen by editors with Panel access.
+  listed:
+    label: Published
+    text: The item is online and publicly listed under Summer Intensive Curriculum.
+
+columns:
+  txt:
+    width: 2/3
+    sections:
+      courseinfo:
+        type: fields
+        fields:
+          coursetitle:
+            label: Title
+            type: text
+            required: true
+          instructors:
+            label: Instructors
+            type: structure
+            empty: No instructors added
+            fields:
+              instructor:
+                type: select
+                options: query
+                query: site.find('people').children.template('faculty')
+          descrip:
+            label: Course description
+            type: textarea
+            buttons:
+              - italic
+              - link
+              - email
+            size: medium
+  spacer:
+    width: 1/3
+    fields:
+      gap:
+        type: gap

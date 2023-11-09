@@ -1,0 +1,177 @@
+Title: Program
+
+----
+
+Hero:
+
+- image-library/program.jpg
+
+----
+
+Overviewtitle: Overview & Mission
+
+----
+
+Programintro: The two-semester MA in Design Research, Writing & Criticism provides intensive instruction in techniques for analyzing design and its cultural and environmental implications.
+
+----
+
+About: [{"content":{"text":"<p>The program combines humanities-oriented critical thinking and journalistic tools to produce writing and editorial content intended to inform and engage broad audiences. The rigorous one-year MA with thesis offers a high-impact, targeted program well suited to the circumstances of both established professionals and recent graduates wishing to continue their studies at an advanced level. <\/p><p>Here in the SVA Department of Design Research, Writing &amp; Criticism we study design in all its manifestations, with a pronounced interest in its contexts and consequences. This means we don\u2019t just focus on designed products or buildings, but also on the infrastructure that connects them, and the policy that shapes them. We try to look at what happens after a designed product is launched. We go beyond the glossy images supplied by the manufacturer to discover how things actually get used and discarded, and how they impinge upon our daily reality.<\/p>"},"id":"58910f97-604f-4b8c-ab9b-733bf8d94db8","isHidden":false,"type":"text"}]
+
+----
+
+Coursestitle: Courses
+
+----
+
+Courseintro: The program’s curriculum charts the cutting edge of design practice and is responsive to exciting developments in the media landscape.
+
+----
+
+Courseabout: [{"content":{"image":["image-library\/courses.jpg"]},"id":"b971937c-eae7-41c5-9234-4cf489dabe81","isHidden":false,"type":"image"},{"content":{"text":"<p>Through workshops, seminars, lectures, and site visits, students examine the issues and policies that shape the designed environment; learn research methods, reporting techniques, and theoretical models; and experiment with a range of media vehicles for communicating their research, including writing, podcasting, and public speaking.<\/p><p>Each student will identify an individual research territory to explore during the year, culminating in a thesis portfolio of written and applied media projects. Degree candidates must successfully complete 30 credits, including all required courses, with a cumulative grade point average of 3.0. A residency of two academic semesters is required.<\/p>"},"id":"23dc55f5-7590-4cbc-9fa1-af104ce739c4","isHidden":false,"type":"text"}]
+
+----
+
+Fineprint: Note: Departmental requirements are subject to change by the department chair if the chair deems that such change is warranted.
+
+----
+
+Inttitle: Summer Intensive
+
+----
+
+Intintro: The Design Research, Writing and Criticism Department is pleased to offer a two-week, online Summer Intensive aimed at those who would like to refine their skills as thinkers, researchers and storytellers.
+
+----
+
+Intabout: [{"content":{"image":["image-library\/summerintensive.jpg"]},"id":"e72df024-228d-4ee0-8bfe-901081af289e","isHidden":false,"type":"image"},{"content":{"text":"<p>Through a robust daily schedule of seminars, lectures and workshops, the intensive offers students and working professionals a unique opportunity to study with a faculty composed of leading writers and editors, and engage in conversation with prominent designers, architects and urban planners.<\/p><p>Due to increased demand, we are excited to offer\u00a0an on-site option for this year's Summer Intensive. In addition to online instruction from our renowned faculty, on-site participants will receive desk space in our bright and airy studio in the heart of Manhattan. So if you\u2019re in the New York area or would like to be, we invite you to live in the department this June.<\/p><p>On-site perks include:\u00a0<\/p><p>24\/7 studio desk and printer access<\/p><p>In-person studio visits to New York design firms<\/p><p>Roundtable talk with DCrit faculty member and design writer Steven Heller<\/p><p>Opportunity to observe editors of publication-in-residence The New York Review of Architecture produce their Summer issue #36<\/p><p>Meet fellow in-person participants and explore the city<\/p><p>Free access to SVA-partner museums<\/p>"},"id":"5574d83f-6d16-498f-86b5-46f030b67a38","isHidden":false,"type":"text"}]
+
+----
+
+Intlink: For more information, visit our (link: https://designresearch.sva.edu/program/summer-intensive text: Summer Intensive page).
+
+----
+
+Reqs: <p>• Successful completion of 30 credits, including all required courses, administrative requirements and the thesis project. Documentation of all thesis projects must be on file in the Design Research, Writing and Criticism Department to be eligible for degree conferral. </p><p>• A matriculation of one academic year. Students must complete their degree within two years, unless given an official extension by the provost.</p><p>• Students are required to maintain a minimum grade point average of 3.0 (B) in order to remain in good academic standing. </p><p><em>Note: Departmental requirements are subject to change by the department chair if the chair deems that such change is warranted.</em></p>
+
+----
+
+Embed:
+
+input: https://vimeo.com/97146019
+media:
+  title: 'Get There With Design Research: SVA MA Design Research'
+  description: |
+    Design Research Makes it Happen: Kurt Andersen, Paola Antonelli + More
+    
+    The program formerly known as D-Crit is now a one-year MA in Design Research. To celebrate the occasion, we made a series of videos that shows how far research can take you and how sexy it can make you. Watch the first episode where faculty, students, and alums of the department recount their love affairs with Design Research (as well as performing holograms, flying green tree snakes and 51-hour journeys to South Sudan) while they share with us how they teach it, study it, and practice it in their daily work.
+    
+    SVA MA Design Research: http://designresearch.sva.edu
+    
+    Cast:
+    Kurt Andersen, host, “Studio 360,” faculty
+    Paola Antonelli, Senior Curator of Architecture and Design, MoMA, faculty
+    Kim Birks, writer and researcher, alum
+    Akiko Busch, author, faculty
+    Barbara Eldredge, researcher and writer, alum
+    Mercedes Kraus, writer and designer, alum
+    Adam Harrison Levy, BBC documentary interviewer, faculty
+    Molly Heintz, managing director, Superscript, alum
+    Steven Heller, author and educator, faculty
+    Karrie Jacobs, urban design critic, faculty
+    Robin Pogrebin, culture reporter, The New York Times, faculty
+    John Payne, writer and designer, alum
+    Avinash Rajagopal, associate editor, Metropolis, alum
+    Alan Rapp, senior editor, Monacelli Press, alum
+    Anne Quito, designer and writer, alum
+    Angela Riechers, art director and writer, alum
+    Bryn Smith, designer and writer, alum
+    Alice Twemlow, Chair, SVA MA Design Research
+    Justin Zhuang, student
+    
+    Production:
+    Joshua Hume, direction
+    Kristyn Hume, animation
+    Peter Arkle, illustration
+    
+    Kat Westergaard, cinematography
+    Lara Sfire, gaffer
+    Victor De La Cruz, additional support
+  url: https://vimeo.com/97146019
+  type: video
+  tags: [ ]
+  image: >
+    https://i.vimeocdn.com/video/477546084-37ba6aa824764f8218f1a3ffe203f59bfb9df816b2eaf8ac16ce12c78fb682fd-d_295x166
+  imageWidth: 295
+  imageHeight: 166
+  images:
+    - 
+      url: >
+        https://i.vimeocdn.com/video/477546084-37ba6aa824764f8218f1a3ffe203f59bfb9df816b2eaf8ac16ce12c78fb682fd-d_295x166
+      width: 295
+      height: 166
+      size: 48970
+      mime: image/jpeg
+    - 
+      url: 'https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F477546084-37ba6aa824764f8218f1a3ffe203f59bfb9df816b2eaf8ac16ce12c78fb682fd-d_1280x720&src1=https%3A%2F%2Ff.vimeocdn.com%2Fimages_v6%2Fshare%2Fplay_icon_overlay.png'
+      width: 1280
+      height: 720
+      size: 921600
+      mime: image/jpeg
+  code: '<iframe src="https://player.vimeo.com/video/97146019?h=cebb99d3dc&amp;app_id=122963" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Get There With Design Research: SVA MA Design Research" referrerpolicy="strict-origin-when-cross-origin" width="480" height="270" frameborder="0"></iframe>'
+  feeds: [ ]
+  width: 480
+  height: 270
+  aspectRatio: 56.25
+  authorName: SVA MA Design Research
+  authorUrl: https://vimeo.com/dcrit
+  providerIcon: >
+    https://i.vimeocdn.com/favicon/main-touch_180
+  providerIcons:
+    - 
+      url: https://vimeo.com/favicon.ico
+      width: 32
+      height: 32
+      size: 1024
+      mime: image/vnd.microsoft.icon
+    - 
+      url: >
+        https://i.vimeocdn.com/favicon/main-touch_180
+      width: 180
+      height: 180
+      size: 32400
+      mime: image/jpeg
+    - 
+      url: >
+        https://f.vimeocdn.com/images_v6/favicon.ico?889e48ba90ef0abcef9c58cdae0d25db13dd6803
+      width: 32
+      height: 32
+      size: 1024
+      mime: image/vnd.microsoft.icon
+    - 
+      url: >
+        https://i.vimeocdn.com/favicon/main-touch_144
+      width: 144
+      height: 144
+      size: 20736
+      mime: image/jpeg
+  providerName: Vimeo
+  providerUrl: https://vimeo.com/
+  publishedTime: null
+  license: null
+
+----
+
+Cdescrip:
+
+Through workshops, seminars, lectures, and site visits, students examine the issues and policies that shape the designed environment; learn research methods, reporting techniques, and theoretical models; and experiment with a range of media vehicles for communicating their research, including writing, podcasting, and public speaking.
+
+Each student will identify an individual research territory to explore during the year, culminating in a thesis portfolio of written and applied media projects. Degree candidates must successfully complete 30 credits, including all required courses, with a cumulative grade point average of 3.0. A residency of two academic semesters is required.
+
+----
+
+Intro: The two-semester MA in Design Research, Writing & Criticism provides intensive instruction in techniques for researching, analyzing, and interpreting design and its cultural and environmental implications.
+
+----
+
+Courses: 

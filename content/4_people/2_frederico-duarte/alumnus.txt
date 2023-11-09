@@ -1,0 +1,32 @@
+Title: Frederico Duarte
+
+----
+
+Gradyear: 2010
+
+----
+
+Hometown: Lisbon, Portugal
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @freduarte
+
+----
+
+Link: https://twitter.com/freduarte
+
+----
+
+Thesis: https://vimeo.com/11555546
+
+----
+
+Img:
+
+- >
+  image-library/frederico_duarte__pedro_sadio-frederico-duarte.jpg

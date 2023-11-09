@@ -1,0 +1,31 @@
+Title: Deena Denaro
+
+----
+
+Gradyear: 2020
+
+----
+
+Hometown: Montclair, New Jersey
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @Dna_DdB
+
+----
+
+Link: https://twitter.com/Dna_DdB
+
+----
+
+Thesis: https://vimeo.com/432135220
+
+----
+
+Img:
+
+- image-library/image73.png

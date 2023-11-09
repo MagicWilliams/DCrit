@@ -1,0 +1,32 @@
+Title: Contemporary Issues in Design, Architecture, and Urban Planning
+
+----
+
+Coursetitle: Contemporary Issues in Design, Architecture, and Urban Planning
+
+----
+
+Instructors:
+
+- 
+  instructor: people/karrie-jacobs
+
+----
+
+Semester: fall
+
+----
+
+Day: T
+
+----
+
+Time: 14:00:00
+
+----
+
+Descrip: This course will provide an overview of some of the social, economic, political, institutional and personal forces giving shape to our contemporary designed environment—both in New York City and globally. Through seminars, a selection of walking tours, site walk-throughs and visits to some of the city’s design and architecture studios and planning offices, students will be introduced to the issues, controversies and development conflicts that impact the urban environment, and the protagonists who play a role in them. They will investigate how everything from the tallest skyscraper to the smallest bit of ephemera is part of the design ecosystem that is otherwise known as a city, and will find out how urban design is affected by the political process. By the end of this course, students will be familiar with the work of a broad range of international designers, architects and urban planners, and will be conversant with many of the policies and processes that determine the material form of the 21st-century city.
+
+----
+
+Instructor: people/margaret-arbanas

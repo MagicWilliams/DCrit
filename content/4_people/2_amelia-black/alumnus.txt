@@ -1,0 +1,31 @@
+Title: Amelia Black
+
+----
+
+Gradyear: 2010
+
+----
+
+Hometown: 
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @ame_black
+
+----
+
+Link: https://twitter.com/ame_black
+
+----
+
+Thesis: https://vimeo.com/11555416
+
+----
+
+Img:
+
+- image-library/image5.jpg

@@ -1,0 +1,78 @@
+Title: Class of 2021 Panel Discussion
+
+----
+
+Mediaselect: Video
+
+----
+
+Img: 
+
+----
+
+Vid:
+
+input: https://vimeo.com/726055342
+media:
+  title: >
+    Class of 2021 panel discussion with Jon
+    Key, Pune Dracker, Anwulika Oputa, and
+    Youyou Zhou moderated by Alex de Looz
+  description: |
+    Strata–gies:
+    The D-Crit Class of 2022 Graduate Thesis Symposium
+    Tuesday, May 17th, 2022 6-8pm
+    SVA Theatre
+    
+    
+    In 12-minute presentations, each of our six MA candidates show their strategy of research and questioning to uncover the layers of meaning behind designed systems, experiences, and products that influence how we move about in the world.
+  url: https://vimeo.com/726055342
+  type: video
+  tags: [ ]
+  image: >
+    https://i.vimeocdn.com/video/1461658315-69c4ffed7023b284f88608d8df4982229fadfd61b40eb8a25a8d0cd1bff1596b-d_295x166
+  imageWidth: 295
+  imageHeight: 166
+  images:
+    - 
+      url: >
+        https://i.vimeocdn.com/video/1461658315-69c4ffed7023b284f88608d8df4982229fadfd61b40eb8a25a8d0cd1bff1596b-d_295x166
+      width: 295
+      height: 166
+      size: 48970
+      mime: image/jpeg
+  code: '<iframe src="https://player.vimeo.com/video/726055342?h=40a2d537c3&amp;app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Class of 2021 panel discussion with Jon Key, Pune Dracker, Anwulika Oputa, and Youyou Zhou moderated by Alex de Looz" referrerpolicy="strict-origin-when-cross-origin"></iframe>'
+  feeds: [ ]
+  width: 426
+  height: 240
+  aspectRatio: 56.338
+  authorName: SVA MA Design Research
+  authorUrl: https://vimeo.com/dcrit
+  providerIcon: https://vimeo.com/favicon.ico
+  providerIcons:
+    - 
+      url: https://vimeo.com/favicon.ico
+      width: 32
+      height: 32
+      size: 1024
+      mime: image/vnd.microsoft.icon
+  providerName: Vimeo
+  providerUrl: https://vimeo.com/
+  publishedTime: null
+  license: null
+
+----
+
+Featureline: 
+
+----
+
+Link: 
+
+----
+
+Acclink: 
+
+----
+
+Vidcaption: Class of 2021 panel discussion with Jon Key, Pune Dracker, Anwulika Oputa, and Youyou Zhou moderated by Alex de Looz. Part of the program of "Strata–gies: The Class of 2022 Graduate Thesis Symposium."

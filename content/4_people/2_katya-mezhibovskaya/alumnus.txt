@@ -1,0 +1,31 @@
+Title: Katya Mezhibovskaya
+
+----
+
+Gradyear: 2012
+
+----
+
+Hometown: Brooklyn, New York
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://www.katyamezhibovskaya.com/
+
+----
+
+Thesis: https://vimeo.com/41864750
+
+----
+
+Img:
+
+- image-library/image93.jpg

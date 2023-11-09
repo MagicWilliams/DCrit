@@ -1,0 +1,31 @@
+Title: William Myers
+
+----
+
+Gradyear: 2010
+
+----
+
+Hometown: Amsterdam, Netherlands
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @WMyersdesign
+
+----
+
+Link: https://twitter.com/wmyersdesign
+
+----
+
+Thesis: https://vimeo.com/11556712
+
+----
+
+Img:
+
+- image-library/image60.jpg

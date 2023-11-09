@@ -1,0 +1,32 @@
+Title: Jessie Sun
+
+----
+
+Gradyear: 2023
+
+----
+
+Hometown: Beijing, China
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://www.youtube.com/watch?v=uGDTqTwXFhY
+
+----
+
+Img:
+
+- >
+  image-library/headshot_class_of_2023_jessie-jiangfei-sun-1177x1200.jpeg

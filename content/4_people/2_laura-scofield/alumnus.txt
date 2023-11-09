@@ -1,0 +1,32 @@
+Title: Laura Scofield
+
+----
+
+Gradyear: 2019
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: https://www.laurascofield.com/
+
+----
+
+Thesis: https://vimeo.com/341362438
+
+----
+
+Img:
+
+- >
+  image-library/laura-scofield-1-laura-scofield.jpg

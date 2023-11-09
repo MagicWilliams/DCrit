@@ -1,0 +1,31 @@
+Title: Jared Dalcourt
+
+----
+
+Gradyear: 2022
+
+----
+
+Hometown: 
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://vimeo.com/726053850
+
+----
+
+Img:
+
+- image-library/jared-dalcourt_2.png

@@ -1,0 +1,31 @@
+Title: Anna Marie Smith
+
+----
+
+Gradyear: 2014
+
+----
+
+Hometown: Bangkok, Thailand
+
+----
+
+Linktype: insta
+
+----
+
+Linktext: @annamarrr
+
+----
+
+Link: https://www.instagram.com/annamarrr/
+
+----
+
+Thesis: https://vimeo.com/94233037
+
+----
+
+Img:
+
+- image-library/image44.jpg

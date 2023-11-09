@@ -1,0 +1,31 @@
+Title: Lorena Canales
+
+----
+
+Gradyear: 2016
+
+----
+
+Hometown: Guadalajara, Mexico
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @lorscee
+
+----
+
+Link: https://twitter.com/lorscee
+
+----
+
+Thesis: https://vimeo.com/171804528
+
+----
+
+Img:
+
+- image-library/image55.jpg

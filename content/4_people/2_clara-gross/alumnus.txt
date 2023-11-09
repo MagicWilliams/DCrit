@@ -1,0 +1,32 @@
+Title: Clara Gross
+
+----
+
+Gradyear: 2022
+
+----
+
+Hometown: Berlin, Germany
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: https://www.claragross.com/
+
+----
+
+Thesis: https://vimeo.com/726052945
+
+----
+
+Img:
+
+- >
+  image-library/screen-shot-2021-08-26-at-4.19.13-pm.png

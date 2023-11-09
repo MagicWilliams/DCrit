@@ -1,0 +1,31 @@
+Title: Sarah Cox
+
+----
+
+Gradyear: 2011
+
+----
+
+Hometown: Detroit
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://vimeo.com/23554378
+
+----
+
+Img:
+
+- image-library/image32.jpg

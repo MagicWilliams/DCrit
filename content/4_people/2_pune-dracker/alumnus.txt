@@ -1,0 +1,31 @@
+Title: Pune Dracker
+
+----
+
+Gradyear: 2020
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: insta
+
+----
+
+Linktext: @psychedelicate923
+
+----
+
+Link: https://www.instagram.com/psychedelicate923/?hl=en
+
+----
+
+Thesis: https://vimeo.com/569161447
+
+----
+
+Img:
+
+- image-library/image4.jpg

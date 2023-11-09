@@ -1,0 +1,29 @@
+title: Updates
+
+status:
+  delete: false
+  url: false
+  status: false
+
+sections:
+  drafts:
+    label: Drafts
+    type: pages
+    status: draft
+    templates: atlargepost
+    empty: Add new post
+    image: page.img.toFile
+  published:
+    label: Published Posts
+    type: pages
+    status: all
+    create: false
+    empty: No posts yet
+    layout: cards
+    image:
+      query: page.img.toFile
+      ratio: 1/1
+      cover: true
+    flip: true
+
+

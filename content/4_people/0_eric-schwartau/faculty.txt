@@ -1,0 +1,48 @@
+Title: Eric Schwartau
+
+----
+
+Role: Director of Programming, MA Design Research, Writing and Criticism
+
+----
+
+Svapos: corefac
+
+----
+
+Bio:
+
+Eric is a comedian and columnist. He currently pens the Catty Corner column in *New York Review of Architecture*. He is the co-founder of Talk Hole, a comedy and media brand.
+
+At D-Crit, Eric fulfills numerous roles in the department as Graduate Advisor, Applied Media Workshop and Thesis Development Workshop instructor, and Program Director of the Design Writing & Research Summer Intensive.
+
+He is a former editor at Taschen, where he worked on art & photography titles as well as series with *The New York Times* and *National Geographic*. He holds a B.A. in Urban Studies with Honors from Vassar College.
+
+----
+
+Contact:
+
+- 
+  contacttype: Email
+  linktype: ""
+  linktext: eschwartau@sva.edu
+  linkurl: ""
+- 
+  contacttype: Weblink
+  linktype: Twitter
+  linktext: ericschmerick
+  linkurl: ""
+
+----
+
+Lectures: 
+
+----
+
+Img:
+
+- image-library/110_sva_2022-800x1200.jpeg
+
+----
+
+Imgcap: Photo by James Emmerman

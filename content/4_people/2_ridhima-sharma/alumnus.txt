@@ -1,0 +1,32 @@
+Title: Ridhima Sharma
+
+----
+
+Gradyear: 2020
+
+----
+
+Hometown: India
+
+----
+
+Linktype: insta
+
+----
+
+Linktext: @riddhima_s12
+
+----
+
+Link: https://www.instagram.com/riddhima_s12/
+
+----
+
+Thesis: https://vimeo.com/432137138
+
+----
+
+Img:
+
+- >
+  image-library/front-face-photo-ridhima-sharma.jpg

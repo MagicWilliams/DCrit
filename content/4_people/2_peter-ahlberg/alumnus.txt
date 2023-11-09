@@ -1,0 +1,31 @@
+Title: Peter Ahlberg
+
+----
+
+Gradyear: 2021
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: https://www.dandeliondandelion.com/
+
+----
+
+Thesis: https://vimeo.com/569161242
+
+----
+
+Img:
+
+- image-library/image22.jpg

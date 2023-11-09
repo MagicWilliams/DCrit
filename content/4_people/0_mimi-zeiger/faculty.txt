@@ -1,0 +1,51 @@
+Title: Mimi Zeiger
+
+----
+
+Role: Critic, editor, and curator
+
+----
+
+Svapos: otherlec
+
+----
+
+Bio:
+
+Mimi Zeiger is a Los Angeles-based critic, editor, and curator.
+
+She was co-curator of the U.S. Pavilion for the 2018 Venice Architecture Biennale, curator of Soft Schindler at the MAK Center for Art and Architecture, and co-curator of the 2020-2021 Exhibit Columbus entitled *New Middles: From Main Street to Megalopolis, What is the Future of the Middle City?*
+
+She has written for the New York Times, the Los Angeles Times, Architectural Review, Metropolis, and Architect. She is an opinion columnist for Dezeen and former West Coast Editor of The Architects Newspaper. Zeiger is the 2015 recipient of the Bradford Williams Medal for excellence in writing about landscape architecture.
+
+Zeiger is author of New Museums, Tiny Houses, Micro Green: Tiny Houses in Nature, and Tiny Houses in the City. In 1997, Zeiger founded loud paper, an influential zine and digital publication dedicated to increasing the volume of architectural discourse.
+
+She has curated, contributed to, and collaborated on projects that have been shown at the Art Institute Chicago, 2012 Venice Architecture Biennale, the New Museum, Storefront for Art and Architecture, pinkcomma gallery, and the AA School. She co-curated Now, There: Scenes from the Post-Geographic City, which received the Bronze Dragon award at the 2015 Bi-City Biennale of Urbanism\Architecture, Shenzhen.
+
+She is visiting faculty at the Southern California Institute of Architecture (SCI-Arc) and teaches in the Media Design Practices MFA program at Art Center College of Design. She was co-president of the Los Angeles Forum for Architecture and Urban Design and taught at the School of Visual Art, Art Center, Parsons New School of Design, and the California College of the Arts (CCA).
+
+She holds a Master of Architecture degree from SCI-Arc and a Bachelor of Architecture degree from Cornell University.
+
+----
+
+Contact:
+
+- 
+  contacttype: Weblink
+  linktype: Twitter
+  linktext: @loudpaper
+  linkurl: https://twitter.com/loudpaper
+
+----
+
+Lectures: 
+
+----
+
+Img:
+
+- image-library/mimi-zeiger.jpeg
+
+----
+
+Imgcap: 

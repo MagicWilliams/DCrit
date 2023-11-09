@@ -1,0 +1,31 @@
+Title: Lisa Silbermayr
+
+----
+
+Gradyear: 2015
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: insta
+
+----
+
+Linktext: @lisa_silbermayr
+
+----
+
+Link: https://www.instagram.com/lisa_silbermayr/
+
+----
+
+Thesis: 
+
+----
+
+Img:
+
+- image-library/image28.jpg

@@ -1,0 +1,31 @@
+Title: Emma Ng
+
+----
+
+Gradyear: 2017
+
+----
+
+Hometown: Aotearoa, New Zealand
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://k-emma.com/
+
+----
+
+Thesis: 
+
+----
+
+Img:
+
+- image-library/image34.jpg

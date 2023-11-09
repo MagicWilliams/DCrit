@@ -1,0 +1,58 @@
+title: SVA DCrit
+
+columns:
+  main:
+    width: 1/3
+    sections:
+      mainnav:
+        type: pages
+        headline: Main Navigation
+        status: listed
+        image: icon
+      mediagallery:
+        type: pages
+        headline: Media
+        # parent: site.index.findBy("intendedTemplate", "mediagallery")
+        create: false
+        image: icon
+        template: mediagallery
+  subpages:
+    width: 2/3
+    sections:
+      events:
+        type: pages
+        headline: Events
+        parent: site.index.findBy("intendedTemplate", "events")
+        limit: 4
+        template: event
+        image: page.img.toFile
+        sortBy: date
+        flip: true
+        info: '{{ page.date }}'
+      reads:
+        type: pages
+        headline: Reads
+        parent: site.index.findBy("intendedTemplate", "reads")
+        limit: 4
+        template: read
+        width: 2/3
+        image: page.img.toFile
+        info: '{{ page.author }}'
+        sortBy: date
+        flip: true
+      atlarge:
+        type: pages
+        headline: Updates
+        parent: site.index.findBy("intendedTemplate", "atlarge")
+        layout: cards
+        template: atlargepost
+        limit: 3
+        image:
+          query: page.img.toFile
+          ratio: 1/1
+          cover: true
+
+
+        
+      
+      

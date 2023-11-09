@@ -1,0 +1,31 @@
+Title: Ann Weiser
+
+----
+
+Gradyear: 2012
+
+----
+
+Hometown: Hyde Park, NY
+
+----
+
+Linktype: tw
+
+----
+
+Linktext: @damnann
+
+----
+
+Link: https://twitter.com/damnann
+
+----
+
+Thesis: https://vimeo.com/41864753
+
+----
+
+Img:
+
+- image-library/image23.jpg

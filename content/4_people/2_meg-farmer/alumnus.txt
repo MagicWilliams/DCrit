@@ -1,0 +1,31 @@
+Title: Meg Farmer
+
+----
+
+Gradyear: 2015
+
+----
+
+Hometown: Brooklyn, New York
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: http://megfarmer.squarespace.com/
+
+----
+
+Thesis: 
+
+----
+
+Img:
+
+- image-library/image102.jpg

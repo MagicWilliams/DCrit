@@ -1,0 +1,31 @@
+Title: Anne Drape
+
+----
+
+Gradyear: 2016
+
+----
+
+Hometown: Kansas City
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://vimeo.com/171804526
+
+----
+
+Img:
+
+- image-library/image11.jpg

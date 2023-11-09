@@ -1,0 +1,31 @@
+Title: Alex Klimoski
+
+----
+
+Gradyear: 2016
+
+----
+
+Hometown: New York City
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://www.youtube.com/watch?v=jLz0AJIQGEY
+
+----
+
+Img:
+
+- image-library/image26.jpg

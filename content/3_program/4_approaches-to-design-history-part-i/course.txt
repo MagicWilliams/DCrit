@@ -1,0 +1,32 @@
+Title: Approaches to Design History
+
+----
+
+Coursetitle: Approaches to Design History
+
+----
+
+Instructors:
+
+- 
+  instructor: people/steven-heller
+- 
+  instructor: people/alicia-ajayi
+- 
+  instructor: people/jon-key
+
+----
+
+Semester: fall
+
+----
+
+Day: T
+
+----
+
+Time: 10:00:00
+
+----
+
+Descrip: The history of design can be best understood when explored through a spectrum of experiences: makers and users, intentions and consequences, experiences and interpretations. Design influences culture at every level, at the level of individual behavior, the construction of community and our foundational systems and structures—businesses, governments, civic institutions, systems of belief. To what extent do we understand the underlying belief systems that drive those systems? As design writers, what responsibility do we have to understand, investigate, critique and expound on our analysis of the larger social dynamics at play? In this course, we consider ways of approaching design history. Beginning with an introduction to the field of design history itself, our episodic structure zooms in on case studies across various periods and types of design: from the chair to the room, exhibitions, graphics, and digital technology. While examining this handful of moments within an expansive field, students are encouraged to consider relevance to contemporary discourse as well as biases and gaps—both here and in “the canon.” Together we will discuss how ideas in history inform design thinking and making, and attempt to understand how we construct cultural narrative and meaning through history. Reading and writing about design requires a broad social lens focused on those whose stories are often left untold alongside those who have gained a megaphone to amplify their voices.

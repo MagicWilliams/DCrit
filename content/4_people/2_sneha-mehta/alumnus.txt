@@ -1,0 +1,31 @@
+Title: Sneha Mehta
+
+----
+
+Gradyear: 2019
+
+----
+
+Hometown: Mumbai, India
+
+----
+
+Linktype: website
+
+----
+
+Linktext: Website
+
+----
+
+Link: https://www.snehamehta.com/
+
+----
+
+Thesis: https://vimeo.com/341394116
+
+----
+
+Img:
+
+- image-library/sneha-mehta_headshot_2.jpg

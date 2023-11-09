@@ -1,0 +1,32 @@
+Title: Auston Gonzalez
+
+----
+
+Gradyear: 2023
+
+----
+
+Hometown: New York
+
+----
+
+Linktype: none
+
+----
+
+Linktext: 
+
+----
+
+Link: 
+
+----
+
+Thesis: https://www.youtube.com/watch?v=rU586BQfs74
+
+----
+
+Img:
+
+- >
+  image-library/headshot_class_of_2023_auston_gonzalez-1.jpeg
