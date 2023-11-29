@@ -65,6 +65,7 @@
 <?php endif ?>
 <section id="updates">
     <h2>Updates</h2>
+    
     <div class="content-wide">
         <div class="posts">
         <?php foreach ($posts as $post): ?>
@@ -85,7 +86,7 @@
                 <figure>
                 <a class="post-img" href="<?= $post->link() ?>">
                     <?php if($post->img()->isNotEmpty()): ?>
-                    <img src="<?= $post->img()->toFile()->url() ?>" alt="<?= $acclink ?>">
+                    <img src="<?= $post->img()->toFile()->croppedImage()->url() ?>" alt="<?= $acclink ?>">
                     <span aria-hidden="true" class="external-link">Learn More</span>
                     <?php endif ?>
                 </a>
@@ -139,7 +140,7 @@
                 <?php endif ?>
                 <div class="event-item">
                     <div class="event-image">
-                        <img src="<?= $event->img()->toFile()->url() ?>" alt="<?= $event->img()->toFile()->alt() ?>">
+                        <img src="<?= $event->img()->toFile()->croppedImage()->url() ?>" alt="<?= $event->img()->toFile()->alt() ?>">
                     </div>
                     <div class="event-info">
                         <a href="<?= $event->url() ?>"><?= $event->headline() ?></a>

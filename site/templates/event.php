@@ -111,9 +111,19 @@
             </div>
         </div>
     </header>
-<div class="img-container" tabindex="-1">
-    <img src="<?= $page->img()->toFile()->url() ?>" alt="">
+
+    <div class="img-container" tabindex="-1">
+    <img src="<?= $page->img()->toFile()->croppedImage()->url() ?>" alt="">
 </div>
+    <?php
+        $image = $page->img()->toFile();
+        
+        if ($image->croppedImage()->exists()) {
+            var_dump($image->croppedImage()->exists());
+        } else {
+            echo "Method croppedImage does not exist.";
+        }
+    ?>
 <section>
     <div class="etext">
         <h1 id="eventname"><span class="sr-only">D-Crit</span><?=$page->headline() ?></h1>

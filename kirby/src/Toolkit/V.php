@@ -2,9 +2,12 @@
 
 namespace Kirby\Toolkit;
 
+use Countable;
 use Exception;
+use Kirby\Cms\Field;
 use Kirby\Exception\InvalidArgumentException;
 use Kirby\Http\Idn;
+use Kirby\Uuid\Uuid;
 use ReflectionFunction;
 use Throwable;
 
@@ -21,23 +24,19 @@ class V
 {
 	/**
 	 * An array with all installed validators
-	 *
-	 * @var array
 	 */
-	public static $validators = [];
+	public static array $validators = [];
 
 	/**
 	 * Validates the given input with all passed rules
 	 * and returns an array with all error messages.
 	 * The array will be empty if the input is valid
-	 *
-	 * @param mixed $input
-	 * @param array $rules
-	 * @param array $messages
-	 * @return array
 	 */
-	public static function errors($input, array $rules, $messages = []): array
-	{
+	public static function errors(
+		$input,
+		array $rules,
+		array $messages = []
+	): array {
 		$errors = static::value($input, $rules, $messages, false);
 
 		return $errors === true ? [] : $errors;
@@ -47,14 +46,12 @@ class V
 	 * Runs a number of validators on a set of data and
 	 * checks if the data is invalid
 	 * @since 3.7.0
-	 *
-	 * @param array $data
-	 * @param array $rules
-	 * @param array $messages
-	 * @return array
 	 */
-	public static function invalid(array $data = [], array $rules = [], array $messages = []): array
-	{
+	public static function invalid(
+		array $data = [],
+		array $rules = [],
+		array $messages = []
+	): array {
 		$errors = [];
 
 		foreach ($rules as $field => $validations) {
@@ -116,13 +113,11 @@ class V
 	 * Creates a useful error message for the given validator
 	 * and the arguments. This is used mainly internally
 	 * to create error messages
-	 *
-	 * @param string $validatorName
-	 * @param mixed ...$params
-	 * @return string|null
 	 */
-	public static function message(string $validatorName, ...$params): ?string
-	{
+	public static function message(
+		string $validatorName,
+		...$params
+	): string|null {
 		$validatorName  = strtolower($validatorName);
 		$translationKey = 'error.validation.' . $validatorName;
 		$validators     = array_change_key_case(static::$validators);
@@ -146,7 +141,7 @@ class V
 						}
 					}
 					$value = implode(', ', $value);
-				} catch (Throwable $e) {
+				} catch (Throwable) {
 					$value = '-';
 				}
 			}
@@ -159,8 +154,6 @@ class V
 
 	/**
 	 * Return the list of all validators
-	 *
-	 * @return array
 	 */
 	public static function validators(): array
 	{
@@ -171,15 +164,13 @@ class V
 	 * Validate a single value against
 	 * a set of rules, using all registered
 	 * validators
-	 *
-	 * @param mixed $value
-	 * @param array $rules
-	 * @param array $messages
-	 * @param bool $fail
-	 * @return bool|array
 	 */
-	public static function value($value, array $rules, array $messages = [], bool $fail = true)
-	{
+	public static function value(
+		$value,
+		array $rules,
+		array $messages = [],
+		bool $fail = true
+	): bool|array {
 		$errors = [];
 
 		foreach ($rules as $validatorName => $validatorOptions) {
@@ -211,10 +202,6 @@ class V
 	 * Validate an input array against
 	 * a set of rules, using all registered
 	 * validators
-	 *
-	 * @param array $input
-	 * @param array $rules
-	 * @return bool
 	 */
 	public static function input(array $input, array $rules): bool
 	{
@@ -249,10 +236,6 @@ class V
 
 	/**
 	 * Calls an installed validator and passes all arguments
-	 *
-	 * @param string $method
-	 * @param array $arguments
-	 * @return bool
 	 */
 	public static function __callStatic(string $method, array $arguments): bool
 	{
@@ -298,8 +281,9 @@ V::$validators = [
 	 * Checks for numbers within the given range
 	 */
 	'between' => function ($value, $min, $max): bool {
-		return V::min($value, $min) === true &&
-			   V::max($value, $max) === true;
+		return
+			V::min($value, $min) === true &&
+			V::max($value, $max) === true;
 	},
 
 	/**
@@ -317,7 +301,7 @@ V::$validators = [
 	 * Pass an operator as second argument and another date as
 	 * third argument to compare them.
 	 */
-	'date' => function (?string $value, string $operator = null, string $test = null): bool {
+	'date' => function (string|null $value, string $operator = null, string $test = null): bool {
 		// make sure $value is a string
 		$value ??= '';
 
@@ -338,22 +322,16 @@ V::$validators = [
 			return false;
 		}
 
-		switch ($operator) {
-			case '!=':
-				return $value !== $test;
-			case '<':
-				return $value < $test;
-			case '>':
-				return $value > $test;
-			case '<=':
-				return $value <= $test;
-			case '>=':
-				return $value >= $test;
-			case '==':
-				return $value === $test;
-		}
+		return match ($operator) {
+			'!=' => $value !== $test,
+			'<'  => $value < $test,
+			'>'  => $value > $test,
+			'<='  => $value <= $test,
+			'>='  => $value >= $test,
+			'=='  => $value === $test,
 
-		throw new InvalidArgumentException('Invalid date comparison operator: "' . $operator . '". Allowed operators: "==", "!=", "<", "<=", ">", ">="');
+			default => throw new InvalidArgumentException('Invalid date comparison operator: "' . $operator . '". Allowed operators: "==", "!=", "<", "<=", ">", ">="')
+		};
 	},
 
 	/**
@@ -380,7 +358,7 @@ V::$validators = [
 		if (filter_var($value, FILTER_VALIDATE_EMAIL) === false) {
 			try {
 				$email = Idn::encodeEmail($value);
-			} catch (Throwable $e) {
+			} catch (Throwable) {
 				return false;
 			}
 
@@ -418,8 +396,9 @@ V::$validators = [
 	 * Checks for a valid filename
 	 */
 	'filename' => function ($value): bool {
-		return V::match($value, '/^[a-z0-9@._-]+$/i') === true &&
-			   V::min($value, 2) === true;
+		return
+			V::match($value, '/^[a-z0-9@._-]+$/i') === true &&
+			V::min($value, 2) === true;
 	},
 
 	/**
@@ -579,7 +558,7 @@ V::$validators = [
 	'size' => function ($value, $size, $operator = '=='): bool {
 		// if value is field object, first convert it to a readable value
 		// it is important to check at the beginning as the value can be string or numeric
-		if (is_a($value, '\Kirby\Cms\Field') === true) {
+		if ($value instanceof Field) {
 			$value = $value->value();
 		}
 
@@ -590,7 +569,7 @@ V::$validators = [
 		} elseif (is_array($value) === true) {
 			$count = count($value);
 		} elseif (is_object($value) === true) {
-			if ($value instanceof \Countable) {
+			if ($value instanceof Countable) {
 				$count = count($value);
 			} elseif (method_exists($value, 'count') === true) {
 				$count = $value->count();
@@ -601,18 +580,13 @@ V::$validators = [
 			throw new Exception('$value is of type without size');
 		}
 
-		switch ($operator) {
-			case '<':
-				return $count < $size;
-			case '>':
-				return $count > $size;
-			case '<=':
-				return $count <= $size;
-			case '>=':
-				return $count >= $size;
-			default:
-				return $count == $size;
-		}
+		return match ($operator) {
+			'<'     => $count < $size,
+			'>'     => $count > $size,
+			'<='    => $count <= $size,
+			'>='    => $count >= $size,
+			default => $count == $size
+		};
 	},
 
 	/**
@@ -637,5 +611,12 @@ V::$validators = [
 		// Added localhost support and removed 127.*.*.* ip restriction
 		$regex = '_^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!10(?:\.\d{1,3}){3})(?!169\.254(?:\.\d{1,3}){2})(?!192\.168(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:localhost)|(?:(?:[a-z\x{00a1}-\x{ffff}0-9]+-?)*[a-z\x{00a1}-\x{ffff}0-9]+)(?:\.(?:[a-z\x{00a1}-\x{ffff}0-9]+-?)*[a-z\x{00a1}-\x{ffff}0-9]+)*(?:\.(?:[a-z\x{00a1}-\x{ffff}]{2,})))(?::\d{2,5})?(?:\/[^\s]*)?$_iu';
 		return preg_match($regex, $value ?? '') !== 0;
+	},
+
+	/**
+	 * Checks for a valid Uuid, optionally for specific model type
+	 */
+	'uuid' => function (string $value, string $type = null): bool {
+		return Uuid::is($value, $type);
 	}
 ];

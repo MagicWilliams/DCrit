@@ -2,9 +2,7 @@ Title: Apply
 
 ----
 
-Hero:
-
-- image-library/apply.jpg
+Hero: - image-library/apply.jpg
 
 ----
 
@@ -126,3 +124,7 @@ Dates:
 ----
 
 Infotitle: Info Sessions
+
+----
+
+Uuid: Mxo3UBEOFgA9vprP

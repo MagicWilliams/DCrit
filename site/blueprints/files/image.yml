@@ -1,11 +1,22 @@
 title: Image
 
 fields:
+  crop:
+    label: Image Crop
+    type: imagecrop
+    minSize:
+      width: 700
+      height: 250
+    targetSize:
+      width: 1400
+      height: 500
+    preserveAspectRatio: true
   alt:
     label: Alt Text
     type: text
     required: true
     width: 3/4
+    default: "Decorative image"
   gap:
     type: gap
     width: 1/4

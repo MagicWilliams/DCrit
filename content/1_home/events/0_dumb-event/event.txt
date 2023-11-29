@@ -1,0 +1,53 @@
+Title: Dumb Event
+
+----
+
+Infosession: false
+
+----
+
+Headline: My Test Event 1
+
+----
+
+Date: 2023-11-28
+
+----
+
+Starttime: 12:00
+
+----
+
+Endtime: 15:00
+
+----
+
+Shortdescrip: This is just a dummy event.
+
+----
+
+Fulldescrip: 
+
+----
+
+Link: https://espn.com
+
+----
+
+Linkhost: 
+
+----
+
+Documentation: https://www.youtube.com/watch?v=aDE3s0lz8PQ&t=45s
+
+----
+
+Watchhost: YouTube
+
+----
+
+Img: - file://6lg8i3PWS7iEflQt
+
+----
+
+Uuid: AwGFckgGFtVhX58a

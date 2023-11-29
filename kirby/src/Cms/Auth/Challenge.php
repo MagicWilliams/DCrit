@@ -3,6 +3,7 @@
 namespace Kirby\Cms\Auth;
 
 use Kirby\Cms\User;
+use SensitiveParameter;
 
 /**
  * Template class for authentication challenges
@@ -37,7 +38,7 @@ abstract class Challenge
 	 * @return string|null The generated and sent code or `null` in case
 	 *                     there was no code to generate by this algorithm
 	 */
-	abstract public static function create(User $user, array $options): ?string;
+	abstract public static function create(User $user, array $options): string|null;
 
 	/**
 	 * Verifies the provided code against the created one;
@@ -48,8 +49,11 @@ abstract class Challenge
 	 * @param string $code Code to verify
 	 * @return bool
 	 */
-	public static function verify(User $user, string $code): bool
-	{
+	public static function verify(
+		User $user,
+		#[SensitiveParameter]
+		string $code
+	): bool {
 		$hash = $user->kirby()->session()->get('kirby.challenge.code');
 		if (is_string($hash) !== true) {
 			return false;

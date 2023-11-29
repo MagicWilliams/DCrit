@@ -4,6 +4,7 @@ namespace Kirby\Cms;
 
 use Closure;
 use Kirby\Exception\DuplicateException;
+use Kirby\Filesystem\Asset;
 use Kirby\Filesystem\Dir;
 use Kirby\Filesystem\F;
 use Kirby\Filesystem\Mime;
@@ -45,6 +46,7 @@ trait AppPlugins
 		// other plugin types
 		'api' => [],
 		'areas' => [],
+		'assetMethods' => [],
 		'authChallenges' => [],
 		'blockMethods' => [],
 		'blockModels' => [],
@@ -52,6 +54,7 @@ trait AppPlugins
 		'blueprints' => [],
 		'cacheTypes' => [],
 		'collections' => [],
+		'commands' => [],
 		'components' => [],
 		'controllers' => [],
 		'collectionFilters' => [],
@@ -120,14 +123,14 @@ trait AppPlugins
 	protected function extendApi($api): array
 	{
 		if (is_array($api) === true) {
-			if (is_a($api['routes'] ?? [], 'Closure') === true) {
+			if (($api['routes'] ?? []) instanceof Closure) {
 				$api['routes'] = $api['routes']($this);
 			}
 
 			return $this->extensions['api'] = A::merge($this->extensions['api'], $api, A::MERGE_APPEND);
-		} else {
-			return $this->extensions['api'];
 		}
+
+		return $this->extensions['api'];
 	}
 
 	/**
@@ -139,14 +142,22 @@ trait AppPlugins
 	protected function extendAreas(array $areas): array
 	{
 		foreach ($areas as $id => $area) {
-			if (isset($this->extensions['areas'][$id]) === false) {
-				$this->extensions['areas'][$id] = [];
-			}
-
+			$this->extensions['areas'][$id] ??= [];
 			$this->extensions['areas'][$id][] = $area;
 		}
 
 		return $this->extensions['areas'];
+	}
+
+	/**
+	 * Registers additional asset methods
+	 *
+	 * @param array $methods
+	 * @return array
+	 */
+	protected function extendAssetMethods(array $methods): array
+	{
+		return $this->extensions['assetMethods'] = Asset::$methods = array_merge(Asset::$methods, $methods);
 	}
 
 	/**
@@ -213,6 +224,17 @@ trait AppPlugins
 	protected function extendCacheTypes(array $cacheTypes): array
 	{
 		return $this->extensions['cacheTypes'] = array_merge($this->extensions['cacheTypes'], $cacheTypes);
+	}
+
+	/**
+	 * Registers additional CLI commands
+	 *
+	 * @param array $commands
+	 * @return array
+	 */
+	protected function extendCommands(array $commands): array
+	{
+		return $this->extensions['commands'] = array_merge($this->extensions['commands'], $commands);
 	}
 
 	/**
@@ -376,9 +398,7 @@ trait AppPlugins
 	protected function extendHooks(array $hooks): array
 	{
 		foreach ($hooks as $name => $callbacks) {
-			if (isset($this->extensions['hooks'][$name]) === false) {
-				$this->extensions['hooks'][$name] = [];
-			}
+			$this->extensions['hooks'][$name] ??= [];
 
 			if (is_array($callbacks) === false) {
 				$callbacks = [$callbacks];
@@ -520,7 +540,7 @@ trait AppPlugins
 	 */
 	protected function extendRoutes($routes): array
 	{
-		if (is_a($routes, 'Closure') === true) {
+		if ($routes instanceof Closure) {
 			$routes = $routes($this);
 		}
 
@@ -705,7 +725,7 @@ trait AppPlugins
 			$class = str_replace(['.', '-', '_'], '', $name) . 'Page';
 
 			// load the model class
-			F::loadOnce($model);
+			F::loadOnce($model, allowOutput: false);
 
 			if (class_exists($class) === true) {
 				$models[$name] = $class;
@@ -896,7 +916,7 @@ trait AppPlugins
 			$styles = $dir . '/index.css';
 
 			if (is_file($entry) === true) {
-				F::loadOnce($entry);
+				F::loadOnce($entry, allowOutput: false);
 			} elseif (is_file($script) === true || is_file($styles) === true) {
 				// if no PHP file is present but an index.js or index.css,
 				// register as anonymous plugin (without actual extensions)

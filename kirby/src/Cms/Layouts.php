@@ -18,7 +18,14 @@ use Throwable;
  */
 class Layouts extends Items
 {
-	public const ITEM_CLASS = '\Kirby\Cms\Layout';
+	public const ITEM_CLASS = Layout::class;
+
+	/**
+	 * All registered layouts methods
+	 *
+	 * @var array
+	 */
+	public static $methods = [];
 
 	public static function factory(array $items = null, array $params = [])
 	{
@@ -65,7 +72,7 @@ class Layouts extends Items
 		if (empty($input) === false && is_array($input) === false) {
 			try {
 				$input = Data::decode($input, 'json');
-			} catch (Throwable $e) {
+			} catch (Throwable) {
 				return [];
 			}
 		}
@@ -98,6 +105,9 @@ class Layouts extends Items
 			}
 		}
 
-		return Blocks::factory($blocks);
+		return Blocks::factory($blocks, [
+			'field'  => $this->field,
+			'parent' => $this->parent
+		]);
 	}
 }

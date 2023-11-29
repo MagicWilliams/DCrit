@@ -17,6 +17,13 @@ use Kirby\Filesystem\F;
 class Languages extends Collection
 {
 	/**
+	 * All registered languages methods
+	 *
+	 * @var array
+	 */
+	public static $methods = [];
+
+	/**
 	 * Creates a new collection with the given language objects
 	 *
 	 * @param array $objects `Kirby\Cms\Language` objects
@@ -66,11 +73,7 @@ class Languages extends Collection
 	 */
 	public function default()
 	{
-		if ($language = $this->findBy('isDefault', true)) {
-			return $language;
-		} else {
-			return $this->first();
-		}
+		return $this->findBy('isDefault', true) ?? $this->first();
 	}
 
 	/**
@@ -85,7 +88,7 @@ class Languages extends Collection
 		$files     = glob(App::instance()->root('languages') . '/*.php');
 
 		foreach ($files as $file) {
-			$props = F::load($file);
+			$props = F::load($file, allowOutput: false);
 
 			if (is_array($props) === true) {
 				// inject the language code from the filename

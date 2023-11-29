@@ -10,6 +10,8 @@ Bio: Allison Hewitt Ward is an art critic based in New York City. Grounded in hi
 
 ----
 
-Img:
+Img: - image-library/allison_hewitt_ward.png
 
-- image-library/allison_hewitt_ward.png
+----
+
+Uuid: vkahDrLM3ZcRB6Fc

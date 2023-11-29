@@ -21,6 +21,13 @@ use Kirby\Exception\InvalidArgumentException;
 class Structure extends Collection
 {
 	/**
+	 * All registered structure methods
+	 *
+	 * @var array
+	 */
+	public static $methods = [];
+
+	/**
 	 * Creates a new Collection with the given objects
 	 *
 	 * @param array $objects Kirby\Cms\StructureObject` objects or props arrays
@@ -46,7 +53,7 @@ class Structure extends Collection
 	 */
 	public function __set(string $id, $props): void
 	{
-		if (is_a($props, 'Kirby\Cms\StructureObject') === true) {
+		if ($props instanceof StructureObject) {
 			$object = $props;
 		} else {
 			if (is_array($props) === false) {

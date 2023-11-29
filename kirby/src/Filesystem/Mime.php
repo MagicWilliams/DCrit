@@ -61,6 +61,7 @@ class Mime
 		'mid'   => 'audio/midi',
 		'midi'  => 'audio/midi',
 		'mif'   => 'application/vnd.mif',
+		'mjs'   => 'text/javascript',
 		'mov'   => 'video/quicktime',
 		'movie' => 'video/x-sgi-movie',
 		'mp2'   => 'audio/mpeg',
@@ -77,6 +78,7 @@ class Mime
 		'php'   => ['text/php', 'text/x-php', 'application/x-httpd-php', 'application/php', 'application/x-php', 'application/x-httpd-php-source'],
 		'php3'  => ['text/php', 'text/x-php', 'application/x-httpd-php', 'application/php', 'application/x-php', 'application/x-httpd-php-source'],
 		'phps'  => ['text/php', 'text/x-php', 'application/x-httpd-php', 'application/php', 'application/x-php', 'application/x-httpd-php-source'],
+		'pht'   => ['text/php', 'text/x-php', 'application/x-httpd-php', 'application/php', 'application/x-php', 'application/x-httpd-php-source'],
 		'phtml' => ['text/php', 'text/x-php', 'application/x-httpd-php', 'application/php', 'application/x-php', 'application/x-httpd-php-source'],
 		'png'   => 'image/png',
 		'ppt'   => ['application/powerpoint', 'application/vnd.ms-powerpoint'],
@@ -133,13 +135,20 @@ class Mime
 			'text/plain' => [
 				'css'  => 'text/css',
 				'json' => 'application/json',
+				'mjs' => 'text/javascript',
 				'svg'  => ['Kirby\Filesystem\Mime', 'fromSvg'],
 			],
 			'text/x-asm' => [
 				'css' => 'text/css'
 			],
+			'text/x-java' => [
+				'mjs' => 'text/javascript',
+			],
 			'image/svg' => [
 				'svg' => 'image/svg+xml'
+			],
+			'application/octet-stream' => [
+				'mjs' => 'text/javascript'
 			]
 		];
 
@@ -162,7 +171,7 @@ class Mime
 	 * @param string $extension
 	 * @return string|null
 	 */
-	public static function fromExtension(string $extension): ?string
+	public static function fromExtension(string $extension): string|null
 	{
 		$mime = static::$types[$extension] ?? null;
 		return is_array($mime) === true ? array_shift($mime) : $mime;
@@ -304,12 +313,8 @@ class Mime
 
 	/**
 	 * Returns the MIME type of a file
-	 *
-	 * @param string $file
-	 * @param string $extension
-	 * @return string|false
 	 */
-	public static function type(string $file, string $extension = null)
+	public static function type(string $file, string|null $extension = null): string|null
 	{
 		// use the standard finfo extension
 		$mime = static::fromFileInfo($file);

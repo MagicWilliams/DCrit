@@ -121,16 +121,30 @@ return function ($page, $site, $pages, $kirby) {
             $posts[] = $post;
         }
 
-        if(sizeof($posts) > 1 || sizeof($posts) === sizeof($postlist)) {
+        if(sizeof($posts) === sizeof($postlist) || sizeof ($posts) === 3) {
             break;
         }
     }
 
-    $articles = $site->index()->findBy("intendedTemplate", "reads")->children()->limit(3);
+    $articles = $site->index()->findBy("intendedTemplate", "reads")->children()->sortBy('index')->flip();
+
+    $articles = $site->index()->findBy("intendedTemplate", "reads")->children()->sortBy(function ($child) {
+        return $child->content()->index()->int();
+    });
 
     $events = $site->index()->findBy("intendedTemplate", "events")->children()->sortBy('date')->flip();
 
-    
+    $allEvents = $site->index()->findBy("intendedTemplate", "events")->children();
+
+    $upcomingEvents = $allEvents->filter(function ($event) {
+        return $event->date()->toDate() > time();
+    })->sortBy('date');
+
+    $pastEvents = $allEvents->filter(function ($event) {
+        return $event->date()->toDate() <= time();
+    })->sortBy('date')->flip();
+
+    $events = $upcomingEvents->add($pastEvents);
 
     return A::merge($shared, compact('html', 'landing', 'shortcuts', 'posts', 'articles', 'events'));
 };

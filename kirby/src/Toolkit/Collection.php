@@ -99,11 +99,11 @@ class Collection extends Iterator implements Countable
 	 */
 	public function __set(string $key, $value): void
 	{
-		if ($this->caseSensitive === true) {
-			$this->data[$key] = $value;
-		} else {
-			$this->data[strtolower($key)] = $value;
+		if ($this->caseSensitive !== true) {
+			$key = strtolower($key);
 		}
+
+		$this->data[$key] = $value;
 	}
 
 	/**
@@ -123,6 +123,10 @@ class Collection extends Iterator implements Countable
 	 */
 	public function __unset($key)
 	{
+		if ($this->caseSensitive !== true) {
+			$key = strtolower($key);
+		}
+
 		unset($this->data[$key]);
 	}
 
@@ -380,11 +384,11 @@ class Collection extends Iterator implements Countable
 	public function find(...$keys)
 	{
 		if (count($keys) === 1) {
-			if (is_array($keys[0]) === true) {
-				$keys = $keys[0];
-			} else {
+			if (is_array($keys[0]) === false) {
 				return $this->findByKey($keys[0]);
 			}
+
+			$keys = $keys[0];
 		}
 
 		$result = [];
@@ -525,14 +529,13 @@ class Collection extends Iterator implements Countable
 	 */
 	public function group($field, bool $i = true)
 	{
-
 		// group by field name
 		if (is_string($field) === true) {
 			return $this->group(function ($item) use ($field, $i) {
 				$value = $this->getAttribute($item, $field);
 
 				// ignore upper/lowercase for group names
-				return $i === true ? Str::lower($value) : $value;
+				return $i === true ? Str::lower($value) : (string)$value;
 			});
 		}
 
@@ -541,7 +544,6 @@ class Collection extends Iterator implements Countable
 			$groups = [];
 
 			foreach ($this->data as $key => $item) {
-
 				// get the value to group by
 				$value = $field($item);
 
@@ -553,12 +555,14 @@ class Collection extends Iterator implements Countable
 				// make sure we have a proper key for each group
 				if (is_array($value) === true) {
 					throw new Exception('You cannot group by arrays or objects');
-				} elseif (is_object($value) === true) {
+				}
+
+				if (is_object($value) === true) {
 					if (method_exists($value, '__toString') === false) {
 						throw new Exception('You cannot group by arrays or objects');
-					} else {
-						$value = (string)$value;
 					}
+
+					$value = (string)$value;
 				}
 
 				if (isset($groups[$value]) === false) {
@@ -1005,7 +1009,6 @@ class Collection extends Iterator implements Countable
 		$fields = [];
 
 		foreach ($args as $arg) {
-
 			// get the index of the latest field array inside the $fields array
 			$currentField = $fields ? count($fields) - 1 : 0;
 
@@ -1178,11 +1181,7 @@ class Collection extends Iterator implements Countable
 			return $callback->call($this, $condition);
 		}
 
-		if ($fallback !== null) {
-			return $fallback->call($this, $condition);
-		}
-
-		return $this;
+		return $fallback?->call($this, $condition) ?? $this;
 	}
 
 	/**
@@ -1469,7 +1468,8 @@ Collection::$filters['date <='] = [
  */
 Collection::$filters['date between'] = Collection::$filters['date ..'] = [
 	'validator' => function ($value, $test) {
-		return V::date($value, '>=', $test[0]) &&
-			   V::date($value, '<=', $test[1]);
+		return
+			V::date($value, '>=', $test[0]) &&
+			V::date($value, '<=', $test[1]);
 	}
 ];

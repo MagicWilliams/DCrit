@@ -2,6 +2,7 @@
 
 namespace Kirby\Form;
 
+use Closure;
 use Exception;
 use Kirby\Exception\InvalidArgumentException;
 use Kirby\Toolkit\A;
@@ -61,7 +62,10 @@ class Field extends Component
 	public function __construct(string $type, array $attrs = [], ?Fields $formFields = null)
 	{
 		if (isset(static::$types[$type]) === false) {
-			throw new InvalidArgumentException('The field type "' . $type . '" does not exist');
+			throw new InvalidArgumentException([
+				'key'  => 'field.type.missing',
+				'data' => ['name' => $attrs['name'] ?? '-', 'type' => $type]
+			]);
 		}
 
 		if (isset($attrs['model']) === false) {
@@ -86,7 +90,7 @@ class Field extends Component
 	{
 		if (
 			isset($this->options['api']) === true &&
-			is_a($this->options['api'], 'Closure') === true
+			$this->options['api'] instanceof Closure
 		) {
 			return $this->options['api']->call($this);
 		}
@@ -112,7 +116,7 @@ class Field extends Component
 			return null;
 		}
 
-		if (is_a($save, 'Closure') === true) {
+		if ($save instanceof Closure) {
 			return $save->call($this, $value);
 		}
 
@@ -398,7 +402,7 @@ class Field extends Component
 			if ($formFields !== null) {
 				foreach ($this->when as $field => $value) {
 					$field      = $formFields->get($field);
-					$inputValue = $field !== null ? $field->value() : '';
+					$inputValue = $field?->value() ?? '';
 
 					// if the input data doesn't match the requested `when` value,
 					// that means that this field is not required and can be saved
@@ -472,7 +476,7 @@ class Field extends Component
 				continue;
 			}
 
-			if (is_a($validation, 'Closure') === true) {
+			if ($validation instanceof Closure) {
 				try {
 					$validation->call($this, $this->value());
 				} catch (Exception $e) {

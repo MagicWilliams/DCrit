@@ -6,9 +6,7 @@ Mediaselect: Image
 
 ----
 
-Img:
-
-- image-library/insta2.jpeg
+Img: - image-library/insta2.jpeg
 
 ----
 
@@ -25,3 +23,7 @@ Acclink: Learn More about Strata-gies on Instagram
 ----
 
 Vidcaption: 
+
+----
+
+Uuid: PMSWM5oAuDqHGhqA

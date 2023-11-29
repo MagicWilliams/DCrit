@@ -41,13 +41,14 @@ class FilePicker extends Picker
 		$model = $this->options['model'];
 
 		// find the right default query
-		if (empty($this->options['query']) === false) {
-			$query = $this->options['query'];
-		} elseif (is_a($model, 'Kirby\Cms\File') === true) {
-			$query = 'file.siblings';
-		} else {
-			$query = $model::CLASS_ALIAS . '.files';
-		}
+		$query = match (true) {
+			empty($this->options['query']) === false
+				=> $this->options['query'],
+			$model instanceof File
+				=> 'file.siblings',
+			default
+			=> $model::CLASS_ALIAS . '.files'
+		};
 
 		// fetch all files for the picker
 		$files = $model->query($query);
@@ -55,15 +56,14 @@ class FilePicker extends Picker
 		// help mitigate some typical query usage issues
 		// by converting site and page objects to proper
 		// pages by returning their children
-		if (is_a($files, 'Kirby\Cms\Site') === true) {
-			$files = $files->files();
-		} elseif (is_a($files, 'Kirby\Cms\Page') === true) {
-			$files = $files->files();
-		} elseif (is_a($files, 'Kirby\Cms\User') === true) {
-			$files = $files->files();
-		} elseif (is_a($files, 'Kirby\Cms\Files') === false) {
-			throw new InvalidArgumentException('Your query must return a set of files');
-		}
+		$files = match (true) {
+			$files instanceof Site,
+			$files instanceof Page,
+			$files instanceof User  => $files->files(),
+			$files instanceof Files => $files,
+
+			default => throw new InvalidArgumentException('Your query must return a set of files')
+		};
 
 		// search
 		$files = $this->search($files);

@@ -2,6 +2,10 @@ Title: Taking Notice: Work from the 2023 D-Crit Summer Intensive
 
 ----
 
+Index: 10
+
+----
+
 Headline: Taking Notice: Work from the 2023 D-Crit Summer Intensive
 
 ----
@@ -27,3 +31,7 @@ Link: https://medium.com/taking-notice-work-from-the-2023-d-crit-summer
 ----
 
 Img: 
+
+----
+
+Uuid: 98hiMOXabLYbKAKX
