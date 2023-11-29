@@ -1,0 +1,25 @@
+Crop:
+
+x: 0
+y: 187
+width: 1701
+height: 607
+rotate: 0
+scaleX: 1
+scaleY: 1
+
+----
+
+Alt: Decorative image
+
+----
+
+Caption: 
+
+----
+
+Uuid: 6lg8i3PWS7iEflQt
+
+----
+
+Template: image

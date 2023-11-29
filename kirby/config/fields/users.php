@@ -82,7 +82,7 @@ return [
 					$field = $this->field();
 
 					return $field->userpicker([
-						'image'  => $field->image(),
+						'image'  => $field->image()->croppedImage() ?? $field->image(),
 						'info'   => $field->info(),
 						'layout' => $field->layout(),
 						'limit'  => $field->limit(),
@@ -96,7 +96,7 @@ return [
 		];
 	},
 	'save' => function ($value = null) {
-		return A::pluck($value, 'id');
+		return A::pluck($value, $this->store);
 	},
 	'validations' => [
 		'max',

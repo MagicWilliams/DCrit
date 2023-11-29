@@ -8,6 +8,7 @@ use Kirby\Exception\LogicException;
 use Kirby\Exception\PermissionException;
 use Kirby\Toolkit\Str;
 use Kirby\Toolkit\V;
+use SensitiveParameter;
 
 /**
  * Validators for all user actions
@@ -83,13 +84,13 @@ class UserRules
 	/**
 	 * Validates if the password can be changed
 	 *
-	 * @param \Kirby\Cms\User $user
-	 * @param string $password
-	 * @return bool
 	 * @throws \Kirby\Exception\PermissionException If the user is not allowed to change the password
 	 */
-	public static function changePassword(User $user, string $password): bool
-	{
+	public static function changePassword(
+		User $user,
+		#[SensitiveParameter]
+		string $password
+	): bool {
 		if ($user->permissions()->changePassword() !== true) {
 			throw new PermissionException([
 				'key'  => 'user.changePassword.permission',
@@ -179,26 +180,27 @@ class UserRules
 		$currentUser = $user->kirby()->user();
 
 		// admins are allowed everything
-		if ($currentUser && $currentUser->isAdmin() === true) {
+		if ($currentUser?->isAdmin() === true) {
 			return true;
 		}
 
 		// only admins are allowed to add admins
 		$role = $props['role'] ?? null;
 
-		if ($role === 'admin' && $currentUser && $currentUser->isAdmin() === false) {
+		if ($role === 'admin' && $currentUser?->isAdmin() === false) {
 			throw new PermissionException([
 				'key' => 'user.create.permission'
 			]);
 		}
 
 		// check user permissions (if not on install)
-		if ($user->kirby()->users()->count() > 0) {
-			if ($user->permissions()->create() !== true) {
-				throw new PermissionException([
-					'key' => 'user.create.permission'
-				]);
-			}
+		if (
+			$user->kirby()->users()->count() > 0 &&
+			$user->permissions()->create() !== true
+		) {
+			throw new PermissionException([
+				'key' => 'user.create.permission'
+			]);
 		}
 
 		return true;
@@ -299,8 +301,8 @@ class UserRules
 	 */
 	public static function validId(User $user, string $id): bool
 	{
-		if ($id === 'account') {
-			throw new InvalidArgumentException('"account" is a reserved word and cannot be used as user id');
+		if (in_array($id, ['account', 'kirby', 'nobody']) === true) {
+			throw new InvalidArgumentException('"' . $id . '" is a reserved word and cannot be used as user id');
 		}
 
 		if ($user->kirby()->users()->find($id)) {
@@ -332,16 +334,27 @@ class UserRules
 	/**
 	 * Validates a password
 	 *
-	 * @param \Kirby\Cms\User $user
-	 * @param string $password
-	 * @return bool
 	 * @throws \Kirby\Exception\InvalidArgumentException If the password is too short
 	 */
-	public static function validPassword(User $user, string $password): bool
-	{
+	public static function validPassword(
+		User $user,
+		#[SensitiveParameter]
+		string $password
+	): bool {
+		// too short passwords are ineffective
 		if (Str::length($password ?? null) < 8) {
 			throw new InvalidArgumentException([
 				'key' => 'user.password.invalid',
+			]);
+		}
+
+		// too long passwords can cause DoS attacks
+		// and are therefore blocked in the auth system
+		// (blocked here as well to avoid passwords
+		// that cannot be used to log in)
+		if (Str::length($password ?? null) > 1000) {
+			throw new InvalidArgumentException([
+				'key' => 'user.password.excessive',
 			]);
 		}
 
@@ -358,7 +371,7 @@ class UserRules
 	 */
 	public static function validRole(User $user, string $role): bool
 	{
-		if (is_a($user->kirby()->roles()->find($role), 'Kirby\Cms\Role') === true) {
+		if ($user->kirby()->roles()->find($role) instanceof Role) {
 			return true;
 		}
 

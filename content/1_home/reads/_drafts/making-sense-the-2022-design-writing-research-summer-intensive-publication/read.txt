@@ -26,6 +26,8 @@ Link: https://medium.com/making-sense-the-2022-design-writing-and-research
 
 ----
 
-Img:
+Img: - image-library/041019_sva_-911.jpg
 
-- image-library/041019_sva_-911.jpg
+----
+
+Uuid: MSf5pBu1P5zWN2JH

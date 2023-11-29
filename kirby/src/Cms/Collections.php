@@ -2,6 +2,7 @@
 
 namespace Kirby\Cms;
 
+use Closure;
 use Kirby\Exception\NotFoundException;
 use Kirby\Filesystem\F;
 use Kirby\Toolkit\Controller;
@@ -27,25 +28,20 @@ class Collections
 	 * has been called, to avoid further
 	 * processing on sequential calls to
 	 * the same collection.
-	 *
-	 * @var array
 	 */
-	protected $cache = [];
+	protected array $cache = [];
 
 	/**
 	 * Store of all collections
-	 *
-	 * @var array
 	 */
-	protected $collections = [];
+	protected array $collections = [];
 
 	/**
 	 * Magic caller to enable something like
 	 * `$collections->myCollection()`
 	 *
-	 * @param string $name
-	 * @param array $arguments
-	 * @return \Kirby\Cms\Collection|null
+	 * @return \Kirby\Toolkit\Collection|null
+	 * @todo 5.0 Add return type declaration
 	 */
 	public function __call(string $name, array $arguments = [])
 	{
@@ -55,16 +51,14 @@ class Collections
 	/**
 	 * Loads a collection by name if registered
 	 *
-	 * @param string $name
-	 * @param array $data
-	 * @return \Kirby\Cms\Collection|null
+	 * @return \Kirby\Toolkit\Collection|null
+	 * @todo 4.0 Add deprecation warning when anything else than a Collection is returned
+	 * @todo 5.0 Add return type declaration
 	 */
 	public function get(string $name, array $data = [])
 	{
 		// if not yet loaded
-		if (isset($this->collections[$name]) === false) {
-			$this->collections[$name] = $this->load($name);
-		}
+		$this->collections[$name] ??= $this->load($name);
 
 		// if not yet cached
 		if (
@@ -101,7 +95,7 @@ class Collections
 		try {
 			$this->load($name);
 			return true;
-		} catch (NotFoundException $e) {
+		} catch (NotFoundException) {
 			return false;
 		}
 	}
@@ -122,9 +116,9 @@ class Collections
 		$file = $kirby->root('collections') . '/' . $name . '.php';
 
 		if (is_file($file) === true) {
-			$collection = F::load($file);
+			$collection = F::load($file, allowOutput: false);
 
-			if (is_a($collection, 'Closure')) {
+			if ($collection instanceof Closure) {
 				return $collection;
 			}
 		}

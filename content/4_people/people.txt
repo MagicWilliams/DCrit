@@ -2,9 +2,7 @@ Title: People
 
 ----
 
-Hero:
-
-- image-library/people.jpg
+Hero: - image-library/people.jpg
 
 ----
 
@@ -45,3 +43,7 @@ Studiovisits:
 ----
 
 Studenttitle: Class of 2024
+
+----
+
+Uuid: JhdN8xAc2Z14YLOL

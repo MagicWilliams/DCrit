@@ -2,6 +2,7 @@
 
 use Kirby\Cms\App;
 use Kirby\Cms\Blocks;
+use Kirby\Cms\Content;
 use Kirby\Cms\Field;
 use Kirby\Cms\Files;
 use Kirby\Cms\Html;
@@ -63,16 +64,17 @@ return function (App $app) {
 		 */
 		'toBlocks' => function (Field $field) {
 			try {
-				$blocks = Blocks::factory(Blocks::parse($field->value()), [
+				$blocks = Blocks::parse($field->value());
+				$blocks = Blocks::factory($blocks, [
 					'parent' => $field->parent(),
+					'field'  => $field,
 				]);
-
 				return $blocks->filter('isHidden', false);
-			} catch (Throwable $e) {
-				if ($field->parent() === null) {
-					$message = 'Invalid blocks data for "' . $field->key() . '" field';
-				} else {
-					$message = 'Invalid blocks data for "' . $field->key() . '" field on parent "' . $field->parent()->title() . '"';
+			} catch (Throwable) {
+				$message = 'Invalid blocks data for "' . $field->key() . '" field';
+
+				if ($parent = $field->parent()) {
+					$message .= ' on parent "' . $parent->title() . '"';
 				}
 
 				throw new InvalidArgumentException($message);
@@ -99,13 +101,10 @@ return function (App $app) {
 		 * @return array
 		 */
 		'toData' => function (Field $field, string $method = ',') {
-			switch ($method) {
-				case 'yaml':
-				case 'json':
-					return Data::decode($field->value, $method);
-				default:
-					return $field->split($method);
-			}
+			return match ($method) {
+				'yaml', 'json' => Data::decode($field->value, $method),
+				default        => $field->split($method)
+			};
 		},
 
 		/**
@@ -194,7 +193,8 @@ return function (App $app) {
 		 */
 		'toLayouts' => function (Field $field) {
 			return Layouts::factory(Layouts::parse($field->value()), [
-				'parent' => $field->parent()
+				'parent' => $field->parent(),
+				'field'  => $field,
 			]);
 		},
 
@@ -220,6 +220,17 @@ return function (App $app) {
 			}
 
 			return Html::a($href, $field->value, $attr ?? []);
+		},
+
+		/**
+		 * Parse yaml data and convert it to a
+		 * content object
+		 *
+		 * @param \Kirby\Cms\Field $field
+		 * @return \Kirby\Cms\Content
+		 */
+		'toObject' => function (Field $field) {
+			return new Content($field->yaml(), $field->parent(), true);
 		},
 
 		/**
@@ -252,11 +263,11 @@ return function (App $app) {
 		'toStructure' => function (Field $field) {
 			try {
 				return new Structure(Data::decode($field->value, 'yaml'), $field->parent());
-			} catch (Exception $e) {
-				if ($field->parent() === null) {
-					$message = 'Invalid structure data for "' . $field->key() . '" field';
-				} else {
-					$message = 'Invalid structure data for "' . $field->key() . '" field on parent "' . $field->parent()->title() . '"';
+			} catch (Exception) {
+				$message = 'Invalid structure data for "' . $field->key() . '" field';
+
+				if ($parent = $field->parent()) {
+					$message .= ' on parent "' . $parent->title() . '"';
 				}
 
 				throw new InvalidArgumentException($message);
@@ -267,10 +278,10 @@ return function (App $app) {
 		 * Converts the field value to a Unix timestamp
 		 *
 		 * @param \Kirby\Cms\Field $field
-		 * @return int
+		 * @return int|false
 		 */
-		'toTimestamp' => function (Field $field): int {
-			return strtotime($field->value);
+		'toTimestamp' => function (Field $field): int|false {
+			return strtotime($field->value ?? '');
 		},
 
 		/**
@@ -317,7 +328,7 @@ return function (App $app) {
 		 * Returns the number of words in the text
 		 */
 		'words' => function (Field $field) {
-			return str_word_count(strip_tags($field->value));
+			return str_word_count(strip_tags($field->value ?? ''));
 		},
 
 		// manipulators
@@ -340,10 +351,10 @@ return function (App $app) {
 		 * @param \Kirby\Cms\Field $field
 		 * @param string $context Location of output (`html`, `attr`, `js`, `css`, `url` or `xml`)
 		 */
-		// 'escape' => function (Field $field, string $context = 'html') {
-		// 	$field->value = Str::esc($field->value, $context);
-		// 	return $field;
-		// },
+		'escape' => function (Field $field, string $context = 'html') {
+			$field->value = Str::esc($field->value ?? '', $context);
+			return $field;
+		},
 
 		/**
 		 * Creates an excerpt of the field value without html
@@ -385,7 +396,7 @@ return function (App $app) {
 			// Obsolete elements, script tags, image maps and form elements have
 			// been excluded for safety reasons and as they are most likely not
 			// needed in most cases.
-			$field->value = strip_tags($field->value, Html::$inlineList);
+			$field->value = strip_tags($field->value ?? '', Html::$inlineList);
 			return $field;
 		},
 
@@ -472,7 +483,7 @@ return function (App $app) {
 		 * @return \Kirby\Cms\Field
 		 */
 		'nl2br' => function (Field $field) {
-			$field->value = nl2br($field->value, false);
+			$field->value = nl2br($field->value ?? '', false);
 			return $field;
 		},
 
@@ -500,10 +511,11 @@ return function (App $app) {
 		 *
 		 * @param \Kirby\Cms\Field $field
 		 * @param array $data
-		 * @param string $fallback Fallback for tokens in the template that cannot be replaced
+		 * @param string|null $fallback Fallback for tokens in the template that cannot be replaced
+		 *                              (`null` to keep the original token)
 		 * @return \Kirby\Cms\Field
 		 */
-		'replace' => function (Field $field, array $data = [], string $fallback = '') use ($app) {
+		'replace' => function (Field $field, array $data = [], string|null $fallback = '') use ($app) {
 			if ($parent = $field->parent()) {
 				// never pass `null` as the $template to avoid the fallback to the model ID
 				$field->value = $parent->toString($field->value ?? '', $data, $fallback);

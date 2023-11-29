@@ -80,6 +80,7 @@ columns:
             query: site.index.findBy("intendedTemplate", "mediagallery").images
             uploads:
               parent: site.index.findBy("intendedTemplate", "mediagallery")
+              template: image
             image:
               ratio: 1/1
           imgcap:

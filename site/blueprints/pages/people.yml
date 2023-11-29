@@ -16,6 +16,7 @@ tabs:
             empty: No image selected yet
             layout: cards
             uploads:
+              template: image
               parent: site.index.findBy("intendedTemplate", "mediagallery")
             multiple: false
             width: 1/4
@@ -174,4 +175,3 @@ tabs:
         empty: No alumni added yet
         sortBy: lastnamesort asc
         image: page.img.toFile
-

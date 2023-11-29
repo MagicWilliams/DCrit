@@ -2,6 +2,8 @@
 
 namespace Kirby\Cms;
 
+use Kirby\Uuid\Uuid;
+
 /**
  * HasFiles
  *
@@ -55,16 +57,17 @@ trait HasFiles
 	 * Creates a new file
 	 *
 	 * @param array $props
+	 * @param bool $move If set to `true`, the source will be deleted
 	 * @return \Kirby\Cms\File
 	 */
-	public function createFile(array $props)
+	public function createFile(array $props, bool $move = false)
 	{
 		$props = array_merge($props, [
 			'parent' => $this,
 			'url'    => null
 		]);
 
-		return File::create($props);
+		return File::create($props, $move);
 	}
 
 	/**
@@ -90,6 +93,11 @@ trait HasFiles
 			return $this->$in()->first();
 		}
 
+		// find by global UUID
+		if (Uuid::is($filename, 'file') === true) {
+			return Uuid::for($filename, $this->$in())->model();
+		}
+
 		if (strpos($filename, '/') !== false) {
 			$path     = dirname($filename);
 			$filename = basename($filename);
@@ -111,7 +119,7 @@ trait HasFiles
 	 */
 	public function files()
 	{
-		if (is_a($this->files, 'Kirby\Cms\Files') === true) {
+		if ($this->files instanceof Files) {
 			return $this->files;
 		}
 

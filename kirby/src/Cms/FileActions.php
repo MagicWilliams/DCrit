@@ -7,6 +7,8 @@ use Kirby\Exception\InvalidArgumentException;
 use Kirby\Exception\LogicException;
 use Kirby\Filesystem\F;
 use Kirby\Form\Form;
+use Kirby\Uuid\Uuid;
+use Kirby\Uuid\Uuids;
 
 /**
  * FileActions
@@ -44,6 +46,9 @@ trait FileActions
 				'filename' => $name . '.' . $oldFile->extension(),
 			]);
 
+			// remove all public versions, lock and clear UUID cache
+			$oldFile->unpublish();
+
 			if ($oldFile->exists() === false) {
 				return $newFile;
 			}
@@ -51,14 +56,6 @@ trait FileActions
 			if ($newFile->exists() === true) {
 				throw new LogicException('The new file exists and cannot be overwritten');
 			}
-
-			// remove the lock of the old file
-			if ($lock = $oldFile->lock()) {
-				$lock->remove();
-			}
-
-			// remove all public versions
-			$oldFile->unpublish();
 
 			// rename the main file
 			F::move($oldFile->root(), $newFile->root());
@@ -75,6 +72,7 @@ trait FileActions
 				F::move($oldFile->contentFile(), $newFile->contentFile());
 			}
 
+			// update collections
 			$newFile->parent()->files()->remove($oldFile->id());
 			$newFile->parent()->files()->set($newFile->id(), $newFile);
 
@@ -122,13 +120,12 @@ trait FileActions
 
 		$result = $callback(...$argumentValues);
 
-		if ($action === 'create') {
-			$argumentsAfter = ['file' => $result];
-		} elseif ($action === 'delete') {
-			$argumentsAfter = ['status' => $result, 'file' => $old];
-		} else {
-			$argumentsAfter = ['newFile' => $result, 'oldFile' => $old];
-		}
+		$argumentsAfter = match ($action) {
+			'create' => ['file' => $result],
+			'delete' => ['status' => $result, 'file' => $old],
+			default  => ['newFile' => $result, 'oldFile' => $old]
+		};
+
 		$kirby->trigger('file.' . $action . ':after', $argumentsAfter);
 
 		$kirby->cache('pages')->flush();
@@ -155,7 +152,14 @@ trait FileActions
 			F::copy($contentFile, $page->root() . '/' . basename($contentFile));
 		}
 
-		return $page->clone()->file($this->filename());
+		$copy = $page->clone()->file($this->filename());
+
+		// overwrite with new UUID (remove old, add new)
+		if (Uuids::enabled() === true) {
+			$copy = $copy->save(['uuid' => Uuid::generate()]);
+		}
+
+		return $copy;
 	}
 
 	/**
@@ -165,11 +169,12 @@ trait FileActions
 	 * way of generating files.
 	 *
 	 * @param array $props
+	 * @param bool $move If set to `true`, the source will be deleted
 	 * @return static
 	 * @throws \Kirby\Exception\InvalidArgumentException
 	 * @throws \Kirby\Exception\LogicException
 	 */
-	public static function create(array $props)
+	public static function create(array $props, bool $move = false)
 	{
 		if (isset($props['source'], $props['parent']) === false) {
 			throw new InvalidArgumentException('Please provide the "source" and "parent" props for the File');
@@ -184,22 +189,32 @@ trait FileActions
 		$file = static::factory($props);
 		$upload = $file->asset($props['source']);
 
+		// gather content
+		$content = $props['content'] ?? [];
+
+		// make sure that a UUID gets generated and
+		// added to content right away
+		if (Uuids::enabled() === true) {
+			$content['uuid'] ??= Uuid::generate();
+		}
+
 		// create a form for the file
-		$form = Form::for($file, [
-			'values' => $props['content'] ?? []
-		]);
+		$form = Form::for($file, ['values' => $content]);
 
 		// inject the content
 		$file = $file->clone(['content' => $form->strings(true)]);
 
 		// run the hook
-		return $file->commit('create', compact('file', 'upload'), function ($file, $upload) {
-
-			// delete all public versions
+		$arguments = compact('file', 'upload');
+		return $file->commit('create', $arguments, function ($file, $upload) use ($move) {
+			// remove all public versions, lock and clear UUID cache
 			$file->unpublish();
 
+			// only move the original source if intended
+			$method = $move === true ? 'move' : 'copy';
+
 			// overwrite the original
-			if (F::copy($upload->root(), $file->root(), true) !== true) {
+			if (F::$method($upload->root(), $file->root(), true) !== true) {
 				throw new LogicException('The file could not be created');
 			}
 
@@ -230,14 +245,8 @@ trait FileActions
 	public function delete(): bool
 	{
 		return $this->commit('delete', ['file' => $this], function ($file) {
-
-			// remove all versions in the media folder
+			// remove all public versions, lock and clear UUID cache
 			$file->unpublish();
-
-			// remove the lock of the old file
-			if ($lock = $file->lock()) {
-				$lock->remove();
-			}
 
 			if ($file->kirby()->multilang() === true) {
 				foreach ($file->translations() as $translation) {
@@ -276,10 +285,11 @@ trait FileActions
 	 * source.
 	 *
 	 * @param string $source
+	 * @param bool $move If set to `true`, the source will be deleted
 	 * @return static
 	 * @throws \Kirby\Exception\LogicException
 	 */
-	public function replace(string $source)
+	public function replace(string $source, bool $move = false)
 	{
 		$file = $this->clone();
 
@@ -288,13 +298,15 @@ trait FileActions
 			'upload' => $file->asset($source)
 		];
 
-		return $this->commit('replace', $arguments, function ($file, $upload) {
-
+		return $this->commit('replace', $arguments, function ($file, $upload) use ($move) {
 			// delete all public versions
-			$file->unpublish();
+			$file->unpublish(true);
+
+			// only move the original source if intended
+			$method = $move === true ? 'move' : 'copy';
 
 			// overwrite the original
-			if (F::copy($upload->root(), $file->root(), true) !== true) {
+			if (F::$method($upload->root(), $file->root(), true) !== true) {
 				throw new LogicException('The file could not be created');
 			}
 
@@ -304,13 +316,42 @@ trait FileActions
 	}
 
 	/**
+	 * Stores the content on disk
+	 *
+	 * @internal
+	 * @param array|null $data
+	 * @param string|null $languageCode
+	 * @param bool $overwrite
+	 * @return static
+	 */
+	public function save(array $data = null, string $languageCode = null, bool $overwrite = false)
+	{
+		$file = parent::save($data, $languageCode, $overwrite);
+
+		// update model in siblings collection
+		$file->parent()->files()->set($file->id(), $file);
+
+		return $file;
+	}
+
+	/**
 	 * Remove all public versions of this file
 	 *
 	 * @return $this
 	 */
-	public function unpublish()
+	public function unpublish(bool $onlyMedia = false)
 	{
+		// unpublish media files
 		Media::unpublish($this->parent()->mediaRoot(), $this);
+
+		if ($onlyMedia !== true) {
+			// remove the lock
+			$this->lock()?->remove();
+
+			// clear UUID cache
+			$this->uuid()?->clear();
+		}
+
 		return $this;
 	}
 }

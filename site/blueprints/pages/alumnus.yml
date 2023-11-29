@@ -58,6 +58,7 @@ columns:
             empty: No image selected yet
             query: site.index.findBy("intendedTemplate", "mediagallery").images
             uploads:
+              template: image
               parent: site.index.findBy("intendedTemplate", "mediagallery")
             image:
               ratio: 1/1

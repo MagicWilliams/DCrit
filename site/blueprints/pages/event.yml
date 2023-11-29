@@ -108,6 +108,7 @@ columns:
             multiple: false
             query: site.index.findBy("intendedTemplate", "mediagallery").images
             uploads:
+              template: image
               parent: site.index.findBy("intendedTemplate", "mediagallery")
 
 

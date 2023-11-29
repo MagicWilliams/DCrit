@@ -31,7 +31,7 @@ trait AppUsers
 	 */
 	public function auth()
 	{
-		return $this->auth = $this->auth ?? new Auth($this);
+		return $this->auth ??= new Auth($this);
 	}
 
 	/**
@@ -48,7 +48,7 @@ trait AppUsers
 	 *               if called with callback: Return value from the callback
 	 * @throws \Throwable
 	 */
-	public function impersonate(?string $who = null, ?Closure $callback = null)
+	public function impersonate(string|null $who = null, Closure|null $callback = null)
 	{
 		$auth = $this->auth();
 
@@ -60,14 +60,13 @@ trait AppUsers
 		}
 
 		try {
-			// bind the App object to the callback
-			return $callback->call($this, $userAfter);
+			return $callback($userAfter);
 		} catch (Throwable $e) {
 			throw $e;
 		} finally {
 			// ensure that the impersonation is *always* reset
 			// to the original value, even if an error occurred
-			$auth->impersonate($userBefore !== null ? $userBefore->id() : null);
+			$auth->impersonate($userBefore?->id());
 		}
 	}
 
@@ -110,7 +109,7 @@ trait AppUsers
 	 *                                 (when `$id` is passed as `null`)
 	 * @return \Kirby\Cms\User|null
 	 */
-	public function user(?string $id = null, bool $allowImpersonation = true)
+	public function user(string|null $id = null, bool $allowImpersonation = true)
 	{
 		if ($id !== null) {
 			return $this->users()->find($id);
@@ -118,12 +117,12 @@ trait AppUsers
 
 		if ($allowImpersonation === true && is_string($this->user) === true) {
 			return $this->auth()->impersonate($this->user);
-		} else {
-			try {
-				return $this->auth()->user(null, $allowImpersonation);
-			} catch (Throwable $e) {
-				return null;
-			}
+		}
+
+		try {
+			return $this->auth()->user(null, $allowImpersonation);
+		} catch (Throwable) {
+			return null;
 		}
 	}
 
@@ -134,7 +133,7 @@ trait AppUsers
 	 */
 	public function users()
 	{
-		if (is_a($this->users, 'Kirby\Cms\Users') === true) {
+		if ($this->users instanceof Users) {
 			return $this->users;
 		}
 

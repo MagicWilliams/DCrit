@@ -17,6 +17,9 @@ columns:
       content:
         type: fields
         fields:
+          index:
+            label: Index
+            type: number
           headline:
             label: Article Title
             type: text

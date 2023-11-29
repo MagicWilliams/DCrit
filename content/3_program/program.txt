@@ -2,9 +2,7 @@ Title: Program
 
 ----
 
-Hero:
-
-- image-library/program.jpg
+Hero: - image-library/program.jpg
 
 ----
 
@@ -175,3 +173,7 @@ Intro: The two-semester MA in Design Research, Writing & Criticism provides inte
 ----
 
 Courses: 
+
+----
+
+Uuid: G6OOObnXNrtdpvgw

@@ -23,17 +23,17 @@ class Find
 	 * Returns the file object for the given
 	 * parent path and filename
 	 *
-	 * @param string|null $path Path to file's parent model
+	 * @param string $path Path to file's parent model
 	 * @param string $filename Filename
 	 * @return \Kirby\Cms\File|null
 	 * @throws \Kirby\Exception\NotFoundException if the file cannot be found
 	 */
-	public static function file(string $path = null, string $filename)
+	public static function file(string $path, string $filename)
 	{
 		$filename = urldecode($filename);
 		$file     = static::parent($path)->file($filename);
 
-		if ($file && $file->isReadable() === true) {
+		if ($file?->isReadable() === true) {
 			return $file;
 		}
 
@@ -78,7 +78,7 @@ class Find
 		$id   = str_replace(['+', ' '], '/', $id);
 		$page = App::instance()->page($id);
 
-		if ($page && $page->isReadable() === true) {
+		if ($page?->isReadable() === true) {
 			return $page;
 		}
 
@@ -117,31 +117,19 @@ class Find
 
 		$kirby = App::instance();
 
-		switch ($modelName) {
-			case 'site':
-				$model = $kirby->site();
-				break;
-			case 'account':
-				$model = static::user();
-				break;
-			case 'page':
-				$model = static::page(basename($path));
-				break;
-			case 'file':
-				$model = static::file(...explode('/files/', $path));
-				break;
-			case 'user':
-				$model = $kirby->user(basename($path));
-				break;
-			default:
-				throw new InvalidArgumentException('Invalid model type: ' . $modelType);
-		}
+		$model = match ($modelName) {
+			'site'    => $kirby->site(),
+			'account' => static::user(),
+			'page'    => static::page(basename($path)),
+			// regular expression to split the path at the last
+			// occurrence of /files/ which separates parent path
+			// and filename
+			'file'    => static::file(...preg_split('$.*\K(/files/)$', $path)),
+			'user'    => $kirby->user(basename($path)),
+			default   => throw new InvalidArgumentException('Invalid model type: ' . $modelType)
+		};
 
-		if ($model) {
-			return $model;
-		}
-
-		throw new NotFoundException([
+		return $model ?? throw new NotFoundException([
 			'key' => $modelName . '.undefined'
 		]);
 	}
@@ -167,21 +155,18 @@ class Find
 
 		// get the authenticated user
 		if ($id === null) {
-			if ($user = $kirby->user(null, $kirby->option('api.allowImpersonation', false))) {
-				return $user;
-			}
+			$user = $kirby->user(
+				null,
+				$kirby->option('api.allowImpersonation', false)
+			);
 
-			throw new NotFoundException([
+			return $user ?? throw new NotFoundException([
 				'key' => 'user.undefined'
 			]);
 		}
 
 		// get a specific user by id
-		if ($user = $kirby->user($id)) {
-			return $user;
-		}
-
-		throw new NotFoundException([
+		return $kirby->user($id) ?? throw new NotFoundException([
 			'key'  => 'user.notFound',
 			'data' => [
 				'name' => $id

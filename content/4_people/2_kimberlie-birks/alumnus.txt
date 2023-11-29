@@ -26,6 +26,8 @@ Thesis: https://vimeo.com/23554728
 
 ----
 
-Img:
+Img: - image-library/kbirks-dcrit.png
 
-- image-library/kbirks-dcrit.png
+----
+
+Uuid: X7BxXZhWSdKgA9CL

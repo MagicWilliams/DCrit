@@ -20,7 +20,6 @@ columns:
             label: Title
             type: text
           bio:
-
             type: textarea
             size: medium
             buttons:
@@ -41,6 +40,8 @@ columns:
             empty: No image selected yet
             query: site.index.findBy("intendedTemplate", "mediagallery").images
             uploads:
+              template: image
               parent: site.index.findBy("intendedTemplate", "mediagallery")
+              template: image
             image:
               ratio: 1/1

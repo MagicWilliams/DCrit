@@ -67,7 +67,7 @@ return [
 
 			foreach (Data::decode($value, 'yaml') as $id) {
 				if (is_array($id) === true) {
-					$id = $id['id'] ?? null;
+					$id =  $id['uuid'] ?? $id['id'] ?? null;
 				}
 
 				if ($id !== null && ($page = $kirby->page($id))) {
@@ -86,7 +86,7 @@ return [
 					$field = $this->field();
 
 					return $field->pagepicker([
-						'image'    => $field->image(),
+						'image'    => $field->image()->croppedImage() ?? $field->image(),
 						'info'     => $field->info(),
 						'layout'   => $field->layout(),
 						'limit'    => $field->limit(),
@@ -102,7 +102,7 @@ return [
 		];
 	},
 	'save' => function ($value = null) {
-		return A::pluck($value, 'id');
+		return A::pluck($value, $this->store);
 	},
 	'validations' => [
 		'max',

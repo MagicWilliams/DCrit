@@ -4,8 +4,7 @@
   <header>
     <h1><?= $page->title() ?></h1>
   </header>
-
-
+  
   <div class="feed">
     <?php foreach ($page->children() as $item): ?>
     <article>

@@ -545,13 +545,14 @@ nav.shortcut ul {
 
 .posts {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     padding-right: 1rem;
     max-width: 65rem;
 }
 
 .post {
-    flex: 1;
+    width: calc(33.33% - 1rem);
     margin-left: 1rem;
 }
 

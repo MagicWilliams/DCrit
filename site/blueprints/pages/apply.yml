@@ -17,6 +17,7 @@ tabs:
             empty: No image selected yet
             layout: cards
             uploads:
+              template: image
               parent: site.index.findBy("intendedTemplate", "mediagallery")
             multiple: false
             width: 1/4

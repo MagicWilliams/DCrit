@@ -2,6 +2,7 @@
 
 namespace Kirby\Cms;
 
+use Closure;
 use Kirby\Exception\Exception;
 use Kirby\Exception\InvalidArgumentException;
 use Kirby\Exception\NotFoundException;
@@ -95,7 +96,7 @@ class Page extends ModelWithContent
 	 * The template, that should be loaded
 	 * if it exists
 	 *
-	 * @var \Kirby\Cms\Template
+	 * @var \Kirby\Template\Template
 	 */
 	protected $intendedTemplate;
 
@@ -142,7 +143,7 @@ class Page extends ModelWithContent
 	/**
 	 * The intended page template
 	 *
-	 * @var \Kirby\Cms\Template
+	 * @var \Kirby\Template\Template
 	 */
 	protected $template;
 
@@ -217,9 +218,9 @@ class Page extends ModelWithContent
 	{
 		if ($relative === true) {
 			return 'pages/' . $this->panel()->id();
-		} else {
-			return $this->kirby()->url('api') . '/pages/' . $this->panel()->id();
 		}
+
+		return $this->kirby()->url('api') . '/pages/' . $this->panel()->id();
 	}
 
 	/**
@@ -229,7 +230,7 @@ class Page extends ModelWithContent
 	 */
 	public function blueprint()
 	{
-		if (is_a($this->blueprint, 'Kirby\Cms\PageBlueprint') === true) {
+		if ($this->blueprint instanceof PageBlueprint) {
 			return $this->blueprint;
 		}
 
@@ -242,7 +243,7 @@ class Page extends ModelWithContent
 	 * @param string|null $inSection
 	 * @return array
 	 */
-	public function blueprints(?string $inSection = null): array
+	public function blueprints(string|null $inSection = null): array
 	{
 		if ($inSection !== null) {
 			return $this->blueprint()->section($inSection)->blueprints();
@@ -272,7 +273,7 @@ class Page extends ModelWithContent
 					'name'  => basename($props['name']),
 					'title' => $props['title'],
 				];
-			} catch (Exception $e) {
+			} catch (Exception) {
 				// skip invalid blueprints
 			}
 		}
@@ -307,7 +308,7 @@ class Page extends ModelWithContent
 	 * @param string|null $languageCode
 	 * @return array
 	 */
-	public function contentFileData(array $data, ?string $languageCode = null): array
+	public function contentFileData(array $data, string|null $languageCode = null): array
 	{
 		return A::prepend($data, [
 			'title' => $data['title'] ?? null,
@@ -323,7 +324,7 @@ class Page extends ModelWithContent
 	 * @param string|null $languageCode
 	 * @return string
 	 */
-	public function contentFileName(?string $languageCode = null): string
+	public function contentFileName(string|null $languageCode = null): string
 	{
 		return $this->intendedTemplate()->name();
 	}
@@ -361,7 +362,7 @@ class Page extends ModelWithContent
 
 			foreach ($controllerData as $key => $value) {
 				if (array_key_exists($key, $classes) === true) {
-					if (is_a($value, $classes[$key]) === true) {
+					if ($value instanceof $classes[$key]) {
 						$data[$key] = $value;
 					} else {
 						throw new InvalidArgumentException('The returned variable "' . $key . '" from the controller "' . $this->template()->name() . '" is not of the required type "' . $classes[$key] . '"');
@@ -399,9 +400,9 @@ class Page extends ModelWithContent
 
 		if ($this->num() !== null) {
 			return $this->dirname = $this->num() . Dir::$numSeparator . $this->uid();
-		} else {
-			return $this->dirname = $this->uid();
 		}
+
+		return $this->dirname = $this->uid();
 	}
 
 	/**
@@ -423,9 +424,9 @@ class Page extends ModelWithContent
 
 		if ($parent = $this->parent()) {
 			return $this->diruri = $parent->diruri() . '/' . $dirname;
-		} else {
-			return $this->diruri = $dirname;
 		}
+
+		return $this->diruri = $dirname;
 	}
 
 	/**
@@ -503,7 +504,7 @@ class Page extends ModelWithContent
 	 * Returns the template that should be
 	 * loaded if it exists.
 	 *
-	 * @return \Kirby\Cms\Template
+	 * @return \Kirby\Template\Template
 	 */
 	public function intendedTemplate()
 	{
@@ -545,7 +546,7 @@ class Page extends ModelWithContent
 	 */
 	public function is($page): bool
 	{
-		if (is_a($page, 'Kirby\Cms\Page') === false) {
+		if ($page instanceof self === false) {
 			if (is_string($page) === false) {
 				return false;
 			}
@@ -553,7 +554,7 @@ class Page extends ModelWithContent
 			$page = $this->kirby()->page($page);
 		}
 
-		if (is_a($page, 'Kirby\Cms\Page') === false) {
+		if ($page instanceof self === false) {
 			return false;
 		}
 
@@ -567,10 +568,8 @@ class Page extends ModelWithContent
 	 */
 	public function isActive(): bool
 	{
-		if ($page = $this->site()->page()) {
-			if ($page->is($this) === true) {
-				return true;
-			}
+		if ($this->site()->page()?->is($this) === true) {
+			return true;
 		}
 
 		return false;
@@ -625,7 +624,7 @@ class Page extends ModelWithContent
 		}
 
 		// check for a custom ignore rule
-		if (is_a($ignore, 'Closure') === true) {
+		if ($ignore instanceof Closure) {
 			if ($ignore($this) === true) {
 				return false;
 			}
@@ -649,11 +648,7 @@ class Page extends ModelWithContent
 	 */
 	public function isChildOf($parent): bool
 	{
-		if ($parentObj = $this->parent()) {
-			return $parentObj->is($parent);
-		}
-
-		return false;
+		return $this->parent()?->is($parent) ?? false;
 	}
 
 	/**
@@ -738,7 +733,7 @@ class Page extends ModelWithContent
 	 */
 	public function isListed(): bool
 	{
-		return $this->num() !== null;
+		return $this->isPublished() && $this->num() !== null;
 	}
 
 	/**
@@ -754,10 +749,8 @@ class Page extends ModelWithContent
 			return true;
 		}
 
-		if ($page = $this->site()->page()) {
-			if ($page->parents()->has($this->id()) === true) {
-				return true;
-			}
+		if ($this->site()->page()?->parents()->has($this->id()) === true) {
+			return true;
 		}
 
 		return false;
@@ -784,11 +777,7 @@ class Page extends ModelWithContent
 
 		$template = $this->intendedTemplate()->name();
 
-		if (isset($readable[$template]) === true) {
-			return $readable[$template];
-		}
-
-		return $readable[$template] = $this->permissions()->can('read');
+		return $readable[$template] ??= $this->permissions()->can('read');
 	}
 
 	/**
@@ -808,7 +797,7 @@ class Page extends ModelWithContent
 	 */
 	public function isUnlisted(): bool
 	{
-		return $this->isListed() === false;
+		return $this->isPublished() && $this->num() === null;
 	}
 
 	/**
@@ -822,7 +811,7 @@ class Page extends ModelWithContent
 	public function isVerified(string $token = null)
 	{
 		if (
-			$this->isDraft() === false &&
+			$this->isPublished() === true &&
 			$this->parents()->findBy('status', 'draft') === null
 		) {
 			return true;
@@ -870,7 +859,7 @@ class Page extends ModelWithContent
 		if ($class = (static::$models[$name] ?? null)) {
 			$object = new $class($props);
 
-			if (is_a($object, 'Kirby\Cms\Page') === true) {
+			if ($object instanceof self) {
 				return $object;
 			}
 		}
@@ -900,7 +889,7 @@ class Page extends ModelWithContent
 	 *
 	 * @return int|null
 	 */
-	public function num(): ?int
+	public function num(): int|null
 	{
 		return $this->num;
 	}
@@ -931,13 +920,9 @@ class Page extends ModelWithContent
 	 * @internal
 	 * @return string|null
 	 */
-	public function parentId(): ?string
+	public function parentId(): string|null
 	{
-		if ($parent = $this->parent()) {
-			return $parent->id();
-		}
-
-		return null;
+		return $this->parent()?->id();
 	}
 
 	/**
@@ -972,6 +957,15 @@ class Page extends ModelWithContent
 	}
 
 	/**
+	 * Return the permanent URL to the page using its UUID
+	 * @since 3.8.0
+	 */
+	public function permalink(): string|null
+	{
+		return $this->uuid()?->url();
+	}
+
+	/**
 	 * Returns the permissions object for this page
 	 *
 	 * @return \Kirby\Cms\PagePermissions
@@ -987,7 +981,7 @@ class Page extends ModelWithContent
 	 * @internal
 	 * @return string|null
 	 */
-	public function previewUrl(): ?string
+	public function previewUrl(): string|null
 	{
 		$preview = $this->blueprint()->preview();
 
@@ -1066,8 +1060,23 @@ class Page extends ModelWithContent
 
 			$kirby->data = $this->controller($data, $contentType);
 
+			// trigger before hook and apply for `data`
+			$kirby->data = $kirby->apply('page.render:before', [
+				'contentType' => $contentType,
+				'data'        => $kirby->data,
+				'page'        => $this
+			], 'data');
+
 			// render the page
 			$html = $template->render($kirby->data);
+
+			// trigger after hook and apply for `html`
+			$html = $kirby->apply('page.render:after', [
+				'contentType' => $contentType,
+				'data'        => $kirby->data,
+				'html'        => $html,
+				'page'        => $this
+			], 'html');
 
 			// cache the result
 			$response = $kirby->response();
@@ -1087,7 +1096,7 @@ class Page extends ModelWithContent
 	/**
 	 * @internal
 	 * @param mixed $type
-	 * @return \Kirby\Cms\Template
+	 * @return \Kirby\Template\Template
 	 * @throws \Kirby\Exception\NotFoundException If the content representation cannot be found
 	 */
 	public function representation($type)
@@ -1268,13 +1277,13 @@ class Page extends ModelWithContent
 	public function slug(string $languageCode = null): string
 	{
 		if ($this->kirby()->multilang() === true) {
-			if ($languageCode === null) {
-				$languageCode = $this->kirby()->languageCode();
-			}
-
+			$languageCode      ??= $this->kirby()->languageCode();
 			$defaultLanguageCode = $this->kirby()->defaultLanguage()->code();
 
-			if ($languageCode !== $defaultLanguageCode && $translation = $this->translations()->find($languageCode)) {
+			if (
+				$languageCode !== $defaultLanguageCode &&
+				$translation = $this->translations()->find($languageCode)
+			) {
 				return $translation->slug() ?? $this->slug;
 			}
 		}
@@ -1304,7 +1313,7 @@ class Page extends ModelWithContent
 	/**
 	 * Returns the final template
 	 *
-	 * @return \Kirby\Cms\Template
+	 * @return \Kirby\Template\Template
 	 */
 	public function template()
 	{
@@ -1411,9 +1420,9 @@ class Page extends ModelWithContent
 		if ($this->kirby()->multilang() === true) {
 			if (is_string($options) === true) {
 				return $this->urlForLanguage($options);
-			} else {
-				return $this->urlForLanguage(null, $options);
 			}
+
+			return $this->urlForLanguage(null, $options);
 		}
 
 		if ($options !== null) {
@@ -1431,9 +1440,9 @@ class Page extends ModelWithContent
 		if ($parent = $this->parent()) {
 			if ($parent->isHomePage() === true) {
 				return $this->url = $this->kirby()->url('base') . '/' . $parent->uid() . '/' . $this->uid();
-			} else {
-				return $this->url = $this->parent()->url() . '/' . $this->uid();
 			}
+
+			return $this->url = $this->parent()->url() . '/' . $this->uid();
 		}
 
 		return $this->url = $this->kirby()->url('base') . '/' . $this->uid();
@@ -1460,104 +1469,11 @@ class Page extends ModelWithContent
 		if ($parent = $this->parent()) {
 			if ($parent->isHomePage() === true) {
 				return $this->url = $this->site()->urlForLanguage($language) . '/' . $parent->slug($language) . '/' . $this->slug($language);
-			} else {
-				return $this->url = $this->parent()->urlForLanguage($language) . '/' . $this->slug($language);
 			}
+
+			return $this->url = $this->parent()->urlForLanguage($language) . '/' . $this->slug($language);
 		}
 
 		return $this->url = $this->site()->urlForLanguage($language) . '/' . $this->slug($language);
-	}
-
-
-	/**
-	 * Deprecated!
-	 */
-
-	/**
-	 * Provides a kirbytag or markdown
-	 * tag for the page, which will be
-	 * used in the panel, when the page
-	 * gets dragged onto a textarea
-	 *
-	 * @deprecated 3.6.0 Use `->panel()->dragText()` instead
-	 * @todo Remove in 3.8.0
-	 *
-	 * @internal
-	 * @param string|null $type (null|auto|kirbytext|markdown)
-	 * @return string
-	 * @codeCoverageIgnore
-	 */
-	public function dragText(string $type = null): string
-	{
-		Helpers::deprecated('Cms\Page::dragText() has been deprecated and will be removed in Kirby 3.8.0. Use $page->panel()->dragText() instead.');
-		return $this->panel()->dragText($type);
-	}
-
-	/**
-	 * Returns the escaped Id, which is
-	 * used in the panel to make routing work properly
-	 *
-	 * @deprecated 3.6.0 Use `->panel()->id()` instead
-	 * @todo Remove in 3.8.0
-	 *
-	 * @internal
-	 * @return string
-	 * @codeCoverageIgnore
-	 */
-	public function panelId(): string
-	{
-		Helpers::deprecated('Cms\Page::panelId() has been deprecated and will be removed in Kirby 3.8.0. Use $page->panel()->id() instead.');
-		return $this->panel()->id();
-	}
-
-	/**
-	 * Returns the full path without leading slash
-	 *
-	 * @deprecated 3.6.0 Use `->panel()->path()` instead
-	 * @todo Remove in 3.8.0
-	 *
-	 * @internal
-	 * @return string
-	 * @codeCoverageIgnore
-	 */
-	public function panelPath(): string
-	{
-		Helpers::deprecated('Cms\Page::panelPath() has been deprecated and will be removed in Kirby 3.8.0. Use $page->panel()->path() instead.');
-		return $this->panel()->path();
-	}
-
-	/**
-	 * Prepares the response data for page pickers
-	 * and page fields
-	 *
-	 * @deprecated 3.6.0 Use `->panel()->pickerData()` instead
-	 * @todo Remove in 3.8.0
-	 *
-	 * @param array|null $params
-	 * @return array
-	 * @codeCoverageIgnore
-	 */
-	public function panelPickerData(array $params = []): array
-	{
-		Helpers::deprecated('Cms\Page::panelPickerData() has been deprecated and will be removed in Kirby 3.8.0. Use $page->panel()->pickerData() instead.');
-		return $this->panel()->pickerData($params);
-	}
-
-	/**
-	 * Returns the url to the editing view
-	 * in the panel
-	 *
-	 * @deprecated 3.6.0 Use `->panel()->url()` instead
-	 * @todo Remove in 3.8.0
-	 *
-	 * @internal
-	 * @param bool $relative
-	 * @return string
-	 * @codeCoverageIgnore
-	 */
-	public function panelUrl(bool $relative = false): string
-	{
-		Helpers::deprecated('Cms\Page::panelUrl() has been deprecated and will be removed in Kirby 3.8.0. Use $page->panel()->url() instead.');
-		return $this->panel()->url($relative);
 	}
 }

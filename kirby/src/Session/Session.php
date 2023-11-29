@@ -10,6 +10,7 @@ use Kirby\Exception\NotFoundException;
 use Kirby\Http\Cookie;
 use Kirby\Http\Url;
 use Kirby\Toolkit\Str;
+use Kirby\Toolkit\SymmetricCrypto;
 use Throwable;
 
 /**
@@ -38,7 +39,7 @@ class Session
 	protected $lastActivity;
 	protected $renewable;
 	protected $data;
-	protected $newSession;
+	protected array|null $newSession;
 
 	// temporary state flags
 	protected $updatingLastActivity = false;
@@ -139,12 +140,12 @@ class Session
 		if ($this->tokenExpiry !== null) {
 			if (is_string($this->tokenKey)) {
 				return $this->tokenExpiry . '.' . $this->tokenId . '.' . $this->tokenKey;
-			} else {
-				return $this->tokenExpiry . '.' . $this->tokenId;
 			}
-		} else {
-			return null;
+
+			return $this->tokenExpiry . '.' . $this->tokenId;
 		}
+
+		return null;
 	}
 
 	/**
@@ -339,20 +340,36 @@ class Session
 		 * @todo The $this->destroyed check gets flagged by Psalm for unknown reasons
 		 * @psalm-suppress ParadoxicalCondition
 		 */
-		if ($this->writeMode !== true || $this->tokenExpiry === null || $this->destroyed === true) {
+		if (
+			$this->writeMode !== true ||
+			$this->tokenExpiry === null ||
+			$this->destroyed === true
+		) {
 			return;
 		}
 
 		// collect all data
-		if ($this->newSession) {
+		if (isset($this->newSession) === true) {
 			// the token has changed
 			// we are writing to the old session: it only gets the reference to the new session
 			// and a shortened expiry time (30 second grace period)
 			$data = [
 				'startTime'  => $this->startTime(),
 				'expiryTime' => time() + 30,
-				'newSession' => $this->newSession
+				'newSession' => $this->newSession[0]
 			];
+
+			// include the token key for the new session if we
+			// have access to the PHP `sodium` extension;
+			// otherwise (if no encryption is possible), the token key
+			// is omitted, which makes the new session read-only
+			// when accessed through the old session
+			if ($crypto = $this->crypto()) {
+				// encrypt the new token key with the old token key
+				// so that attackers with read access to the session file
+				// (e.g. via directory traversal) cannot impersonate the new session
+				$data['newSessionKey'] = $crypto->encrypt($this->newSession[1]);
+			}
 		} else {
 			$data = [
 				'startTime'    => $this->startTime(),
@@ -442,7 +459,7 @@ class Session
 
 		// mark the old session as moved if there is one
 		if ($this->tokenExpiry !== null) {
-			$this->newSession = $tokenExpiry . '.' . $tokenId;
+			$this->newSession = [$tokenExpiry . '.' . $tokenId, $tokenKey];
 			$this->commit();
 
 			// we are now in the context of the new session
@@ -523,12 +540,16 @@ class Session
 		 * @todo The $this->destroyed check gets flagged by Psalm for unknown reasons
 		 * @psalm-suppress ParadoxicalCondition
 		 */
-		if ($this->tokenExpiry === null || $this->destroyed === true || $this->writeMode === true) {
+		if (
+			$this->tokenExpiry === null ||
+			$this->destroyed === true ||
+			$this->writeMode === true
+		) {
 			return;
 		}
 
 		// don't allow writing for read-only sessions
-		// (only the case for moved sessions)
+		// (only the case for moved sessions when the PHP `sodium` extension is not available)
 		/**
 		 * @todo This check gets flagged by Psalm for unknown reasons
 		 * @psalm-suppress ParadoxicalCondition
@@ -545,6 +566,22 @@ class Session
 		$this->sessions->store()->lock($this->tokenExpiry, $this->tokenId);
 		$this->init();
 		$this->writeMode = true;
+	}
+
+	/**
+	 * Returns a symmetric crypto instance based on the
+	 * token key of the session
+	 */
+	protected function crypto(): SymmetricCrypto|null
+	{
+		if (
+			$this->tokenKey === null ||
+			SymmetricCrypto::isAvailable() === false
+		) {
+			return null; // @codeCoverageIgnore
+		}
+
+		return new SymmetricCrypto(secretKey: hex2bin($this->tokenKey));
 	}
 
 	/**
@@ -611,12 +648,15 @@ class Session
 		// now make sure that we have a valid timestamp
 		if (is_int($time)) {
 			return $time;
-		} else {
-			throw new InvalidArgumentException([
-				'data'      => ['method' => 'Session::timeToTimestamp', 'argument' => '$time'],
-				'translate' => false
-			]);
 		}
+
+		throw new InvalidArgumentException([
+			'data' => [
+				'method'   => 'Session::timeToTimestamp',
+				'argument' => '$time'
+			],
+			'translate' => false
+		]);
 	}
 
 	/**
@@ -687,6 +727,20 @@ class Session
 
 		// follow to the new session if there is one
 		if (isset($data['newSession'])) {
+			// decrypt the token key if provided and we have access to
+			// the PHP `sodium` extension for decryption
+			if (
+				isset($data['newSessionKey']) === true &&
+				$crypto = $this->crypto()
+			) {
+				$tokenKey = $crypto->decrypt($data['newSessionKey']);
+
+				$this->parseToken($data['newSession'] . '.' . $tokenKey);
+				$this->init();
+				return;
+			}
+
+			// otherwise initialize without the token key (read-only mode)
 			$this->parseToken($data['newSession'], true);
 			$this->init();
 			return;
@@ -727,7 +781,7 @@ class Session
 		$this->renewable    = $data['renewable'];
 
 		// reload data into existing object to avoid breaking memory references
-		if (is_a($this->data, 'Kirby\Session\SessionData')) {
+		if ($this->data instanceof SessionData) {
 			$this->data()->reload($data['data']);
 		} else {
 			$this->data = new SessionData($this, $data['data']);

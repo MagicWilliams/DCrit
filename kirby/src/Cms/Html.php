@@ -26,7 +26,7 @@ class Html extends \Kirby\Toolkit\Html
 	 * @param string|array $options Pass an array of attributes for the link tag or a media attribute string
 	 * @return string|null
 	 */
-	public static function css($url, $options = null): ?string
+	public static function css($url, $options = null): string|null
 	{
 		if (is_array($url) === true) {
 			$links = A::map($url, fn ($url) => static::css($url, $options));
@@ -45,7 +45,8 @@ class Html extends \Kirby\Toolkit\Html
 			}
 		}
 
-		// only valid value for 'rel' is 'alternate stylesheet', if 'title' is given as well
+		// only valid value for 'rel' is 'alternate stylesheet',
+		// if 'title' is given as well
 		if (
 			($options['rel'] ?? '') !== 'alternate stylesheet' ||
 			($options['title'] ?? '') === ''
@@ -83,7 +84,7 @@ class Html extends \Kirby\Toolkit\Html
 	 * @param string|array $options
 	 * @return string|null
 	 */
-	public static function js($url, $options = null): ?string
+	public static function js($url, $options = null): string|null
 	{
 		if (is_array($url) === true) {
 			$scripts = A::map($url, fn ($url) => static::js($url, $options));
@@ -121,7 +122,7 @@ class Html extends \Kirby\Toolkit\Html
 	{
 		// support for Kirby's file objects
 		if (
-			is_a($file, 'Kirby\Cms\File') === true &&
+			$file instanceof File &&
 			$file->extension() === 'svg'
 		) {
 			return $file->read();

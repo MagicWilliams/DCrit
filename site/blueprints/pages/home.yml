@@ -23,6 +23,7 @@ tabs:
                 layout: cards
                 query: site.index.findBy("intendedTemplate", "mediagallery").images
                 uploads:
+                  template: image
                   parent: site.index.findBy("intendedTemplate", "mediagallery")
                 multiple: false
                 when:

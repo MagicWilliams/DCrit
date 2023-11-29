@@ -6,9 +6,7 @@ Toggle: Image
 
 ----
 
-Heroselect:
-
-- image-library/landing.jpg
+Heroselect: - image-library/landing.jpg
 
 ----
 
@@ -94,3 +92,7 @@ Img:
 ----
 
 Feature: None
+
+----
+
+Uuid: lY4fBfqRs05RnNA2
